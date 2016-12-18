@@ -1,0 +1,23 @@
+.clearfix:after { clear: both; }
+.clearfix:after,
+.clearfix:before {
+	display: block;
+
+	content: " ";
+}
+
+.block { display: block; }
+.inline { display: inline; }
+.inline-block { display: inline-block; }
+.none { display: none; }
+.table {
+	display: table;
+
+	table-layout: fixed;
+}
+
+.table-cell { display: table-cell; }
+.table-row { display: table-row; }
+
+.float-left { float: left; }
+.float-right { float: right; }
