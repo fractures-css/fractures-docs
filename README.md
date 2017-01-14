@@ -1,3 +1,3 @@
-# fractures
+# fractures-docs
 
-Legacy docs site for fractures.
+Docs
