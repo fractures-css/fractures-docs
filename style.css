@@ -1,12 +1,10 @@
 :root {
-	--blue: #aacce1;
 	--dark: #3e3c75;
-	--green: #50e1a0;
-	--light: #edeef6;
-	--lightblue: #cbdeea;
+	--gray: #e0e1ea;
+	--high: #e5fedd;
 }
 
-*::selection { background-color: var(--blue); }
+*::selection { background-color: var(--high); }
 
 body {
 	background-color: white;
@@ -30,6 +28,7 @@ body {
 
 a {
 	color: var(--dark);
+	cursor: pointer;
 
 	font-weight: 600;
 }
@@ -49,11 +48,19 @@ a {
 }
 
 .btn-primary {
-	background: var(--light);
-	color: var(--dark);
+	background: var(--dark);
+	color: white;
 }
 
-.source-code-pro { font-family: "Source Code Pro", monospace; }
+.btn-default {
+	color: var(--dark);
+	box-shadow: inset 0 0 0 .125rem var(--gray);
+}
+
+.source-code-pro {
+	font-family: "Source Code Pro", monospace;
+	line-height: 1.25;
+}
 
 .class {
 	display: inline-block;
@@ -64,8 +71,8 @@ a {
 }
 
 .skeletons {
-	border-bottom: 1px solid var(--light);
-	border-top: 1px solid var(--light);
+	border-bottom: 1px solid var(--gray);
+	border-top: 1px solid var(--gray);
 }
 
 .skeletons img {
@@ -73,11 +80,8 @@ a {
 	width: 6.25rem;
 
 	border-radius: 5px;
-	box-shadow: 0 0 .75rem 0 var(--light);
+	box-shadow: 0 .25rem 1.5rem 0 var(--gray);
 	transition: all 100ms ease;
 }
 
-.skeletons a:hover img {
-	transform: translateY(-.25rem);
-	box-shadow: 0 .25rem 1.5rem 0 var(--light);
-}
+.skeletons a:hover img { transform: translateY(-.25rem); }
