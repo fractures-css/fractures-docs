@@ -30,35 +30,80 @@
 			</div>
 
 			<!-- Skeletons -->
-			<div class="skeletons py-4">
+			<div class="skeleton py-4">
 				<div class="container">
-					<div>
-						<ul class="flex flex--around flex--rsp-m gutter-3">
-							<li class="center">
-								<a class="block" href="/examples/center.html">
-									<img src="/images/browser--center.png" alt="">
-									<span class="block mt-1">centered</span>
-								</a>
-							</li>
-							<li class="center">
-								<a class="block" href="/examples/container.html">
-									<img src="/images/browser--container.png" alt="">
-									<span class="block mt-1">containers</span>
-								</a>
-							</li>
-							<li class="center">
-								<a class="block" href="/examples/gutter.html">
-									<img src="/images/browser--grid.png" alt="">
-									<span class="block mt-1">grid</span>
-								</a>
-							</li>
-							<li class="center">
-								<a class="block" href="/examples/sticky-footer.html">
-									<img src="/images/browser--sticky.png" alt="">
-									<span class="block mt-1">sticky</span>
-								</a>
-							</li>
-						</ul>
+
+					<!-- Cases -->
+					<ul class="flex flex--around gutter-3">
+						<li
+							v-bind:class="{ active: example === 'layout' }"
+							v-on:click="example = 'layout'"
+							data-after="layout"
+							class="skeleton-item skeleton-item--layout"></li>
+						<li
+							v-bind:class="{ active: example === 'flex' }"
+							v-on:click="example = 'flex'"
+							data-after="flex"
+							class="skeleton-item skeleton-item--flex"></li>
+						<li
+							v-bind:class="{ active: example === 'container' }"
+							v-on:click="example = 'container'"
+							data-after="container"
+							class="skeleton-item skeleton-item--container"></li>
+						<li
+							v-bind:class="{ active: example === 'sticky' }"
+							v-on:click="example = 'sticky'"
+							data-after="sticky"
+							class="skeleton-item skeleton-item--sticky"></li>
+					</ul>
+
+					<!-- Codes -->
+					<div
+						v-cloak
+						v-if="example"
+						class="relative mt-3 py-3">
+
+						<!-- Grid -->
+						<pre
+							v-if="example === 'layout'"
+							class="pre-line">
+							<span class="color--orange">// Basic flex layout with gutter and vertical margins</span>
+							&lt;div class="<span class="color--green">flex gutter-2 my-2</span>"&gt;
+								&emsp;&lt;div class="<span class="color--green">grow-1</span>"&gt;&lt;/div&gt;
+								&emsp;&lt;div class="<span class="color--green">grow-1</span>"&gt;&lt;/div&gt;
+							&lt;/div&gt;
+						</pre>
+
+						<!-- Flex -->
+						<pre
+							v-if="example === 'flex'"
+							class="pre-line">
+							<span class="color--orange">// Centered flex content</span>
+							&lt;div class="<span class="color--green">flex flex--center</span>"&gt;
+								&emsp;&lt;div&gt;&lt;/div&gt;
+							&lt;/div&gt;
+						</pre>
+
+						<!-- Container -->
+						<pre
+							v-if="example === 'container'"
+							class="pre-line">
+							<span class="color--orange">// Responsive containers based on material design breakpoints</span>
+							&lt;div class="<span class="color--green">container-small</span>"&gt;&lt;/div&gt;
+							&lt;div class="<span class="color--green">container</span>"&gt;&lt;/div&gt;
+							&lt;div class="<span class="color--green">container-large</span>"&gt;&lt;/div&gt;
+						</pre>
+
+						<!-- Sticky -->
+						<pre
+							v-if="example === 'sticky'"
+							class="pre-line">
+							<span class="color--orange">// Sticky footer with minimum element height</span>
+							&lt;div class="<span class="color--green">flex flex--column minvh-100</span>"&gt;
+								&emsp;&lt;div class="<span class="color--green">grow-1</span>"&gt;&lt;/div&gt;
+								&emsp;&lt;footer&gt;&lt;/footer&gt;
+							&lt;/div&gt;
+						</pre>
 					</div>
 				</div>
 			</div>
@@ -95,7 +140,7 @@
 						<p v-html="name"></p>
 						<div v-for="(array, index) in block">
 							<div class="flex flex--wrap gutter-2">
-								<div v-html="index + ' &rarr;'" class="class silver"></div>
+								<div v-html="index + ' &rarr;'" class="docs-class silver"></div>
 								<div v-for="elem in array" v-html="elem" class="class"></div>
 							</div>
 						</div>
@@ -110,7 +155,8 @@
 		new Vue({
 			el: "#app",
 			data: {
-				blocks: []
+				blocks: [],
+				example: "layout"
 			},
 			created: function() {
 				this.fetchBlocks()
@@ -124,8 +170,7 @@
 				}
 			}
 		});
-	</script>
-	<script>
+
 		(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
