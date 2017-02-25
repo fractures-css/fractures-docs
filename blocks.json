@@ -39,7 +39,8 @@
 		"gutter": ["gutter-1", "gutter-2", "gutter-3", "gutter-4", "gutter-5"]
 	},
 	"list": {
-		"list-style-type": ["list-circle", "list-disc", "list-square", "list-none", "list-lower-latin", "list-lower-roman", "list-upper-latin", "list-upper-roman"]
+		"list-style-type": ["list-circle", "list-disc", "list-square", "list-none", "list-lower-latin", "list-lower-roman", "list-upper-latin", "list-upper-roman"],
+		"literal": ["list-comma"]
 	},
 	"margin": {
 		"margin": ["m-0", "m-1", "m-2", "m-3", "m-4", "m-5"],
@@ -49,6 +50,9 @@
 		"margin-top": [ "mt-0", "mt-1", "mt-2", "mt-3", "mt-4", "mt-5"],
 		"margin-x-axis": ["mx-0", "mx-1", "mx-2", "mx-3", "mx-4", "mx-5"],
 		"margin-y-axis": ["my-0", "my-1", "my-2", "my-3", "my-4", "my-5"]
+	},
+	"opacity": {
+		"opacity": ["opacity-0", "opacity-10", "opacity-20", "opacity-30", "opacity-40", "opacity-50", "opacity-60", "opacity-70", "opacity-80", "opacity-90", "opacity-100"],
 	},
 	"padding": {
 		"padding": [ "p-0", "p-1", "p-2", "p-3", "p-4", "p-5"],
