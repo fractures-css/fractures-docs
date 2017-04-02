@@ -1,10 +1,13 @@
 {
+	"border": {
+		"radius": ["radius-100"]
+	},
 	"color": {
 		"color": ["black", "gray", "silver", "white"],
 		"background-color": ["bg-black", "bg-gray", "bg-silver", "bg-white"]
 	},
 	"container": {
-		"container": ["container", "container-small", "container-large"]
+		"fr-container": ["fr-container", "fr-container-small", "fr-container-large"]
 	},
 	"dimension": {
 		"height": ["h-25", "h-33", "h-50", "h-66", "h-75", "h-100"],

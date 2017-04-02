@@ -14,7 +14,7 @@
 		<main id="app">
 
 			<!-- Hero -->
-			<div class="container flex flex--rsp-l gutter-4 py-5">
+			<div class="fr-container flex flex--rsp-l gutter-4 py-6">
 				<div><img src="/images/fractures.svg" style="height: 160px; width: 160px;" alt="fractures"></div>
 				<div class="grow-2">
 					<h1 title="fractures">fr&middot;ctures</h1>
@@ -24,14 +24,14 @@
 					<a onclick="document.getElementById('getting-started').scrollIntoView(true);" class="btn btn-primary">Getting started</a>
 					<a href="https://github.com/fractures/fractures" class="btn btn-default ml-1">GitHub</a>
 					<div class="mt-3 silver source-code-pro">
-						<small>version: 0.4.31<br>size: 2.5kb gzipped</small>
+						<small>version: 0.4.35<br>size: 2.7kb gzipped</small>
 					</div>
 				</div>
 			</div>
 
 			<!-- Skeletons -->
-			<div class="skeleton py-4">
-				<div class="container">
+			<div class="skeleton py-5">
+				<div class="fr-container">
 
 					<!-- Cases -->
 					<ul class="flex flex--around gutter-3">
@@ -61,7 +61,7 @@
 					<div
 						v-cloak
 						v-if="example"
-						class="relative mt-3 py-3">
+						class="relative mt-4 py-4">
 
 						<!-- Grid -->
 						<pre
@@ -89,9 +89,9 @@
 							v-if="example === 'container'"
 							class="pre-line">
 							<span class="color--orange">// Responsive containers based on material design breakpoints</span>
-							&lt;div class="<span class="color--green">container-small</span>"&gt;&lt;/div&gt;
-							&lt;div class="<span class="color--green">container</span>"&gt;&lt;/div&gt;
-							&lt;div class="<span class="color--green">container-large</span>"&gt;&lt;/div&gt;
+							&lt;div class="<span class="color--green">fr-container-small</span>"&gt;&lt;/div&gt;
+							&lt;div class="<span class="color--green">fr-container</span>"&gt;&lt;/div&gt;
+							&lt;div class="<span class="color--green">fr-container-large</span>"&gt;&lt;/div&gt;
 						</pre>
 
 						<!-- Sticky -->
@@ -109,7 +109,7 @@
 			</div>
 
 			<!-- Content -->
-			<div class="container py-4" id="getting-started">
+			<div class="fr-container py-5" id="getting-started">
 
 				<!-- Getting started -->
 				<h2 class="regular mb-1">Getting started</h2>
