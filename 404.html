@@ -36,10 +36,10 @@
 					<!-- Cases -->
 					<ul class="flex flex--around gutter-3">
 						<li
-							v-bind:class="{ active: example === 'layout' }"
-							v-on:click="example = 'layout'"
-							data-after="layout"
-							class="skeleton-item skeleton-item--layout"></li>
+							v-bind:class="{ active: example === 'grid' }"
+							v-on:click="example = 'grid'"
+							data-after="grid"
+							class="skeleton-item skeleton-item--grid"></li>
 						<li
 							v-bind:class="{ active: example === 'flex' }"
 							v-on:click="example = 'flex'"
@@ -65,12 +65,12 @@
 
 						<!-- Grid -->
 						<pre
-							v-if="example === 'layout'"
+							v-if="example === 'grid'"
 							class="pre-line">
-							<span class="color--orange">// Basic flex layout with gutter and vertical margins</span>
-							&lt;div class="<span class="color--green">flex gutter-2 my-2</span>"&gt;
-								&emsp;&lt;div class="<span class="color--green">grow-1</span>"&gt;&lt;/div&gt;
-								&emsp;&lt;div class="<span class="color--green">grow-1</span>"&gt;&lt;/div&gt;
+							<span class="color--orange">// Basic grid with horizontal and vertical gap</span>
+							&lt;div class="<span class="color--green">grid grid-cols-3 gap-x-2 gap-y-2</span>"&gt;
+								&emsp;&lt;div&gt;&lt;/div&gt;
+								&emsp;&lt;div&gt;&lt;/div&gt;
 							&lt;/div&gt;
 						</pre>
 
@@ -156,7 +156,7 @@
 			el: "#app",
 			data: {
 				blocks: [],
-				example: "layout"
+				example: "grid"
 			},
 			created: function() {
 				this.fetchBlocks()
