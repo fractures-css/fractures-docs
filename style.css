@@ -128,7 +128,7 @@ pre span::selection { background-color: rgba(0, 0, 0, .5); }
 	text-align: center;
 }
 
-.skeleton-item--layout { background-image: url("./images/browser--layout.png"); }
+.skeleton-item--grid { background-image: url("./images/browser--grid.png"); }
 .skeleton-item--flex { background-image: url("./images/browser--flex.png"); }
 .skeleton-item--container { background-image: url("./images/browser--container.png"); }
 .skeleton-item--sticky { background-image: url("./images/browser--sticky.png"); }
