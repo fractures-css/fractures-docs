@@ -132,6 +132,7 @@ pre span::selection { background-color: rgba(0, 0, 0, .5); }
 .skeleton-item--flex { background-image: url("./images/browser--flex.png"); }
 .skeleton-item--container { background-image: url("./images/browser--container.png"); }
 .skeleton-item--sticky { background-image: url("./images/browser--sticky.png"); }
+.skeleton-item--print { background-image: url("./images/browser--print.png"); }
 
 .skeleton-item.active {
 	background-color: var(--green);

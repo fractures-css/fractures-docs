@@ -55,6 +55,11 @@
 							v-on:click="example = 'sticky'"
 							data-after="sticky"
 							class="skeleton-item skeleton-item--sticky"></li>
+						<li
+							v-bind:class="{ active: example === 'print' }"
+							v-on:click="example = 'print'"
+							data-after="more"
+							class="skeleton-item skeleton-item--print"></li>
 					</ul>
 
 					<!-- Codes -->
@@ -103,6 +108,14 @@
 								&emsp;&lt;div class="<span class="color--green">grow-1</span>"&gt;&lt;/div&gt;
 								&emsp;&lt;footer&gt;&lt;/footer&gt;
 							&lt;/div&gt;
+						</pre>
+
+						<!-- Print -->
+						<pre
+							v-if="example === 'print'"
+							class="pre-line">
+							<span class="color--orange">// Working examples</span>
+							<a href="http://fractures.github.io/fractures/" class="color--orange">// fractures.github.io/fractures</a>
 						</pre>
 					</div>
 				</div>
