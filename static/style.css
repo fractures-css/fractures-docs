@@ -128,11 +128,11 @@ pre span::selection { background-color: rgba(0, 0, 0, .5); }
 	text-align: center;
 }
 
-.skeleton-item--grid { background-image: url("./images/browser--grid.png"); }
-.skeleton-item--flex { background-image: url("./images/browser--flex.png"); }
-.skeleton-item--container { background-image: url("./images/browser--container.png"); }
-.skeleton-item--sticky { background-image: url("./images/browser--sticky.png"); }
-.skeleton-item--print { background-image: url("./images/browser--print.png"); }
+.skeleton-item--grid { background-image: url("/static/images/browser--grid.png"); }
+.skeleton-item--flex { background-image: url("/static/images/browser--flex.png"); }
+.skeleton-item--container { background-image: url("/static/images/browser--container.png"); }
+.skeleton-item--sticky { background-image: url("/static/images/browser--sticky.png"); }
+.skeleton-item--print { background-image: url("/static/images/browser--print.png"); }
 
 .skeleton-item.active {
 	background-color: var(--green);
