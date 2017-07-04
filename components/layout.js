@@ -20,7 +20,7 @@ export default ({ children, title = "Fractures" }) =>
 				rel="stylesheet"
 			/>
 			<link
-				href="https://unpkg.com/fractures@1.0.0-beta.10/dist/fractures.prefixed.min.css"
+				href="https://unpkg.com/fractures@1.0.0-beta.11/dist/fractures.prefixed.min.css"
 				rel="stylesheet"
 			/>
 			<link href="/static/css/style.css" rel="stylesheet" />

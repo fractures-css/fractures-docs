@@ -1,16 +1,22 @@
 :root {
 	--color-high: #e5fedd;
-	--color-dark: #222;
+	/*--color-dark: #222;*/
+
+	--color-green: #50e1a0;
+	--color-gray: #e0e1ea;
 
 	/*--dark: #3e3c75;
-	--gray: #e0e1ea;
-	--red: #ff5656;
-	--green: #50e1a0;
-	--orange: #ffe1a0;*/
+
+	--red: #ff5656;*/
+	--color-orange: #ffe1a0;
 }
 
 *::selection {
 	background-color: var(--color-high);
+}
+
+html {
+	background-color: var(--color-gray);
 }
 
 body {
@@ -29,6 +35,10 @@ a {
 	cursor: pointer;
 }
 
+.bg-fractures-gray {
+	background-color: var(--color-gray);
+}
+
 .container {
 	margin: 0 auto;
 	width: 990px;
@@ -41,6 +51,50 @@ a {
 .source-code-pro {
 	font-family: "Source Code Pro", monospace;
 	line-height: 1.25;
+}
+
+.fractures-skeleton {
+}
+
+.skeleton {
+	border-bottom: 1px solid var(--gray);
+	border-top: 1px solid var(--gray);
+}
+
+.skeleton-item img {
+	box-shadow: 0 .25rem 1.5rem 0 rgba(0, 0, 0, .1);
+}
+
+.skeleton-item a {
+	display: block;
+}
+
+.skeleton-item.active {
+	background-color: var(--color-green);
+	background-blend-mode: soft-light;
+}
+
+.btn {
+	display: inline-block;
+	padding: 0 1.25rem;
+
+	border-radius: 9999px;
+
+	font-size: .875rem;
+	font-weight: 600;
+	line-height: 2.5rem;
+	text-align: center;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.btn-primary {
+	background-color: black;
+	color: white;
+}
+
+.btn-default {
+	box-shadow: inset 0 0 0 2px var(--color-gray);
 }
 
 /*
@@ -60,29 +114,7 @@ pre span::selection {
 	background-color: rgba(0, 0, 0, .5);
 }
 
-.btn {
-	display: inline-block;
-	padding: 0 1.25rem;
 
-	border-radius: 9999px;
-
-	font-size: .875rem;
-	font-weight: 600;
-	line-height: 2.5rem;
-	text-align: center;
-	-webkit-user-select: none;
-	user-select: none;
-}
-
-.btn-primary {
-	background: var(--dark);
-	color: white;
-}
-
-.btn-default {
-	color: var(--dark);
-	box-shadow: inset 0 0 0 .125rem var(--gray);
-}
 
 .color--gray {
 	color: var(--gray);
@@ -161,8 +193,7 @@ pre span::selection {
 }
 
 .skeleton-item.active {
-	background-color: var(--green);
-	background-blend-mode: soft-light;
+
 }
 
 .skeleton-item.active,

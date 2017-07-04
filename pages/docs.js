@@ -295,6 +295,7 @@ export default () =>
 					<div className="bg-smoke p-1">mx-4</div>
 					<div className="bg-smoke p-1">mx-5</div>
 					<div className="bg-smoke p-1">mx-6</div>
+					<div className="bg-smoke p-1">mx-auto</div>
 				</div>
 				<small className="block mt-4">
 					<b>mx-x</b> is margin on X axis.<br />
