@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 
 export default () =>
 	<Layout title="Docs">
-		<div className="container">
+		<div className="fr-container">
 			<header className="py-5">
 				<h1>Docs</h1>
 				<p>Lorem ipsum dolor sit amet.</p>
@@ -13,7 +13,7 @@ export default () =>
 			<article className="py-5">
 				<h3>Border</h3>
 				<p className="mb-4">Border radius is important.</p>
-				<div className="grid grid-cols-7 gap-1">
+				<div className="grid grid-cols-7 grid-gap-1">
 					<div className="bg-smoke radius-0 h-6 w-6 flex flex-center">
 						radius-0
 					</div>
@@ -26,10 +26,16 @@ export default () =>
 					<div className="bg-light radius-3 h-6 w-6 flex flex-center">
 						radius-3
 					</div>
+					<div className="bg-black smoke radius-max h-6 w-6 flex flex-center">
+						radius-max
+					</div>
 					<div className="bg-black smoke radius-100 h-6 w-6 flex flex-center">
 						radius-100
 					</div>
 				</div>
+				<small className="block mt-4">
+					<b>radius-max</b> is rounding border with a large pixel value. Creates tube.
+				</small>
 			</article>
 
 			{/* <!-- Color --> */}
@@ -39,7 +45,7 @@ export default () =>
 					Basic monochrome color scheme from CSS defaults.<br />
 					You can overwrite these, but don't.
 				</p>
-				<div className="grid grid-cols-7 gap-1">
+				<div className="grid grid-cols-7 grid-gap-1">
 					<div className="bg-white p-1">bg-white</div>
 					<div className="bg-smoke p-1">bg-smoke</div>
 					<div className="bg-light p-1">bg-light</div>
@@ -61,7 +67,7 @@ export default () =>
 			<article className="py-5">
 				<h3>Display</h3>
 				<p className="mb-4">CSS display properties.</p>
-				<div className="grid grid-cols-6 gap-1">
+				<div className="grid grid-cols-6 grid-gap-1">
 					<div className="bg-smoke p-1">block</div>
 					<div className="bg-smoke p-1">
 						clearfix<sup>*</sup>
@@ -93,7 +99,7 @@ export default () =>
 			<article className="py-5">
 				<h3>Flex</h3>
 				<p className="mb-4">Flexbox related properties.</p>
-				<div className="grid grid-cols-8 gap-1">
+				<div className="grid grid-cols-8 grid-gap-1">
 					<div className="bg-smoke p-1">flex-wrap</div>
 					<div className="bg-smoke p-1">flex-wrap-reverse</div>
 					<div className="bg-smoke p-1">flex-reverse</div>
@@ -143,25 +149,25 @@ export default () =>
 			<article className="py-5">
 				<h3>Grid</h3>
 				<p className="mb-4">WIP.</p>
-				<div className="grid grid-cols-6 gap-1">
-					<div className="bg-smoke p-1">gap-1</div>
-					<div className="bg-smoke p-1">gap-2</div>
-					<div className="bg-smoke p-1">gap-3</div>
-					<div className="bg-smoke p-1">gap-4</div>
-					<div className="bg-smoke p-1">gap-5</div>
-					<div className="bg-smoke p-1">gap-6</div>
-					<div className="bg-smoke p-1">gap-x-1</div>
-					<div className="bg-smoke p-1">gap-x-2</div>
-					<div className="bg-smoke p-1">gap-x-3</div>
-					<div className="bg-smoke p-1">gap-x-4</div>
-					<div className="bg-smoke p-1">gap-x-5</div>
-					<div className="bg-smoke p-1">gap-x-6</div>
-					<div className="bg-smoke p-1">gap-y-1</div>
-					<div className="bg-smoke p-1">gap-y-2</div>
-					<div className="bg-smoke p-1">gap-y-3</div>
-					<div className="bg-smoke p-1">gap-y-4</div>
-					<div className="bg-smoke p-1">gap-y-5</div>
-					<div className="bg-smoke p-1">gap-y-6</div>
+				<div className="grid grid-cols-6 grid-gap-1">
+					<div className="bg-smoke p-1">grid-gap-1</div>
+					<div className="bg-smoke p-1">grid-gap-2</div>
+					<div className="bg-smoke p-1">grid-gap-3</div>
+					<div className="bg-smoke p-1">grid-gap-4</div>
+					<div className="bg-smoke p-1">grid-gap-5</div>
+					<div className="bg-smoke p-1">grid-gap-6</div>
+					<div className="bg-smoke p-1">grid-gap-x-1</div>
+					<div className="bg-smoke p-1">grid-gap-x-2</div>
+					<div className="bg-smoke p-1">grid-gap-x-3</div>
+					<div className="bg-smoke p-1">grid-gap-x-4</div>
+					<div className="bg-smoke p-1">grid-gap-x-5</div>
+					<div className="bg-smoke p-1">grid-gap-x-6</div>
+					<div className="bg-smoke p-1">grid-gap-y-1</div>
+					<div className="bg-smoke p-1">grid-gap-y-2</div>
+					<div className="bg-smoke p-1">grid-gap-y-3</div>
+					<div className="bg-smoke p-1">grid-gap-y-4</div>
+					<div className="bg-smoke p-1">grid-gap-y-5</div>
+					<div className="bg-smoke p-1">grid-gap-y-6</div>
 					<div className="bg-smoke p-1">grid-cols</div>
 					<div className="bg-smoke p-1">grid-cols-2</div>
 					<div className="bg-smoke p-1">grid-cols-3</div>
@@ -189,7 +195,7 @@ export default () =>
 			<article className="py-5">
 				<h3>Height</h3>
 				<p className="mb-4">Common height options.</p>
-				<div className="grid grid-cols-7 gap-1">
+				<div className="grid grid-cols-7 grid-gap-1">
 					<div className="bg-light h-0">h-0</div>
 					<div className="bg-light h-1">h-1</div>
 					<div className="bg-light h-2">h-2</div>
@@ -220,7 +226,7 @@ export default () =>
 			<article className="py-5">
 				<h3>List</h3>
 				<p className="mb-4">Common list styles for ul, ol.</p>
-				<div className="grid grid-cols-7 gap-1">
+				<div className="grid grid-cols-7 grid-gap-1">
 					<div className="bg-smoke p-1">list-circle</div>
 					<div className="bg-smoke p-1">list-disc</div>
 					<div className="bg-smoke p-1">list-square</div>
@@ -245,7 +251,7 @@ export default () =>
 				<p className="mb-4">
 					Margins based on overwriteable box sizes.
 				</p>
-				<div className="grid grid-cols-7 gap-1">
+				<div className="grid grid-cols-7 grid-gap-1">
 					<div className="bg-light m-0">m-0</div>
 					<div className="bg-light m-1">m-1</div>
 					<div className="bg-light m-2">m-2</div>
@@ -328,7 +334,7 @@ export default () =>
 				<p className="mb-4">
 					Paddings based on overwriteable box sizes.
 				</p>
-				<div className="grid grid-cols-7 gap-1">
+				<div className="grid grid-cols-7 grid-gap-1">
 					<div className="bg-light p-0">p-0</div>
 					<div className="bg-light p-1">p-1</div>
 					<div className="bg-light p-2">p-2</div>
@@ -389,7 +395,7 @@ export default () =>
 			<article className="py-5">
 				<h3>Position</h3>
 				<p className="mb-4">Position related classes.</p>
-				<div className="grid grid-cols-8 gap-1">
+				<div className="grid grid-cols-8 grid-gap-1">
 					<div className="bg-smoke p-1">absolute</div>
 					<div className="bg-smoke p-1">fixed</div>
 					<div className="bg-smoke p-1">relative</div>
@@ -419,7 +425,7 @@ export default () =>
 			<article className="py-5">
 				<h3>Typo</h3>
 				<p className="mb-4">This is WIP.</p>
-				<div className="grid grid-cols-3 gap-2">
+				<div className="grid grid-cols-3 grid-gap-2">
 					<h1>
 						Sunt in culpa qui officia deserunt mollit anim id est
 						laborum.
@@ -473,7 +479,7 @@ export default () =>
 			<article className="py-5">
 				<h3>Width</h3>
 				<p className="mb-4">Common width options.</p>
-				<div className="grid grid-cols-7 gap-1">
+				<div className="grid grid-cols-7 grid-gap-1">
 					<div className="bg-light w-0">W-0</div>
 					<div className="bg-light w-1">w-1</div>
 					<div className="bg-light w-2">w-2</div>

@@ -15,11 +15,9 @@ class Nav extends Component {
 	}
 
 	render() {
-		console.log(this.state)
-
 		return (
 			<div className="fractures-header fixed z-2 top-0 w-100">
-				<div className="container">
+				<div className="fr-container">
 					<ul className="flex flex-gap-2">
 						<li className={this.state.pathname === "/" && "active"}>
 							<Link href="/">
@@ -29,7 +27,8 @@ class Nav extends Component {
 						<li
 							className={
 								this.state.pathname === "/docs" && "active"
-							}>
+							}
+						>
 							<Link href="/docs">
 								<a>Docs</a>
 							</Link>
@@ -37,7 +36,8 @@ class Nav extends Component {
 						<li
 							className={
 								this.state.pathname === "/about" && "active"
-							}>
+							}
+						>
 							<Link href="/about">
 								<a>About</a>
 							</Link>
@@ -51,17 +51,17 @@ class Nav extends Component {
 						background-color: white;
 						box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .15);
 
-						/*font-weight: bold;*/
 						line-height: 4rem;
 					}
 
 					.fractures-header a {
 						display: block;
 						padding: 0 .5rem;
+
+						color: black;
 					}
 
 					.fractures-header .active {
-						box-shadow: 0 2px 0 0 var(--color-dark);
 						box-shadow: 0 1px 0 0 black;
 					}
 				`}</style>

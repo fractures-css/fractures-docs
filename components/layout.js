@@ -20,7 +20,7 @@ export default ({ children, title = "Fractures" }) =>
 				rel="stylesheet"
 			/>
 			<link
-				href="https://unpkg.com/fractures@1.0.0-beta.11/dist/fractures.prefixed.min.css"
+				href="https://unpkg.com/fractures@1.0.0-beta.12/dist/fractures.prefixed.min.css"
 				rel="stylesheet"
 			/>
 			<link href="/static/css/style.css" rel="stylesheet" />
@@ -35,7 +35,7 @@ export default ({ children, title = "Fractures" }) =>
 		</Head>
 		<main>
 			<Nav />
-			<div className="fractures-content">
+			<div className="fr-content">
 				{children}
 			</div>
 		</main>
