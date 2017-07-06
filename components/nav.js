@@ -50,11 +50,11 @@ class Nav extends Component {
 						display: block;
 						padding: 0 .5rem;
 
-						color: black;
+						color: var(--color-dark);
 					}
 
 					.fractures-header .active {
-						box-shadow: 0 1px 0 0 black;
+						box-shadow: 0 1px 0 0 var(--color-dark);
 					}
 				`}</style>
 			</div>

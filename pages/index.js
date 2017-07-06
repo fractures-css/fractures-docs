@@ -165,11 +165,14 @@ class Index extends Component {
 						</li>
 					</ul>
 				</div>
-				<div className="py-5 bg-color-gray">
+				<div className="py-5 fr-skeleton">
 					<div className="fr-container">
 						<div className="flex flex-xcenter flex-gap-4 flex-wrap">
 							<div className="skeleton-item mb-4">
-								<img src={` /static/images/browser-${this.state.example}.svg `} />
+								<img
+									src={` /static/images/browser-${this.state.example}.svg `}
+									className="float-left"
+								/>
 							</div>
 							<div className="grow-1">
 								{this.state.example === 0 && exampleIntro}
@@ -213,9 +216,10 @@ class Index extends Component {
 									through your build process.
 								</li>
 								<li>
-									<span className="line-through">
-										Here is an example repo with React.
-									</span>
+									Here is an example repo{" "}
+									<a href="https://github.com/fractures/fractures-react">
+										with React
+									</a>.
 								</li>
 							</ul>
 						</li>
@@ -224,10 +228,7 @@ class Index extends Component {
 							<ul className="list-disc ml-4">
 								<li>
 									🐹 from{" "}
-									<a
-										href="https://github.com/fractures/fractures/releases"
-										className="underline"
-									>
+									<a href="https://github.com/fractures/fractures/releases">
 										GitHub
 									</a>
 								</li>

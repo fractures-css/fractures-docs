@@ -27,7 +27,7 @@ export default class Layout extends Component {
 					<meta name="description" content="xxxx" />
 					<link rel="icon" href="/static/favicon.ico" />
 					<link
-						href="https://fonts.googleapis.com/css?family=Source+Code+Pro"
+						href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700"
 						rel="stylesheet"
 					/>
 					<link
