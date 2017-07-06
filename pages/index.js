@@ -63,7 +63,7 @@ class Index extends Component {
 					Eg.: sticky footer with minimum element height
 				</span>
 				<span>
-					&lt;div class="<em>flex flex--column minvh-100</em>"&gt;
+					&lt;div class="<em>flex flex-column minvh-100</em>"&gt;
 				</span>
 				<span>
 					&emsp;&lt;div class="<em>grow-1</em>" /&gt;
