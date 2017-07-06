@@ -9,6 +9,7 @@
 		"babel-preset-es2015": "^6.24.1",
 		"next": "3.0.1-beta.8",
 		"react": "^15.6.1",
-		"react-dom": "^15.6.1"
+		"react-dom": "^15.6.1",
+		"react-ga": "^2.2.0"
 	}
 }

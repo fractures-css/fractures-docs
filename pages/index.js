@@ -167,7 +167,7 @@ class Index extends Component {
 				</div>
 				<div className="py-5 bg-color-gray">
 					<div className="fr-container">
-						<div className="skeleton__view flex flex-xcenter flex-gap-4 flex-wrap">
+						<div className="flex flex-xcenter flex-gap-4 flex-wrap">
 							<div className="skeleton-item mb-4">
 								<img src={` /static/images/browser-${this.state.example}.svg `} />
 							</div>

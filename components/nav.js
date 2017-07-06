@@ -24,20 +24,12 @@ class Nav extends Component {
 								<a>Home</a>
 							</Link>
 						</li>
-						<li
-							className={
-								this.state.pathname === "/docs" && "active"
-							}
-						>
+						<li className={this.state.pathname === "/docs" && "active"}>
 							<Link href="/docs">
 								<a>Docs</a>
 							</Link>
 						</li>
-						<li
-							className={
-								this.state.pathname === "/about" && "active"
-							}
-						>
+						<li className={this.state.pathname === "/about" && "active"}>
 							<Link href="/about">
 								<a>About</a>
 							</Link>
