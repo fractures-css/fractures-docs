@@ -28,119 +28,87 @@ class Index extends Component {
 	}
 
 	render() {
-		const exampleGrid = (
-			<div className="flex flex-xcenter flex-gap-3">
-				<div>
-					<img
-						src="/static/images/browser--grid.svg"
-						className="skeleton-item"
-					/>
-				</div>
-				<div className="flex flex-ycenter">
-					<pre className="source-code-pro">
-						<span className="color-gray">
-							// Basic grid with horizontal and vertical gap
-						</span>
-						<br />
-						&lt;div class="<span className="color-red">
-							grid grid-cols-3 gap-2
-						</span>"&gt;<br />
-						&emsp;&emsp;&lt;div&gt;&lt;/div&gt;<br />
-						&emsp;&emsp;&lt;div&gt;&lt;/div&gt;<br />
-						&lt;/div&gt;
-					</pre>
-				</div>
-			</div>
+		const exampleIntro = (
+			<pre>
+				<span className="color-gray mb-3">
+					Use atomic, self-explanatory classes with ease.
+				</span>
+				<span>
+					&lt;div class="<em>flex flex-center</em>"&gt;
+				</span>
+				<span>&emsp;&lt;div&gt;&lt;/div&gt;</span>
+				<span>&emsp;&lt;div&gt;&lt;/div&gt;</span>
+				<span>&lt;/div&gt;</span>
+			</pre>
 		)
 
-		const exampleFlex = (
-			<div className="flex flex-xcenter flex-gap-3">
-				<div>
-					<img
-						src="/static/images/browser--flex.svg"
-						className="skeleton-item"
-					/>
-				</div>
-				<div className="flex flex-ycenter">
-					<pre className="source-code-pro">
-						<span className="color--orange">
-							// Centered flex content
-						</span>
-						<br />
-						&lt;div class="<span className="color--green">
-							<br />
-							flex flex--center<br />
-						</span>"&gt; &emsp;&lt;div&gt;&lt;/div&gt; &lt;/div&gt;
-					</pre>
-				</div>
-			</div>
+		const exampleBoxes = (
+			<pre>
+				<span className="color-gray mb-3">
+					Have a default size-scale for persevering layouts.
+				</span>
+				<span>
+					&lt;header class="<em>fixed w-100 py-2</em>" /&gt;
+				</span>
+				<span>
+					&lt;article class="<em>mx-auto py-4</em>" /&gt;
+				</span>
+			</pre>
 		)
 
 		const exampleSticky = (
-			<div className="flex flex-xcenter flex-gap-3">
-				<div>
-					<img
-						src="/static/images/browser--sticky.svg"
-						className="skeleton-item"
-					/>
-				</div>
-				<div className="flex flex-ycenter">
-					<pre className="source-code-pro">
-						<span className="color--orange">
-							// Sticky footer with minimum element height
-						</span>
-						<br />
-						&lt;div class="<span className="color--green">
-							<br />
-							flex flex--column minvh-100<br />
-						</span>"&gt; &emsp;&lt;div class="<span className="color--green">grow-1</span>"&gt;&lt;/div&gt;<br />
-						&emsp;&lt;footer&gt;&lt;/footer&gt; &lt;/div&gt;
-					</pre>
-				</div>
-			</div>
+			<pre className="source-code-pro">
+				<span className="mb-3">
+					Achieve more complex layout with just a few classes.<br />
+					Eg.: sticky footer with minimum element height
+				</span>
+				<span>
+					&lt;div class="<em>flex flex--column minvh-100</em>"&gt;
+				</span>
+				<span>
+					&emsp;&lt;div class="<em>grow-1</em>" /&gt;
+				</span>
+				<span>&emsp;&lt;footer /"&gt;</span>
+				<span>&lt;/div&gt;</span>
+			</pre>
 		)
 
-		const examplePrint = (
-			<div className="flex flex-xcenter flex-gap-3">
-				<div>
-					<img
-						src="/static/images/browser--print.svg"
-						className="skeleton-item"
-					/>
-				</div>
-				<div className="flex flex-ycenter">
-					<pre className="source-code-pro">
-						<span class="color--orange">// Working examples</span>
-						<br />
-						<a
-							href="http://fractures.github.io/fractures/"
-							class="color--orange"
-						>
-							// fractures.github.io/fractures
-						</a>
-					</pre>
-				</div>
-			</div>
+		const exampleOwn = (
+			<pre>
+				<span className="mb-3">
+					Mix and match with your own css.<br />
+					Checkout{" "}
+					<Link href="/docs">
+						<a>docs</a>
+					</Link>{" "}
+					for a complete overview.
+				</span>
+				<span>
+					&lt;div class="your-container <em>grid grid-gap-2</em>"&gt;
+				</span>
+				<span>
+					&emsp;&lt;div class="your-container__el <em>py-3</em>" /&gt;
+				</span>
+				<span>&lt;/div&gt;</span>
+			</pre>
 		)
 
 		return (
 			<Layout title="Index">
-				<header className="flex flex-gap-4 py-6 fr-container">
+				<header className="flex flex-gap-4 flex-wrap py-6 fr-container">
 					<div className="h-6 w-6">
 						<img
 							src="/static/images/fractures.svg"
 							alt="fractures"
+							className="h-6 w-6"
 						/>
 					</div>
-					<div>
+					<div className="grow-1">
 						<h1 title="fractures">fr&middot;ctures</h1>
-						<b className="source-code-pro">
-							Baseline atomic CSS toolkit.
-						</b>
+						<b className="source-code-pro">Baseline atomic CSS toolkit.</b>
 						<p className="my-3">
-							Fractures helps you bootstrap design-systems and
-							prototypes by providing a set of non-blocking,
-							atomic, utility classes.{" "}
+							Fractures helps you bootstrap design-systems and prototypes by providing
+							a set of non-blocking, atomic, utility classes.{" "}
 							<Link href="/about">
 								<a className="underline">Learn more.</a>
 							</Link>
@@ -169,44 +137,47 @@ class Index extends Component {
 				</header>
 
 				{/* Skeletons */}
+				<div className="skeleton__nav">
+					<ul className="fr-container flex flex-gap-4">
+						<li
+							className={this.state.example === 0 && "active"}
+							onClick={e => this.showExample(e, 0)}
+						>
+							Basics
+						</li>
+						<li
+							className={this.state.example === 1 && "active"}
+							onClick={e => this.showExample(e, 1)}
+						>
+							Sizes
+						</li>
+						<li
+							className={this.state.example === 2 && "active"}
+							onClick={e => this.showExample(e, 2)}
+						>
+							Complex
+						</li>
+						<li
+							className={this.state.example === 3 && "active"}
+							onClick={e => this.showExample(e, 3)}
+						>
+							Extend
+						</li>
+					</ul>
+				</div>
 				<div className="py-5 bg-color-gray">
 					<div className="fr-container">
-						<div>
-							{this.state.example === 0 && exampleFlex}
-							{this.state.example === 1 && exampleGrid}
-							{this.state.example === 2 && exampleSticky}
-							{this.state.example === 3 && examplePrint}
+						<div className="skeleton__view flex flex-xcenter flex-gap-4 flex-wrap">
+							<div className="skeleton-item mb-4">
+								<img src={` /static/images/browser-${this.state.example}.svg `} />
+							</div>
+							<div className="grow-1">
+								{this.state.example === 0 && exampleIntro}
+								{this.state.example === 1 && exampleBoxes}
+								{this.state.example === 2 && exampleSticky}
+								{this.state.example === 3 && exampleOwn}
+							</div>
 						</div>
-
-						{/* Switcher */}
-						<ul className="skeleton__nav flex flex-xcenter flex-gap-4 mt-5">
-							<li
-								className={this.state.example === 0 && "active"}
-								onClick={e => this.showExample(e, 0)}
-							>
-								<a>Basics</a>
-							</li>
-							<li
-								className={this.state.example === 1 && "active"}
-								onClick={e => this.showExample(e, 1)}
-							>
-								<a>Grid</a>
-							</li>
-							<li
-								className={this.state.example === 2 && "active"}
-								onClick={e => this.showExample(e, 2)}
-							>
-								<div className="flex flex-column flex-gap-2">
-									<a>Flex</a>
-								</div>
-							</li>
-							<li
-								className={this.state.example === 3 && "active"}
-								onClick={e => this.showExample(e, 3)}
-							>
-								<a>Extend</a>
-							</li>
-						</ul>
 					</div>
 				</div>
 
@@ -218,13 +189,15 @@ class Index extends Component {
 							<b>Use unpkg cdn</b>
 							<ul className="list-disc ml-4">
 								<li>
-									&lt;link
-									href="https://unpkg.com/fractures@1.0.0/dist/fractures.prefixed.min.css"
-									rel="stylesheet" /&gt;
+									<div className="float-left ellipsis">
+										&lt;link
+										href="https://unpkg.com/fractures@1.0.0/dist/fractures.prefixed.min.css"
+										rel="stylesheet" /&gt;
+									</div>
 								</li>
 								<li>
-									This is not great for production, but great
-									for prototypes or lazy people.
+									This is not great for production, but great for prototypes or
+									lazy people.
 								</li>
 							</ul>
 						</li>
@@ -233,15 +206,11 @@ class Index extends Component {
 							<ul className="list-disc ml-4">
 								<li>
 									Then you can 🦄{" "}
-									<em>
-										import fractures from
-										fractures/dist/fractures.css
-									</em>
+									<em>import fractures from fractures/dist/fractures.css</em>
 								</li>
 								<li>
-									For production use, I recommend running the
-									fractures.css file through your build
-									process.
+									For production use, I recommend running the fractures.css file
+									through your build process.
 								</li>
 								<li>
 									<span className="line-through">
