@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 const docsDefaultClass = "bg-smoke p-1"
 
 export default () =>
-	<Layout title="Docs">
+	<Layout title="docs — fractures">
 		<div className="fr-container">
 			<header className="py-5">
 				<h1>Docs</h1>

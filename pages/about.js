@@ -2,7 +2,7 @@ import Link from "next/link"
 import Layout from "../components/layout"
 
 export default () =>
-	<Layout title="About">
+	<Layout title="about — fractures">
 		<div className="fr-container py-5">
 			<h1 className="mb-2">About</h1>
 			<p className="mb-5">

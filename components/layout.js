@@ -20,7 +20,7 @@ export default class Layout extends Component {
 			<main>
 				<Head>
 					<title>
-						{this.props.title || "Fractures"}
+						{this.props.title || "fractures"}
 					</title>
 					<meta charSet="utf-8" />
 					<meta name="viewport" content="initial-scale=1.0, width=device-width" />

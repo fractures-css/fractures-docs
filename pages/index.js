@@ -94,7 +94,7 @@ class Index extends Component {
 		)
 
 		return (
-			<Layout title="Index">
+			<Layout title="fractures">
 				<header className="flex flex-gap-4 flex-wrap py-6 fr-container">
 					<div className="h-6 w-6">
 						<img
