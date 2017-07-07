@@ -208,7 +208,7 @@ class Index extends Component {
 							<b>npm i fractures</b>
 							<ul className="list-disc ml-4">
 								<li>
-									Then you can 🦄 <em>import "fractures/dist/fractures.css'</em>
+									Then you can 🦄 <em>import "fractures/dist/fractures.css"</em>
 								</li>
 								<li>
 									For production use, I recommend running the fractures.css file
