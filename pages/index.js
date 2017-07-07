@@ -215,8 +215,8 @@ class Index extends Component {
 									For production use, I recommend running the fractures.css file
 									through your build process.
 								</li>
-								<li>
-									Here is an example repo{" "}
+								<li className="line-through">
+									Soon. Here is an example repo{" "}
 									<a href="https://github.com/fractures/fractures-react">
 										with React
 									</a>.

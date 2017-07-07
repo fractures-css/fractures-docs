@@ -30,8 +30,8 @@ export default () =>
 					<h3 className="regular">Problems</h3>
 					<ul className="list-disc ml-3">
 						<li>
-							I don't think percentage based breakpoint are universal enough, so you
-							have to handle <b>responsive</b> states yourself.
+							I don't think percentage based CSS breakpoint are universal enough, so
+							you have to handle <b>responsive</b> states yourself.
 						</li>
 						<li>
 							You can use it in production, but you have to create your own{" "}
@@ -58,7 +58,7 @@ export default () =>
 				into a common.css, then a tools.css. Now is somewhat atomic.
 			</p>
 			<p className="my-2">I've also learned some tricks from these smart people:</p>
-			<ul className="list-disc mb-4 ml-3">
+			<ul className="list-disc mb-5 ml-3">
 				<li>
 					<a href="https://twitter.com/brad_frost">@brad_frost</a> &mdash; and his classic{" "}
 					<a href="http://atomicdesign.bradfrost.com/">book</a>.
