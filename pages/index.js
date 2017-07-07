@@ -107,8 +107,8 @@ class Index extends Component {
 						<h1 title="fractures">fr&middot;ctures</h1>
 						<b className="source-code-pro">Baseline atomic CSS toolkit.</b>
 						<p className="my-3">
-							Fractures helps you bootstrap design-systems and prototypes by providing
-							a set of non-blocking, atomic, utility classes.{" "}
+							<b>fractures</b> helps you bootstrap design-systems and prototypes by
+							providing a set of non-blocking, atomic, utility classes.{" "}
 							<Link href="/about">
 								<a className="underline">Learn more.</a>
 							</Link>
@@ -208,8 +208,7 @@ class Index extends Component {
 							<b>npm i fractures</b>
 							<ul className="list-disc ml-4">
 								<li>
-									Then you can 🦄{" "}
-									<em>import fractures from fractures/dist/fractures.css</em>
+									Then you can 🦄 <em>import "fractures/dist/fractures.css'</em>
 								</li>
 								<li>
 									For production use, I recommend running the fractures.css file
