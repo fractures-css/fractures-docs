@@ -21,7 +21,7 @@ export default () =>
 					<ul className="list-disc ml-3">
 						<li>You can design with &mdash; not around it. Leaves UI untouched.</li>
 						<li>Atomic, non blocking.</li>
-						<li>Managable cognitive load, with a small footprint.</li>
+						<li>Manageable cognitive load, with a small footprint.</li>
 						<li>Fast in every way.</li>
 						<li>Framework agnostic.</li>
 					</ul>
