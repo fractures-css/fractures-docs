@@ -110,7 +110,7 @@ class Index extends Component {
 							<b>fractures</b> helps you bootstrap design-systems and prototypes by
 							providing a set of non-blocking, atomic, utility classes.{" "}
 							<Link href="/about">
-								<a className="underline">Learn more.</a>
+								<a>Learn more.</a>
 							</Link>
 						</p>
 						<div className="flex flex-gap-1">
