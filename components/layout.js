@@ -50,7 +50,7 @@ export default class Layout extends Component {
 						rel="stylesheet"
 					/>
 					<link
-						href="https://unpkg.com/fractures@1.0.0/dist/fractures.prefixed.min.css"
+						href="https://unpkg.com/fractures@1.0.1/dist/fractures.prefixed.min.css"
 						rel="stylesheet"
 					/>
 					<link href="/static/css/style.css" rel="stylesheet" />

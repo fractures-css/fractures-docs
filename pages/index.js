@@ -129,7 +129,7 @@ class Index extends Component {
 						</div>
 						<div className="mt-3 source-code-pro">
 							<small>
-								version: 1.0.0-beta.10<br />
+								version: 1.0.1<br />
 								size: &lt;3kb gzipped
 							</small>
 						</div>
@@ -194,7 +194,7 @@ class Index extends Component {
 								<li>
 									<div className="float-left ellipsis">
 										&lt;link
-										href="https://unpkg.com/fractures@1.0.0/dist/fractures.prefixed.min.css"
+										href="https://unpkg.com/fractures@1.0.1/dist/fractures.prefixed.min.css"
 										rel="stylesheet" /&gt;
 									</div>
 								</li>
