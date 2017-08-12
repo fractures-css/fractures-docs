@@ -1,4 +1,4 @@
-const version = "1.0.2"
+const version = "1.0.3"
 const fracturesMeta = {
 	cdn: `https://unpkg.com/fractures@${ version }/dist/fractures.prefixed.min.css`,
 	description: "Baseline atomic CSS toolkit.",
