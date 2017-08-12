@@ -19,17 +19,17 @@ class Nav extends Component {
 			<div className="fractures-header fixed z-2 top-0 w-100">
 				<div className="fr-container">
 					<ul className="flex flex-gap-2">
-						<li className={this.state.pathname === "/" && "active"}>
+						<li className={ this.state.pathname === "/" && "active" }>
 							<Link href="/">
 								<a>Home</a>
 							</Link>
 						</li>
-						<li className={this.state.pathname === "/docs" && "active"}>
+						<li className={ this.state.pathname === "/docs" && "active" }>
 							<Link href="/docs">
 								<a>Docs</a>
 							</Link>
 						</li>
-						<li className={this.state.pathname === "/about" && "active"}>
+						<li className={ this.state.pathname === "/about" && "active" }>
 							<Link href="/about">
 								<a>About</a>
 							</Link>

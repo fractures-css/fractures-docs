@@ -10,13 +10,13 @@ const logPageView = () => {
 }
 
 const logEvent = (category = "", action = "") => {
-	if (category && action) {
+	if(category && action) {
 		ReactGA.event({ category, action })
 	}
 }
 
 const logException = (description = "", fatal = false) => {
-	if (description) {
+	if(description) {
 		ReactGA.exception({ description, fatal })
 	}
 }

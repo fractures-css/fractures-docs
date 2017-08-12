@@ -15,7 +15,7 @@ class Index extends Component {
 	scrollG = e => {
 		e.preventDefault()
 
-		if (typeof window === "undefined") return false
+		if(typeof window === "undefined") return false
 
 		return document.getElementById("getting-started").scrollIntoView(true)
 	}
@@ -30,9 +30,7 @@ class Index extends Component {
 	render() {
 		const exampleIntro = (
 			<pre>
-				<span className="color-gray mb-3">
-					Use atomic, self-explanatory classes with ease.
-				</span>
+				<span className="color-gray mb-3">Use atomic, self-explanatory classes with ease.</span>
 				<span>
 					&lt;div class="<em>flex flex-center</em>"&gt;
 				</span>
@@ -44,9 +42,7 @@ class Index extends Component {
 
 		const exampleBoxes = (
 			<pre>
-				<span className="color-gray mb-3">
-					Have a default size-scale for persevering layouts.
-				</span>
+				<span className="color-gray mb-3">Have a default size-scale for persevering layouts.</span>
 				<span>
 					&lt;header class="<em>fixed w-100 py-2</em>" /&gt;
 				</span>
@@ -97,33 +93,23 @@ class Index extends Component {
 			<Layout title="fractures">
 				<header className="flex flex-gap-4 flex-wrap py-6 fr-container">
 					<div className="h-6 w-6">
-						<img
-							src="/static/images/fractures.svg"
-							alt="fractures"
-							className="h-6 w-6"
-						/>
+						<img src="/static/images/fractures.svg" alt="fractures" className="h-6 w-6" />
 					</div>
 					<div className="grow-1">
 						<h1 title="fractures">fr&middot;ctures</h1>
 						<b className="source-code-pro">Baseline atomic CSS toolkit.</b>
 						<p className="my-3">
-							<b>fractures</b> helps you bootstrap design-systems and prototypes by
-							providing a set of non-blocking, atomic, utility classes.{" "}
+							<b>fractures</b> helps you bootstrap design-systems and prototypes by providing a set of
+							non-blocking, atomic, utility classes.{" "}
 							<Link href="/about">
 								<a>Learn more.</a>
 							</Link>
 						</p>
 						<div className="flex flex-gap-1">
-							<a
-								onClick={e => this.scrollG(e)}
-								className="btn btn-primary radius-max"
-							>
+							<a onClick={ e => this.scrollG(e) } className="btn btn-primary radius-max">
 								Getting started
 							</a>
-							<a
-								href="https://github.com/fractures/fractures"
-								className="btn btn-default radius-max"
-							>
+							<a href="https://github.com/fractures/fractures" className="btn btn-default radius-max">
 								GitHub
 							</a>
 						</div>
@@ -139,28 +125,16 @@ class Index extends Component {
 				{/* Skeletons */}
 				<div className="skeleton__nav">
 					<ul className="fr-container flex flex-gap-4">
-						<li
-							className={this.state.example === 0 && "active"}
-							onClick={e => this.showExample(e, 0)}
-						>
+						<li className={ this.state.example === 0 && "active" } onClick={ e => this.showExample(e, 0) }>
 							Basics
 						</li>
-						<li
-							className={this.state.example === 1 && "active"}
-							onClick={e => this.showExample(e, 1)}
-						>
+						<li className={ this.state.example === 1 && "active" } onClick={ e => this.showExample(e, 1) }>
 							Sizes
 						</li>
-						<li
-							className={this.state.example === 2 && "active"}
-							onClick={e => this.showExample(e, 2)}
-						>
+						<li className={ this.state.example === 2 && "active" } onClick={ e => this.showExample(e, 2) }>
 							Complex
 						</li>
-						<li
-							className={this.state.example === 3 && "active"}
-							onClick={e => this.showExample(e, 3)}
-						>
+						<li className={ this.state.example === 3 && "active" } onClick={ e => this.showExample(e, 3) }>
 							Extend
 						</li>
 					</ul>
@@ -170,7 +144,7 @@ class Index extends Component {
 						<div className="flex flex-xcenter flex-gap-4 flex-wrap">
 							<div className="skeleton-item mb-4">
 								<img
-									src={` /static/images/browser-${this.state.example}.svg `}
+									src={ ` /static/images/browser-${ this.state.example }.svg ` }
 									className="float-left"
 								/>
 							</div>
@@ -198,10 +172,7 @@ class Index extends Component {
 										rel="stylesheet" /&gt;
 									</div>
 								</li>
-								<li>
-									This is not great for production, but great for prototypes or
-									lazy people.
-								</li>
+								<li>This is not great for production, but great for prototypes or lazy people.</li>
 							</ul>
 						</li>
 						<li>
@@ -211,14 +182,12 @@ class Index extends Component {
 									Then you can 🦄 <em>import "fractures/dist/fractures.css"</em>
 								</li>
 								<li>
-									For production use, I recommend running the fractures.css file
-									through your build process.
+									For production use, I recommend running the fractures.css file through your build
+									process.
 								</li>
 								<li>
 									Here is an example repo{" "}
-									<a href="https://github.com/fractures/fractures-react">
-										with React
-									</a>.
+									<a href="https://github.com/fractures/fractures-react">with React</a>.
 								</li>
 							</ul>
 						</li>
@@ -226,10 +195,7 @@ class Index extends Component {
 							<b>Download with your hands</b>
 							<ul className="list-disc ml-4">
 								<li>
-									🐹 from{" "}
-									<a href="https://github.com/fractures/fractures/releases">
-										GitHub
-									</a>
+									🐹 from <a href="https://github.com/fractures/fractures/releases">GitHub</a>
 								</li>
 							</ul>
 						</li>
