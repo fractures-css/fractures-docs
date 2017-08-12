@@ -44,7 +44,7 @@ export default class Layout extends Component {
 					<meta name="google-site-verification" content="zOr1hPUy598X8UrDiYZLK20AkpuhWw0PYKcdOJ-NzPU" />
 					<link rel="icon" href="/static/favicon.ico" />
 					<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" />
-					<link href="https://unpkg.com/fractures@1.0.1/dist/fractures.prefixed.min.css" rel="stylesheet" />
+					<link href="https://unpkg.com/fractures@1.0.2/dist/fractures.prefixed.min.css" rel="stylesheet" />
 					<link href="/static/css/style.css" rel="stylesheet" />
 				</Head>
 				<Nav />
