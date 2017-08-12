@@ -1,6 +1,7 @@
 import { Component } from "react"
 import Link from "next/link"
 import Layout from "../components/layout"
+import meta from "../utils/meta.js"
 
 class Index extends Component {
 	constructor(props) {
@@ -115,8 +116,9 @@ class Index extends Component {
 						</div>
 						<div className="mt-3 source-code-pro">
 							<small>
-								version: 1.0.1<br />
-								size: &lt;3kb gzipped
+								version: {meta.version}
+								<br />
+								size: {meta.size}b gzipped
 							</small>
 						</div>
 					</div>
@@ -167,9 +169,7 @@ class Index extends Component {
 							<ul className="list-disc ml-4">
 								<li>
 									<div className="float-left ellipsis">
-										&lt;link
-										href="https://unpkg.com/fractures@1.0.1/dist/fractures.prefixed.min.css"
-										rel="stylesheet" /&gt;
+										&lt;link href="{meta.cdn}" rel="stylesheet" /&gt;
 									</div>
 								</li>
 								<li>This is not great for production, but great for prototypes or lazy people.</li>

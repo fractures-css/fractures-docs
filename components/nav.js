@@ -1,5 +1,5 @@
-import Link from "next/link"
 import { Component } from "react"
+import Link from "next/link"
 
 class Nav extends Component {
 	constructor(props) {
