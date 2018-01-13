@@ -1,11 +1,12 @@
-import Layout from "../components/layout"
+import Container from "../components/Container"
+import Layout from "../components/Layout"
 
 const gridExampleUrl =
 	"https://rachelandrew.co.uk/archives/2017/07/04/is-it-really-safe-to-start-using-css-grid-layout/"
 
 export default () =>
 	<Layout title="about — fractures">
-		<div className="fr-container py-5">
+		<Container className="py-5">
 			<h1 className="mb-2">About</h1>
 			<p className="mb-5">
 				This is a small project, in which I try to simplify my life by abstracting away the complexities UI
@@ -80,5 +81,5 @@ export default () =>
 			<p className="my-2">
 				I'm just a designer who codes. 🐈 <a href="https://twitter.com/pyx">@pyx</a>
 			</p>
-		</div>
+		</Container>
 	</Layout>

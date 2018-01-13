@@ -2,7 +2,7 @@ import { Component } from "react"
 import { initGA, logPageView } from "../utils/analytics"
 import Head from "next/head"
 import Link from "next/link"
-import Nav from "./nav.js"
+import Nav from "./Nav"
 import meta from "../utils/meta.js"
 
 export default class Layout extends Component {

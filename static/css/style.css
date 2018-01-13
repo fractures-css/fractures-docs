@@ -33,24 +33,6 @@ a {
 	font-weight: 500;
 }
 
-@media screen and (max-width: 1024px) {
-	.fr-container {
-		width: 760px !important;
-	}
-}
-
-@media screen and (max-width: 800px) {
-	.fr-container {
-		margin: 0 1.5rem !important;
-		width: calc(100% - 3rem) !important;
-	}
-}
-
-.fr-container {
-	margin: 0 auto;
-	width: 960px;
-}
-
 .fr-content {
 	margin-top: 4rem;
 }

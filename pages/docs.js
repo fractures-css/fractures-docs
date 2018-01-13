@@ -1,11 +1,12 @@
+import Container from "../components/Container"
+import Layout from "../components/Layout"
 import Link from "next/link"
-import Layout from "../components/layout"
 
 const docsDefaultClass = "bg-smoke p-1"
 
 export default () =>
 	<Layout title="docs — fractures">
-		<div className="fr-container">
+		<Container>
 			<header className="py-5">
 				<h1>Docs</h1>
 				<p>
@@ -509,5 +510,5 @@ export default () =>
 					<b>.minvw-x</b> is minimum width in viewport width percentage.<br />
 				</small>
 			</article>
-		</div>
+		</Container>
 	</Layout>

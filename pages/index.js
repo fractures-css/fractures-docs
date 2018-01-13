@@ -1,6 +1,7 @@
 import { Component } from "react"
+import Container from "../components/Container"
+import Layout from "../components/Layout"
 import Link from "next/link"
-import Layout from "../components/layout"
 import meta from "../utils/meta.js"
 
 class Index extends Component {
@@ -92,7 +93,7 @@ class Index extends Component {
 
 		return (
 			<Layout title="fractures">
-				<header className="flex flex-gap-4 flex-wrap py-6 fr-container">
+				<Container className="flex flex-gap-4 flex-wrap py-6">
 					<div className="h-6 w-6">
 						<img src="/static/images/fractures.svg" alt="fractures" className="h-6 w-6" />
 					</div>
@@ -122,27 +123,29 @@ class Index extends Component {
 							</small>
 						</div>
 					</div>
-				</header>
+				</Container>
 
 				{/* Skeletons */}
 				<div className="skeleton__nav">
-					<ul className="fr-container flex flex-gap-4">
-						<li className={ this.state.example === 0 && "active" } onClick={ e => this.showExample(e, 0) }>
-							Basics
-						</li>
-						<li className={ this.state.example === 1 && "active" } onClick={ e => this.showExample(e, 1) }>
-							Sizes
-						</li>
-						<li className={ this.state.example === 2 && "active" } onClick={ e => this.showExample(e, 2) }>
-							Complex
-						</li>
-						<li className={ this.state.example === 3 && "active" } onClick={ e => this.showExample(e, 3) }>
-							Extend
-						</li>
-					</ul>
+					<Container>
+						<ul className="flex flex-gap-4">
+							<li className={ this.state.example === 0 && "active" } onClick={ e => this.showExample(e, 0) }>
+								Basics
+							</li>
+							<li className={ this.state.example === 1 && "active" } onClick={ e => this.showExample(e, 1) }>
+								Sizes
+							</li>
+							<li className={ this.state.example === 2 && "active" } onClick={ e => this.showExample(e, 2) }>
+								Complex
+							</li>
+							<li className={ this.state.example === 3 && "active" } onClick={ e => this.showExample(e, 3) }>
+								Extend
+							</li>
+						</ul>
+					</Container>
 				</div>
 				<div className="py-5 fr-skeleton">
-					<div className="fr-container">
+					<Container>
 						<div className="flex flex-xcenter flex-gap-4 flex-wrap">
 							<div className="skeleton-item mb-4">
 								<img
@@ -157,11 +160,11 @@ class Index extends Component {
 								{this.state.example === 3 && exampleOwn}
 							</div>
 						</div>
-					</div>
+					</Container>
 				</div>
 
 				{/* Getting started */}
-				<div className="fr-container py-5" id="getting-started">
+				<Container className="py-5" id="getting-started">
 					<h2>Getting started</h2>
 					<ul className="flex flex-column flex-gap-4 my-4">
 						<li>
@@ -200,7 +203,7 @@ class Index extends Component {
 							</ul>
 						</li>
 					</ul>
-				</div>
+				</Container>
 			</Layout>
 		)
 	}
