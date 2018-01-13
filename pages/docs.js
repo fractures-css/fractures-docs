@@ -16,7 +16,7 @@ export default () =>
 				</p>
 				<ul className="list-disc ml-4 mt-3">
 					<li>You can overwrite default building blocks by setting --box-(1-6) on :root.</li>
-					<li>Everything is border-box, no outlines.</li>
+					<li>Every element is set to border-box.</li>
 					<li>Html y-scroll is always on, so pages won't jump.</li>
 				</ul>
 			</header>
@@ -224,11 +224,14 @@ export default () =>
 				<p className="mb-4">Common list styles for ul, ol.</p>
 				<div className="grid grid-cols-7 grid-gap-1">
 					<div className={ docsDefaultClass }>list-circle</div>
+					<div className={ docsDefaultClass }>list-decimal-leading-zero</div>
+					<div className={ docsDefaultClass }>list-decimal</div>
 					<div className={ docsDefaultClass }>list-disc</div>
-					<div className={ docsDefaultClass }>list-square</div>
-					<div className={ docsDefaultClass }>list-none</div>
+					<div className={ docsDefaultClass }>list-greek</div>
 					<div className={ docsDefaultClass }>list-lower-latin</div>
 					<div className={ docsDefaultClass }>list-lower-roman</div>
+					<div className={ docsDefaultClass }>list-none</div>
+					<div className={ docsDefaultClass }>list-square</div>
 					<div className={ docsDefaultClass }>list-upper-latin</div>
 					<div className={ docsDefaultClass }>list-upper-roman</div>
 					<div className={ docsDefaultClass }>
