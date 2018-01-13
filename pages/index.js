@@ -143,8 +143,32 @@ class Index extends Component {
 							</li>
 						</ul>
 					</Container>
+					<style jsx global>{`
+						.skeleton__nav {
+							font-size: .875rem;
+						}
+
+						.skeleton__nav li {
+							position: relative;
+
+							padding: 1rem 0;
+
+							cursor: pointer;
+							color: var(--color-dark);
+
+							font-weight: 500;
+						}
+
+						.skeleton__nav .active {
+							box-shadow: 0 1px 0 0 var(--color-gray);
+						}
+
+						.skeleton__nav .active:before {
+							background-color: var(--color-green);
+						}
+					`}</style>
 				</div>
-				<div className="py-5 fr-skeleton">
+				<div className="py-5 fr-bg-silver">
 					<Container>
 						<div className="flex flex-xcenter flex-gap-4 flex-wrap">
 							<div className="skeleton-item mb-4">
@@ -159,6 +183,17 @@ class Index extends Component {
 								{this.state.example === 2 && exampleSticky}
 								{this.state.example === 3 && exampleOwn}
 							</div>
+							<style jsx global>{`
+								.skeleton-item {
+									height: 7.5rem;
+									width: 7.5rem;
+								}
+
+								.skeleton-item img {
+									border-radius: .5rem;
+									box-shadow: 0 .25rem 1.5rem 0 rgba(0, 0, 0, .1);
+								}
+							`}</style>
 						</div>
 					</Container>
 				</div>

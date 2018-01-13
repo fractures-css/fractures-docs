@@ -48,6 +48,11 @@ export default class Layout extends Component {
 				<div className="fr-content">
 					{this.props.children}
 				</div>
+				<style jsx global>{`
+					.fr-content {
+						margin-top: 4rem;
+					}
+				`}</style>
 			</main>
 		)
 	}
