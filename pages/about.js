@@ -4,7 +4,7 @@ import Layout from "../components/Layout"
 const gridExampleUrl =
 	"https://rachelandrew.co.uk/archives/2017/07/04/is-it-really-safe-to-start-using-css-grid-layout/"
 
-export default () =>
+export default () => (
 	<Layout title="about — fractures">
 		<Container className="py-5">
 			<h1 className="mb-2">About</h1>
@@ -83,3 +83,4 @@ export default () =>
 			</p>
 		</Container>
 	</Layout>
+)

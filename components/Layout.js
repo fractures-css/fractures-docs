@@ -21,9 +21,7 @@ export default class Layout extends Component {
 		return (
 			<main>
 				<Head>
-					<title>
-						{this.props.title || meta.title}
-					</title>
+					<title>{this.props.title || meta.title}</title>
 					<meta charSet="utf-8" />
 					<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 					<meta name="description" content={ meta.description } />
@@ -45,9 +43,7 @@ export default class Layout extends Component {
 					<link href="/static/css/style.css" rel="stylesheet" />
 				</Head>
 				<Nav />
-				<div className="fr-content">
-					{this.props.children}
-				</div>
+				<div className="fr-content">{this.props.children}</div>
 				<style jsx global>{`
 					.fr-content {
 						margin-top: 4rem;

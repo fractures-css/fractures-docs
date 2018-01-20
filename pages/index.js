@@ -145,7 +145,7 @@ class Index extends Component {
 					</Container>
 					<style jsx global>{`
 						.skeleton__nav {
-							font-size: .875rem;
+							font-size: 0.875rem;
 						}
 
 						.skeleton__nav li {
@@ -190,8 +190,8 @@ class Index extends Component {
 								}
 
 								.skeleton-item img {
-									border-radius: .5rem;
-									box-shadow: 0 .25rem 1.5rem 0 rgba(0, 0, 0, .1);
+									border-radius: 0.5rem;
+									box-shadow: 0 0.25rem 1.5rem 0 rgba(0, 0, 0, 0.1);
 								}
 							`}</style>
 						</div>
