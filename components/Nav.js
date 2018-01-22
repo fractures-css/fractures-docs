@@ -23,7 +23,7 @@ class Nav extends Component {
 		]
 
 		const headerRender = headerLinks.map((item, key) => (
-			<li className={ this.state.pathname === item.url ? "active" : "" }>
+			<li className={ this.state.pathname === item.url ? "active" : "" } key={ key }>
 				<Link href={ item.url } prefetch>
 					<a>{item.name}</a>
 				</Link>
