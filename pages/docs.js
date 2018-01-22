@@ -325,6 +325,18 @@ export default () => (
 				</div>
 			</article>
 
+			{/* Overflow */}
+			<article className="py-4">
+				<h3>Overflow</h3>
+				<p className="mb-4">Content overflows.</p>
+				<div className="grid grid-cols-5 grid-gap-1">
+					<div className="bg-light p-1 overflow-hidden nowrap">
+						overflow-hidden overflow-hidden...overflow-hidden
+					</div>
+					<div className="bg-light p-1 overflow-scroll nowrap">overflow-scroll ... overflow-scroll</div>
+				</div>
+			</article>
+
 			{/* Padding */}
 			<article className="py-4">
 				<h3>Padding</h3>
