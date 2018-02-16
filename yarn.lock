@@ -2204,9 +2204,9 @@ form-data@~2.1.1:
     combined-stream "^1.0.5"
     mime-types "^2.1.12"
 
-fractures-ui@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/fractures-ui/-/fractures-ui-0.1.0.tgz#14d648232a4d13e4ba39a1faa76e4c02ddf86e78"
+fractures-ui@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/fractures-ui/-/fractures-ui-0.1.1.tgz#bff8f05874f12246febb9f4095b2bbf9fecdd1f7"
   dependencies:
     classcat "^3.0.0"
     next "5.0.0"

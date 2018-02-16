@@ -1,6 +1,6 @@
 import { Component } from "react"
 import chroma from "chroma-js"
-import { Button, Checkbox, Color, Container, Radio, Range, Progress } from "fractures-ui"
+import { Button, ButtonGroup, Checkbox, Color, Container, Radio, Range, Progress } from "fractures-ui"
 import Layout from "../components/Layout"
 
 const themes = [
@@ -127,6 +127,24 @@ class Index extends Component {
 								<Button type="secondary" value="Rounded" isRounded={ true } />
 								<Button type="secondary" value="Small" small={ true } />
 								<Button type="secondary" value="Small Rounded" small={ true } isRounded={ true } />
+							</div>
+						</div>
+						<div className="my-4">
+							<h1 className="my-2">ButtonGroup</h1>
+							<div className="flex flex-gap-1 my-1">
+								<ButtonGroup>
+									<Button type="primary" value="Active" isActive={ true } />
+									<Button type="primary" value="Second" />
+									<Button type="primary" value="Disabled" disabled={ true } />
+								</ButtonGroup>
+								<ButtonGroup>
+									<Button type="secondary" value="Active" isActive={ true } />
+									<Button type="secondary" value="Second" />
+								</ButtonGroup>
+								<ButtonGroup>
+									<Button type="secondary" value="First" isRounded={ true } />
+									<Button type="secondary" value="Active" isActive={ true } isRounded={ true } />
+								</ButtonGroup>
 							</div>
 						</div>
 						<div className="my-4">
