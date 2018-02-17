@@ -26,11 +26,10 @@ const themes = [
 			.colors(7)
 	],
 	[
-		"#fff",
 		...chroma
-			.scale(["#EBEDF7", "#4452EB", "#1D1D1F"])
+			.scale(["#CAFFB8", "#1D1D1F"])
 			.mode("lch")
-			.colors(7)
+			.colors(8)
 	]
 ]
 
@@ -39,6 +38,7 @@ class Index extends Component {
 		super(props)
 
 		this.state = {
+			buttonLoading: false,
 			checkbox: false,
 			radio: 1,
 			range: 0,
@@ -58,7 +58,7 @@ class Index extends Component {
 
 	// Mock button click
 	mockClick() {
-		console.log("Clicked.")
+		this.setState({ buttonLoading: !this.state.buttonLoading })
 	}
 
 	// Mock range change
@@ -69,6 +69,8 @@ class Index extends Component {
 	}
 
 	render() {
+		const themeList = [{ name: "blue" }, { name: "black" }, { name: "invert" }, { name: "test" }]
+
 		return (
 			<Layout title="UI — fractures">
 				<div className="minvh-100" style={ { backgroundColor: themes[this.state.theme][0] } }>
@@ -76,38 +78,16 @@ class Index extends Component {
 						{themes[this.state.theme].map((color, key) => <Color key={ key } hex={ color } name={ key } />)}
 					</div>
 					<aside className="sticky right-0 flex flex-right flex-gap-1 p-2" style={ { top: "4rem" } }>
-						<a onClick={ () => this.setState({ theme: 0 }) }>
+						{themeList.map((theme, key) => (
 							<Button
-								type="primary"
-								value="theme blue"
+								action={ () => this.setState({ theme: key }) }
+								isActive={ this.state.theme === key && true }
+								key={ key }
 								small={ true }
-								isActive={ this.state.theme === 0 && true }
-							/>
-						</a>
-						<a onClick={ () => this.setState({ theme: 1 }) }>
-							<Button
 								type="primary"
-								value="theme black"
-								small={ true }
-								isActive={ this.state.theme === 1 && true }
+								value={ theme.name }
 							/>
-						</a>
-						<a onClick={ () => this.setState({ theme: 2 }) }>
-							<Button
-								type="primary"
-								value="theme invert"
-								small={ true }
-								isActive={ this.state.theme === 2 && true }
-							/>
-						</a>
-						<a onClick={ () => this.setState({ theme: 3 }) }>
-							<Button
-								type="primary"
-								value="theme fun"
-								small={ true }
-								isActive={ this.state.theme === 3 && true }
-							/>
-						</a>
+						))}
 					</aside>
 					<Container className="py-4">
 						<div className="my-4">
@@ -127,6 +107,34 @@ class Index extends Component {
 								<Button type="secondary" value="Rounded" isRounded={ true } />
 								<Button type="secondary" value="Small" small={ true } />
 								<Button type="secondary" value="Small Rounded" small={ true } isRounded={ true } />
+							</div>
+							<div className="flex flex-gap-1 my-1">
+								<Button
+									type="primary"
+									value="Activate"
+									isLoading={ !this.state.buttonLoading }
+									action={ () => this.mockClick() }
+								/>
+								<Button
+									type="secondary"
+									value="Activate"
+									isLoading={ !this.state.buttonLoading }
+									action={ () => this.mockClick() }
+								/>
+								<Button
+									type="primary"
+									value="Activate"
+									isRounded={ true }
+									isLoading={ !this.state.buttonLoading }
+									action={ () => this.mockClick() }
+								/>
+								<Button
+									type="secondary"
+									value="Activate"
+									isRounded={ true }
+									isLoading={ !this.state.buttonLoading }
+									action={ () => this.mockClick() }
+								/>
 							</div>
 						</div>
 						<div className="my-4">
