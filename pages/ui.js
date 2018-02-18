@@ -1,37 +1,6 @@
 import { Component } from "react"
-import chroma from "chroma-js"
-import { Button, ButtonGroup, Checkbox, Color, Container, Radio, Range, Progress, Input } from "fractures-ui"
+import { Button, ButtonGroup, Checkbox, Color, Container, Fractures, Radio, Range, Progress, Input } from "fractures-ui"
 import Layout from "../components/Layout"
-
-const themes = [
-	[
-		"white",
-		...chroma
-			.scale(["#e8f2fd", "#3482da", "#102a45"])
-			.mode("lch")
-			.colors(7)
-	],
-	[
-		"white",
-		...chroma
-			.scale(["#eee", "#666", "#111"])
-			.mode("lch")
-			.colors(7)
-	],
-	[
-		"#111",
-		...chroma
-			.scale(["#303030", "#888", "#eee"])
-			.mode("lch")
-			.colors(7)
-	],
-	[
-		...chroma
-			.scale(["#CAFFB8", "#1D1D1F"])
-			.mode("lch")
-			.colors(8)
-	]
-]
 
 class Index extends Component {
 	constructor(props) {
@@ -42,7 +11,7 @@ class Index extends Component {
 			checkbox: false,
 			radio: 1,
 			range: 0,
-			theme: 0
+			theme: "blue"
 		}
 	}
 
@@ -78,15 +47,13 @@ class Index extends Component {
 
 		return (
 			<Layout title="UI — fractures">
-				<div className="minvh-100" style={ { backgroundColor: themes[this.state.theme][0] } }>
-					<div className="flex">
-						{themes[this.state.theme].map((color, key) => <Color key={ key } hex={ color } name={ key } />)}
-					</div>
+				<Fractures theme={ this.state.theme } />
+				<div className="pb-4 minvh-100" style={ { backgroundColor: "var(--shade-0)" } }>
 					<aside className="sticky right-0 flex flex-right flex-gap-1 p-2" style={ { top: "4rem" } }>
 						{themeList.map((theme, key) => (
 							<Button
-								action={ () => this.setState({ theme: key }) }
-								isActive={ this.state.theme === key && true }
+								action={ () => this.setState({ theme: theme.name }) }
+								isActive={ this.state.theme === theme.name && true }
 								key={ key }
 								small={ true }
 								type="primary"
@@ -94,7 +61,7 @@ class Index extends Component {
 							/>
 						))}
 					</aside>
-					<Container className="py-4">
+					<Container>
 						<div className="my-4">
 							<h4 className="my-2">Buttons</h4>
 							<div className="flex flex-gap-1 my-1">
@@ -206,24 +173,6 @@ class Index extends Component {
 							</div>
 						</div>
 					</Container>
-					<style jsx global>{`
-						:root {
-							--shade-0: ${ themes[this.state.theme][0] };
-							--shade-1: ${ themes[this.state.theme][1] };
-							--shade-2: ${ themes[this.state.theme][2] };
-							--shade-3: ${ themes[this.state.theme][3] };
-							--shade-4: ${ themes[this.state.theme][4] };
-							--shade-5: ${ themes[this.state.theme][5] };
-							--shade-6: ${ themes[this.state.theme][6] };
-							--shade-7: ${ themes[this.state.theme][7] };
-						}
-
-						body,
-						input {
-							font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
-								"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-						}
-					`}</style>
 				</div>
 			</Layout>
 		)
