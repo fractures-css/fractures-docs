@@ -1,6 +1,6 @@
 import { Component } from "react"
 import chroma from "chroma-js"
-import { Button, ButtonGroup, Checkbox, Color, Container, Radio, Range, Progress } from "fractures-ui"
+import { Button, ButtonGroup, Checkbox, Color, Container, Radio, Range, Progress, Input } from "fractures-ui"
 import Layout from "../components/Layout"
 
 const themes = [
@@ -68,6 +68,11 @@ class Index extends Component {
 		this.setState({ range: value })
 	}
 
+	// Mock input change
+	inputChange(value) {
+		console.log(value)
+	}
+
 	render() {
 		const themeList = [{ name: "blue" }, { name: "black" }, { name: "invert" }, { name: "test" }]
 
@@ -91,7 +96,7 @@ class Index extends Component {
 					</aside>
 					<Container className="py-4">
 						<div className="my-4">
-							<h1 className="my-2">Buttons</h1>
+							<h4 className="my-2">Buttons</h4>
 							<div className="flex flex-gap-1 my-1">
 								<Button type="primary" value="Default" action={ () => this.mockClick() } />
 								<Button type="primary" value="Active" isActive={ true } />
@@ -138,7 +143,7 @@ class Index extends Component {
 							</div>
 						</div>
 						<div className="my-4">
-							<h1 className="my-2">ButtonGroup</h1>
+							<h4 className="my-2">ButtonGroup</h4>
 							<div className="flex flex-gap-1 my-1">
 								<ButtonGroup>
 									<Button type="primary" value="Active" isActive={ true } />
@@ -156,7 +161,7 @@ class Index extends Component {
 							</div>
 						</div>
 						<div className="my-4">
-							<h1 className="my-2">Checkbox</h1>
+							<h4 className="my-2">Checkbox</h4>
 							<div className="flex flex-gap-1 flex-column my-1">
 								<Checkbox
 									label="Checkbox, hmm"
@@ -168,7 +173,7 @@ class Index extends Component {
 							</div>
 						</div>
 						<div className="my-4">
-							<h1 className="my-2">Radio</h1>
+							<h4 className="my-2">Radio</h4>
 							<div className="flex flex-gap-1 flex-column my-1">
 								<Radio label="Val 1" value={ 0 } state={ this.state.radio } set={ e => this.setRadio(e) } />
 								<Radio label="Val 2" value={ 1 } state={ this.state.radio } set={ e => this.setRadio(e) } />
@@ -176,17 +181,28 @@ class Index extends Component {
 							</div>
 						</div>
 						<div className="my-4">
-							<h1 className="my-2">Range {this.state.range}</h1>
+							<h4 className="my-2">Range {this.state.range}</h4>
 							<div className="flex flex-gap-1 flex-column my-1">
 								<Range value={ this.state.range } set={ e => this.setRange(e) } />
 							</div>
 						</div>
 						<div className="my-4">
-							<h1 className="my-2">Progress</h1>
+							<h4 className="my-2">Progress</h4>
 							<div className="flex flex-gap-1 flex-column my-1">
 								<Progress value={ this.state.range } />
 								<Progress value={ 34 } max={ 60 } />
 								<Progress value={ 100 } />
+							</div>
+						</div>
+						<div className="my-4">
+							<h4 className="my-2">Input</h4>
+							<div className="flex flex-gap-1 flex-column my-1">
+								<Input change={ e => this.inputChange(e) } label="With label" placeholder="https://" />
+								<Input change={ e => this.inputChange(e) } value="Without label, with value" />
+								<Input change={ e => this.inputChange(e) } label="Number type" type="number" />
+								<Input change={ e => this.inputChange(e) } label="Password type" type="password" />
+								<Input change={ e => this.inputChange(e) } label="Date type" type="date" />
+								<Input change={ e => this.inputChange(e) } label="Textarea type" type="textarea" />
 							</div>
 						</div>
 					</Container>
@@ -204,14 +220,8 @@ class Index extends Component {
 
 						body,
 						input {
-							color: var(--shade-4);
-
 							font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
 								"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-						}
-
-						h1 {
-							font-weight: normal;
 						}
 					`}</style>
 				</div>
