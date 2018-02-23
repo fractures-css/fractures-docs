@@ -1,5 +1,5 @@
+import { Button, Container } from "fractures-ui"
 import { Component } from "react"
-import Container from "../components/Container"
 import Layout from "../components/Layout"
 import Link from "next/link"
 import meta from "../utils/meta.js"
@@ -108,12 +108,18 @@ class Index extends Component {
 							</Link>
 						</p>
 						<div className="flex flex-gap-1">
-							<a onClick={ e => this.scrollG(e) } className="btn btn-primary radius-max">
-								Getting started
-							</a>
-							<a href="https://github.com/fractures/fractures" className="btn btn-default radius-max">
-								GitHub
-							</a>
+							<Button
+								action={ e => this.scrollG(e) }
+								isRounded={ false }
+								type="primary"
+								value="Getting started"
+							/>
+							<Button
+								action={ () => (window.location = "https://github.com/fractures/fractures") }
+								isRounded={ false }
+								type="secondary"
+								value="GitHub"
+							/>
 						</div>
 						<div className="mt-3 source-code-pro">
 							<small>
@@ -199,7 +205,8 @@ class Index extends Component {
 				</div>
 
 				{/* Getting started */}
-				<Container className="py-5" id="getting-started">
+				<a id="getting-started" />
+				<Container className="py-5">
 					<h2>Getting started</h2>
 					<ul className="flex flex-column flex-gap-4 my-4">
 						<li>

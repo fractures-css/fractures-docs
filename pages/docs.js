@@ -1,4 +1,4 @@
-import Container from "../components/Container"
+import { Container } from "fractures-ui"
 import Layout from "../components/Layout"
 import Link from "next/link"
 

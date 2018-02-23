@@ -6,6 +6,14 @@
 
 	--color-green: #219f73;
 	--color-red: #db5454;
+
+	--fr-ground: #ffffff;
+	--fr-100: #f2f2f7;
+	--fr-300: #bccfe8;
+	--fr-500: #445695;
+	--fr-700: #3d3f71;
+	--fr-900: #262633;
+	--fr-focus: rgba(61, 63, 113, 0.25);
 }
 
 *::selection {
@@ -61,27 +69,6 @@ h6 {
 .source-code-pro {
 	font-family: "Source Code Pro", monospace;
 	font-weight: 400;
-}
-
-.btn {
-	padding: 0 1.25rem;
-
-	font-size: 0.875rem;
-	font-weight: 600;
-	line-height: 2.5rem;
-	text-align: center;
-	user-select: none;
-	white-space: nowrap;
-}
-
-.btn-primary {
-	background-color: var(--color-dark);
-	color: white;
-}
-
-.btn-default {
-	box-shadow: inset 0 0 0 2px var(--color-silver);
-	color: var(--color-dark);
 }
 
 .fr-bg-silver {

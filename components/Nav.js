@@ -1,6 +1,6 @@
 import { Component } from "react"
+import { Container } from "fractures-ui"
 import Link from "next/link"
-import Container from "./Container"
 
 class Nav extends Component {
 	constructor(props) {

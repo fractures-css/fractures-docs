@@ -1,6 +1,7 @@
 import { Component } from "react"
 import { Button, ButtonGroup, Checkbox, Color, Container, Fractures, Radio, Range, Progress, Input } from "fractures-ui"
 import Layout from "../components/Layout"
+import chroma from "chroma-js"
 
 class Index extends Component {
 	constructor(props) {
@@ -47,8 +48,8 @@ class Index extends Component {
 
 		return (
 			<Layout title="UI — fractures">
-				<Fractures theme={ this.state.theme } />
-				<div className="pb-4 minvh-100" style={ { backgroundColor: "var(--shade-0)" } }>
+				<Fractures meta={ true } theme={ this.state.theme } />
+				<div className="pb-4 minvh-100" style={ { backgroundColor: "var(--fr-ground)" } }>
 					<aside className="sticky right-0 flex flex-right flex-gap-1 p-2" style={ { top: "4rem" } }>
 						{themeList.map((theme, key) => (
 							<Button
