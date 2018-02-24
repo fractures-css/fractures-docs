@@ -2217,13 +2217,14 @@ form-data@~2.1.1:
     combined-stream "^1.0.5"
     mime-types "^2.1.12"
 
-fractures-ui@^0.1.5:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/fractures-ui/-/fractures-ui-0.1.5.tgz#4d958396cd5c86a41aa1c9915a9b05295fcc109f"
+fractures-ui@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/fractures-ui/-/fractures-ui-0.1.6.tgz#0fa60a49fe48f04056c24e425bdaf7a5eb10b943"
   dependencies:
     classcat "^3.0.1"
     react "^16.2.0"
     react-dom "^16.2.0"
+    styled-jsx "^2.2.5"
     webpack "^3.11.0"
 
 fractures@^1.2.2:
