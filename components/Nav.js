@@ -35,7 +35,7 @@ class Nav extends Component {
 		))
 
 		return (
-			<div className="fr-header fixed z-2 top-0 w-100 bg-white">
+			<div className="fr-header fixed z-2 top-0 w-100">
 				<Container>
 					<ul className="flex flex-gap-2">{headerRender}</ul>
 				</Container>
@@ -43,6 +43,7 @@ class Nav extends Component {
 					.fr-header {
 						height: 4rem;
 
+						background-color: var(--fr-ground);
 						box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
 
 						line-height: 4rem;

@@ -1,4 +1,5 @@
 import { Fragment } from "react"
+import Link from "next/link"
 
 const UiHero = () => (
 	<Fragment>
@@ -22,6 +23,9 @@ const UiHero = () => (
 		<div className="pb-4">
 			<h3>Let me try</h3>
 			<ul className="list-disc ml-4 mt-1">
+				<li>
+					<code>npm i fractures</code>.
+				</li>
 				<li>
 					<code>npm i fractures-ui</code>.
 				</li>

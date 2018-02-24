@@ -1,7 +1,7 @@
 import { Button, ButtonGroup, Checkbox, Color, Container, Fractures, Radio, Range, Progress, Input } from "fractures-ui"
 import { Component } from "react"
 import Layout from "../../components/Layout"
-import Link from "next/link"
+import UiHero from "./components/UiHero"
 
 class fUI extends Component {
 	constructor(props) {
@@ -11,8 +11,7 @@ class fUI extends Component {
 			buttonLoading: false,
 			checkbox: false,
 			radio: 1,
-			range: 0,
-			theme: "blue"
+			range: 0
 		}
 	}
 
@@ -44,23 +43,9 @@ class fUI extends Component {
 	}
 
 	render() {
-		const themeList = [{ name: "blue" }, { name: "black" }, { name: "invert" }, { name: "test" }]
-
 		return (
 			<Layout title="UI — fractures">
-				<Fractures meta={ true } theme={ this.state.theme } />
-				<aside className="sticky right-0 flex flex-right flex-gap-1 p-2" style={ { top: "4rem" } }>
-					{themeList.map((theme, key) => (
-						<Button
-							action={ () => this.setState({ theme: theme.name }) }
-							isActive={ this.state.theme === theme.name && true }
-							key={ key }
-							small={ true }
-							type="primary"
-							value={ theme.name }
-						/>
-					))}
-				</aside>
+				<Fractures meta={ true } />
 				<Container className="py-4">
 					<UiHero />
 					<div className="my-4">
