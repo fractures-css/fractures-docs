@@ -1,11 +1,19 @@
 import { Component, Fragment } from "react"
 import { initGA, logPageView } from "../utils/analytics"
 import Head from "next/head"
+import NProgress from "nprogress"
 import Link from "next/link"
 import Nav from "./Nav"
+import Router from "next/router"
 import meta from "../utils/meta.js"
 
-export default class Layout extends Component {
+NProgress.configure({ showSpinner: false })
+
+Router.onRouteChangeStart = () => NProgress.start()
+Router.onRouteChangeComplete = () => NProgress.done()
+Router.onRouteChangeError = () => NProgress.done()
+
+class Layout extends Component {
 
 	// Init GA on mount
 	componentDidMount() {
@@ -143,8 +151,36 @@ export default class Layout extends Component {
 
 						font-weight: bold;
 					}
+
+					#nprogress {
+						pointer-events: none;
+					}
+
+					#nprogress .bar {
+						left: 0;
+						position: fixed;
+						top: 0;
+						z-index: 100;
+
+						height: 0.125rem;
+						width: 100%;
+
+						background-color: var(--fr-300);
+					}
+
+					.nprogress-custom-parent {
+						position: relative;
+
+						overflow: hidden;
+					}
+
+					.nprogress-custom-parent #nprogress .bar {
+						position: absolute;
+					}
 				`}</style>
 			</Fragment>
 		)
 	}
 }
+
+export default Layout
