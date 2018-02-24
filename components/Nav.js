@@ -26,7 +26,10 @@ class Nav extends Component {
 		const headerRender = headerLinks.map((item, key) => (
 			<li className={ this.state.pathname === item.url ? "active" : "" } key={ key }>
 				<Link href={ item.url } prefetch>
-					<a>{item.name}</a>
+					<a className="flex flex-gap-1 flex-ycenter relative">
+						<span>{item.name}</span>
+						{item.name === "UI" && <span className="fr-label">WIP</span>}
+					</a>
 				</Link>
 			</li>
 		))
@@ -47,13 +50,31 @@ class Nav extends Component {
 
 					.fr-header li a {
 						display: block;
+						height: 4rem;
 						padding: 0 0.5rem;
 
-						color: var(--color-dark);
+						color: var(--fr-500);
 					}
 
 					.fr-header li.active {
-						box-shadow: 0 1px 0 0 var(--color-dark);
+						box-shadow: 0 1px 0 0 var(--fr-700);
+					}
+
+					.fr-header li.active a {
+						color: var(--fr-900);
+					}
+
+					.fr-header .fr-label {
+						display: inline-flex;
+						padding: 0 0.25rem;
+
+						background-color: var(--fr-500);
+						border-radius: 0.125rem;
+						color: var(--fr-ground);
+						transform: translateY(-0.125rem);
+
+						font-size: 0.75rem;
+						line-height: 1.5rem;
 					}
 				`}</style>
 			</div>
