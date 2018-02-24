@@ -25,7 +25,7 @@ class Nav extends Component {
 
 		const headerRender = headerLinks.map((item, key) => (
 			<li className={ this.state.pathname === item.url ? "active" : "" } key={ key }>
-				<Link href={ item.url } prefetch>
+				<Link href={ item.url }>
 					<a className="flex flex-gap-1 flex-ycenter relative">
 						<span>{item.name}</span>
 						{item.name === "UI" && <span className="fr-label">WIP</span>}
