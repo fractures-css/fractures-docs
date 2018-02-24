@@ -1,7 +1,7 @@
 import { Button, ButtonGroup, Checkbox, Color, Container, Fractures, Radio, Range, Progress, Input } from "fractures-ui"
 import { Component } from "react"
 import chroma from "chroma-js"
-import Layout from "../components/Layout"
+import Layout from "../../components/Layout"
 import Link from "next/link"
 
 class fUI extends Component {
