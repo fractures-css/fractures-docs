@@ -110,13 +110,13 @@ class IndexSkeleton extends Component {
 							padding: 1rem 0;
 
 							cursor: pointer;
-							color: var(--color-dark);
+							color: var(--fr-700);
 
 							font-weight: 500;
 						}
 
 						.skeleton__nav .active {
-							box-shadow: 0 1px 0 0 var(--color-gray);
+							box-shadow: 0 1px 0 0 var(--fr-500);
 						}
 
 						.skeleton__nav .active:before {

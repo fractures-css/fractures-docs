@@ -45,12 +45,8 @@ export default class Layout extends Component {
 				<main style={ { marginTop: "4rem" } }>{this.props.children}</main>
 				<style jsx global>{`
 					:root {
-						--color-high: #e5fedd;
-						--color-dark: #323156;
-						--color-gray: #a2a2ad;
-						--color-silver: #eaeaf0;
-
 						--color-green: #219f73;
+						--color-high: #e5fedd;
 						--color-red: #db5454;
 
 						--fr-ground: #ffffff;
@@ -67,12 +63,12 @@ export default class Layout extends Component {
 					}
 
 					html {
-						background-color: var(--color-silver);
+						background-color: var(--fr-100);
 					}
 
 					body {
-						background-color: white;
-						color: var(--color-dark);
+						background-color: var(--fr-ground);
+						color: var(--fr-700);
 
 						font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
 							"Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -118,7 +114,7 @@ export default class Layout extends Component {
 					}
 
 					.fr-bg-silver {
-						background-color: var(--color-silver);
+						background-color: var(--fr-100);
 					}
 
 					pre {
@@ -129,7 +125,7 @@ export default class Layout extends Component {
 
 					pre::selection,
 					pre *::selection {
-						background-color: var(--color-silver);
+						background-color: var(--fr-100);
 					}
 
 					pre span em {
@@ -143,7 +139,7 @@ export default class Layout extends Component {
 					}
 
 					pre a {
-						color: var(--color-dark);
+						color: var(--fr-900);
 
 						font-weight: bold;
 					}
