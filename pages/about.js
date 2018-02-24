@@ -1,10 +1,7 @@
 import { Container } from "fractures-ui"
 import Layout from "../components/Layout"
 
-const gridExampleUrl =
-	"https://rachelandrew.co.uk/archives/2017/07/04/is-it-really-safe-to-start-using-css-grid-layout/"
-
-export default () => (
+const About = () => (
 	<Layout title="about — fractures">
 		<Container className="py-5">
 			<h1 className="mb-2">About</h1>
@@ -42,7 +39,10 @@ export default () => (
 								prefixed
 							</a>{" "}
 							version handles some, but not everything. This{" "}
-							<a target="_new" href={ gridExampleUrl }>
+							<a
+								target="_new"
+								href="https://rachelandrew.co.uk/archives/2017/07/04/is-it-really-safe-to-start-using-css-grid-layout/"
+							>
 								article
 							</a>{" "}
 							might help you.
@@ -50,7 +50,6 @@ export default () => (
 					</ul>
 				</div>
 			</div>
-
 			<h3 className="regular">Inspiration</h3>
 			<p className="my-2">
 				I started this as my own reset.css when having a reset css was cool. It was grown into a common.css,
@@ -76,7 +75,6 @@ export default () => (
 				</li>
 				<li>...and so much more.</li>
 			</ul>
-
 			<h3 className="regular">Me</h3>
 			<p className="my-2">
 				I'm just a designer who codes. 🐈 <a href="https://twitter.com/pyx">@pyx</a>
@@ -84,3 +82,5 @@ export default () => (
 		</Container>
 	</Layout>
 )
+
+export default About

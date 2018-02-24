@@ -19,7 +19,8 @@ class Nav extends Component {
 		const headerLinks = [
 			{ name: "Home", url: "/" },
 			{ name: "Docs", url: "/docs" },
-			{ name: "About", url: "/about" }
+			{ name: "About", url: "/about" },
+			{ name: "UI", url: "/ui" }
 		]
 
 		const headerRender = headerLinks.map((item, key) => (
@@ -31,12 +32,12 @@ class Nav extends Component {
 		))
 
 		return (
-			<div className="fractures-header fixed z-2 top-0 w-100 bg-white">
+			<div className="fr-header fixed z-2 top-0 w-100 bg-white">
 				<Container>
 					<ul className="flex flex-gap-2">{headerRender}</ul>
 				</Container>
 				<style jsx global>{`
-					.fractures-header {
+					.fr-header {
 						height: 4rem;
 
 						box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
@@ -44,14 +45,14 @@ class Nav extends Component {
 						line-height: 4rem;
 					}
 
-					.fractures-header li a {
+					.fr-header li a {
 						display: block;
 						padding: 0 0.5rem;
 
 						color: var(--color-dark);
 					}
 
-					.fractures-header li.active {
+					.fr-header li.active {
 						box-shadow: 0 1px 0 0 var(--color-dark);
 					}
 				`}</style>

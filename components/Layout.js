@@ -1,4 +1,4 @@
-import { Component } from "react"
+import { Component, Fragment } from "react"
 import { initGA, logPageView } from "../utils/analytics"
 import Head from "next/head"
 import Link from "next/link"
@@ -19,7 +19,7 @@ export default class Layout extends Component {
 
 	render() {
 		return (
-			<main>
+			<Fragment>
 				<Head>
 					<title>{this.props.title || meta.title}</title>
 					<meta charSet="utf-8" />
@@ -40,16 +40,115 @@ export default class Layout extends Component {
 					<link rel="icon" href="/static/favicon.ico" />
 					<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" />
 					<link href={ meta.cdn } rel="stylesheet" />
-					<link href="/static/css/style.css" rel="stylesheet" />
 				</Head>
 				<Nav />
-				<div className="fr-content">{this.props.children}</div>
+				<main style={ { marginTop: "4rem" } }>{this.props.children}</main>
 				<style jsx global>{`
-					.fr-content {
-						margin-top: 4rem;
+					:root {
+						--color-high: #e5fedd;
+						--color-dark: #323156;
+						--color-gray: #a2a2ad;
+						--color-silver: #eaeaf0;
+
+						--color-green: #219f73;
+						--color-red: #db5454;
+
+						--fr-ground: #ffffff;
+						--fr-100: #f2f2f7;
+						--fr-300: #bccfe8;
+						--fr-500: #445695;
+						--fr-700: #3d3f71;
+						--fr-900: #262633;
+						--fr-focus: rgba(61, 63, 113, 0.25);
+					}
+
+					*::selection {
+						background-color: var(--color-high);
+					}
+
+					html {
+						background-color: var(--color-silver);
+					}
+
+					body {
+						background-color: white;
+						color: var(--color-dark);
+
+						font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+							"Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+						font-size: 16px;
+						line-height: 1.5;
+					}
+
+					a {
+						color: var(--color-green);
+
+						cursor: pointer;
+						font-weight: 500;
+					}
+
+					h1 {
+						font-size: 3em;
+					}
+
+					h2 {
+						font-size: 2.5em;
+					}
+
+					h3 {
+						font-size: 2em;
+					}
+
+					h4 {
+						font-size: 1.75em;
+					}
+
+					h5 {
+						font-size: 1.5em;
+					}
+
+					p,
+					h6 {
+						font-size: 1em;
+					}
+
+					.source-code-pro {
+						font-family: "Source Code Pro", monospace;
+						font-weight: 400;
+					}
+
+					.fr-bg-silver {
+						background-color: var(--color-silver);
+					}
+
+					pre {
+						font-size: 0.75rem;
+						font-family: "Source Code Pro", monospace;
+						line-height: 1.5;
+					}
+
+					pre::selection,
+					pre *::selection {
+						background-color: var(--color-silver);
+					}
+
+					pre span em {
+						color: var(--color-red);
+
+						font-style: normal;
+					}
+
+					pre span {
+						display: block;
+					}
+
+					pre a {
+						color: var(--color-dark);
+
+						font-weight: bold;
 					}
 				`}</style>
-			</main>
+			</Fragment>
 		)
 	}
 }

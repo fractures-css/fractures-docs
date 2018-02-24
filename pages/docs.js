@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const docsDefaultClass = "bg-smoke p-1"
 
-export default () => (
+const Docs = () => (
 	<Layout title="docs — fractures">
 		<Container>
 			<header className="py-5">
@@ -525,3 +525,5 @@ export default () => (
 		</Container>
 	</Layout>
 )
+
+export default Docs
