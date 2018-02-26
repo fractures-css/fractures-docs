@@ -1,5 +1,5 @@
 import "./Layout.css"
-import "fractures"
+import { Fractures } from "fractures-ui"
 import { Component, Fragment } from "react"
 import { initGA, logPageView } from "../../utils/analytics"
 import Head from "next/head"
@@ -30,6 +30,7 @@ class Layout extends Component {
 	render() {
 		return (
 			<Fragment>
+				<Fractures />
 				<Head>
 					<title>{this.props.title || meta.title}</title>
 					<meta charSet="utf-8" />

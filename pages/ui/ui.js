@@ -45,7 +45,6 @@ class fUI extends Component {
 	render() {
 		return (
 			<Layout title="UI — fractures">
-				<Fractures meta={ true } />
 				<Container className="py-4">
 					<UiHero />
 					<div className="my-4">
