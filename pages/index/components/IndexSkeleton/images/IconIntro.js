@@ -1,6 +1,6 @@
 const IconIntro = () => (
 	<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
-		<g id="Fractures" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g id="Fractures" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g id="browsers" transform="translate(-130.000000, -625.000000)">
 				<g id="browser--flex" transform="translate(130.000000, 625.000000)">
 					<g id="content" transform="translate(0.000000, 30.000000)">

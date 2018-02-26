@@ -3,7 +3,7 @@ const IconBoxes = () => (
 		<defs>
 			<rect id="path-1" x="0" y="0" width="200" height="170" />
 		</defs>
-		<g id="Fractures" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g id="Fractures" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g id="browsers" transform="translate(-1370.000000, -625.000000)">
 				<g id="browser--print" transform="translate(1370.000000, 625.000000)">
 					<g id="content" transform="translate(0.000000, 30.000000)">
