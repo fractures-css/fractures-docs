@@ -32,9 +32,7 @@ class fUI extends Component {
 
 	// Mock range change
 	setRange(value) {
-		console.log(value)
-
-		this.setState({ range: value })
+		this.setState({ range: parseInt(value) })
 	}
 
 	// Mock input change
@@ -52,7 +50,7 @@ class fUI extends Component {
 						<div className="flex flex-gap-1 my-1">
 							<Button type="primary" value="Default" action={ () => this.mockClick() } />
 							<Button type="primary" value="Active" isActive={ true } />
-							<Button type="primary" value="Disabled" disabled={ true } />
+							<Button type="primary" value="Disabled" isDisabled={ true } />
 							<Button type="primary" value="Rounded" isRounded={ true } />
 							<Button type="primary" value="Small" small={ true } />
 							<Button type="primary" value="Small Rounded" small={ true } isRounded={ true } />
@@ -60,7 +58,7 @@ class fUI extends Component {
 						<div className="flex flex-gap-1 my-1">
 							<Button type="secondary" value="Default" />
 							<Button type="secondary" value="Active" isActive={ true } />
-							<Button type="secondary" value="Disabled" disabled={ true } />
+							<Button type="secondary" value="Disabled" isDisabled={ true } />
 							<Button type="secondary" value="Rounded" isRounded={ true } />
 							<Button type="secondary" value="Small" small={ true } />
 							<Button type="secondary" value="Small Rounded" small={ true } isRounded={ true } />
@@ -100,7 +98,7 @@ class fUI extends Component {
 							<ButtonGroup>
 								<Button type="primary" value="Active" isActive={ true } />
 								<Button type="primary" value="Second" />
-								<Button type="primary" value="Disabled" disabled={ true } />
+								<Button type="primary" value="Disabled" isDisabled={ true } />
 							</ButtonGroup>
 							<ButtonGroup>
 								<Button type="secondary" value="Active" isActive={ true } />
