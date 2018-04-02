@@ -1,6 +1,6 @@
 import "./Layout.css"
-import { Fractures } from "fractures-ui"
 import { Component, Fragment } from "react"
+import { Fractures } from "fractures-ui"
 import { initGA, logPageView } from "../../utils/analytics"
 import Head from "next/head"
 import Link from "next/link"
@@ -16,9 +16,18 @@ Router.onRouteChangeComplete = () => NProgress.done()
 Router.onRouteChangeError = () => NProgress.done()
 
 class Layout extends Component {
+	constructor(props) {
+		super(props)
+
+		this.state = {
+			isLoaded: false
+		}
+	}
 
 	// Init GA on mount
 	componentDidMount() {
+		this.setState({ isLoaded: true })
+
 		if(!window.GA_INITIALIZED) {
 			initGA()
 			window.GA_INITIALIZED = true
@@ -28,7 +37,7 @@ class Layout extends Component {
 	}
 
 	render() {
-		return (
+		return this.state.isLoaded ? (
 			<Fragment>
 				<Fractures />
 				<Head>
@@ -54,7 +63,7 @@ class Layout extends Component {
 				<Nav />
 				<main style={ { marginTop: "4rem" } }>{this.props.children}</main>
 			</Fragment>
-		)
+		) : null
 	}
 }
 
