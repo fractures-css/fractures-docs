@@ -64,6 +64,25 @@ const Docs = () => (
 				</div>
 			</article>
 
+			{/* Cursor */}
+			<article className="py-4">
+				<h3>Cursor</h3>
+				<p className="mb-4">Most common cursors.</p>
+				<div className="grid grid-cols-7 grid-gap-1">
+					<div className="p-1 cursor-col-resize">cursor-col-resize</div>
+					<div className="p-1 cursor-grab">cursor-grab</div>
+					<div className="p-1 cursor-grabbing">cursor-grabbing</div>
+					<div className="p-1 cursor-help">cursor-help</div>
+					<div className="p-1 cursor-move">cursor-move</div>
+					<div className="p-1 cursor-pointer">cursor-pointer</div>
+					<div className="p-1 cursor-progress">cursor-progress</div>
+					<div className="p-1 cursor-row-resize">cursor-row-resize</div>
+					<div className="p-1 cursor-text">cursor-text</div>
+					<div className="p-1 cursor-zoom-in">cursor-zoom-in</div>
+					<div className="p-1 cursor-zoom-out">cursor-zoom-out</div>
+				</div>
+			</article>
+
 			{/* Display */}
 			<article className="py-4">
 				<h3>Display</h3>

@@ -1,9 +1,8 @@
 import "./Layout.css"
+import "fractures/dist/fractures.prefixed.min.css"
 import { Component, Fragment } from "react"
-import { Fractures } from "fractures-ui"
 import { initGA, logPageView } from "../../utils/analytics"
 import Head from "next/head"
-import Link from "next/link"
 import meta from "../../utils/meta.js"
 import Nav from "../Nav"
 import NProgress from "nprogress"
@@ -39,7 +38,6 @@ class Layout extends Component {
 	render() {
 		return this.state.isLoaded ? (
 			<Fragment>
-				<Fractures />
 				<Head>
 					<title>{this.props.title || meta.title}</title>
 					<meta charSet="utf-8" />
