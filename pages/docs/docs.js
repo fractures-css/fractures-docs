@@ -220,21 +220,59 @@ const Docs = () => (
 					<div className="bg-light h-4">h-4</div>
 					<div className="bg-light h-5">h-5</div>
 					<div className="bg-light h-6">h-6</div>
+
+					<div className={ docsDefaultClass }>h-10</div>
+					<div className={ docsDefaultClass }>h-20</div>
 					<div className={ docsDefaultClass }>h-25</div>
+					<div className={ docsDefaultClass }>h-30</div>
 					<div className={ docsDefaultClass }>h-33</div>
+					<div className={ docsDefaultClass }>h-40</div>
 					<div className={ docsDefaultClass }>h-50</div>
+					<div className={ docsDefaultClass }>h-60</div>
 					<div className={ docsDefaultClass }>h-66</div>
+					<div className={ docsDefaultClass }>h-70</div>
 					<div className={ docsDefaultClass }>h-75</div>
+					<div className={ docsDefaultClass }>h-80</div>
+					<div className={ docsDefaultClass }>h-90</div>
 					<div className={ docsDefaultClass }>h-100</div>
-					<div className={ docsDefaultClass }>minvh-25</div>
-					<div className={ docsDefaultClass }>minvh-33</div>
-					<div className={ docsDefaultClass }>minvh-50</div>
-					<div className={ docsDefaultClass }>minvh-66</div>
-					<div className={ docsDefaultClass }>minvh-75</div>
-					<div className={ docsDefaultClass }>minvh-100</div>
+
+					<div className={ docsDefaultClass }>maxh-10</div>
+					<div className={ docsDefaultClass }>maxh-20</div>
+					<div className={ docsDefaultClass }>maxh-25</div>
+					<div className={ docsDefaultClass }>maxh-30</div>
+					<div className={ docsDefaultClass }>maxh-33</div>
+					<div className={ docsDefaultClass }>maxh-40</div>
+					<div className={ docsDefaultClass }>maxh-50</div>
+					<div className={ docsDefaultClass }>maxh-60</div>
+					<div className={ docsDefaultClass }>maxh-66</div>
+					<div className={ docsDefaultClass }>maxh-70</div>
+					<div className={ docsDefaultClass }>maxh-75</div>
+					<div className={ docsDefaultClass }>maxh-80</div>
+					<div className={ docsDefaultClass }>maxh-90</div>
+					<div className={ docsDefaultClass }>maxh-100</div>
+					<div className={ docsDefaultClass }>maxh-viewport</div>
+
+					<div className={ docsDefaultClass }>minh-10</div>
+					<div className={ docsDefaultClass }>minh-20</div>
+					<div className={ docsDefaultClass }>minh-25</div>
+					<div className={ docsDefaultClass }>minh-30</div>
+					<div className={ docsDefaultClass }>minh-33</div>
+					<div className={ docsDefaultClass }>minh-40</div>
+					<div className={ docsDefaultClass }>minh-50</div>
+					<div className={ docsDefaultClass }>minh-60</div>
+					<div className={ docsDefaultClass }>minh-66</div>
+					<div className={ docsDefaultClass }>minh-70</div>
+					<div className={ docsDefaultClass }>minh-75</div>
+					<div className={ docsDefaultClass }>minh-80</div>
+					<div className={ docsDefaultClass }>minh-90</div>
+					<div className={ docsDefaultClass }>minh-100</div>
+					<div className={ docsDefaultClass }>minh-viewport</div>
 				</div>
 				<small className="block mt-4">
-					<b>.minvh-x</b> is minimum height in viewport height percentage.<br />
+					<b>.minh-x</b> is minimum height as percentage.<br />
+					<b>.maxh-x</b> is maximum height as percentage.<br />
+					<b>.maxh-viewport</b> is maximum height set to current viewport height.<br />
+					<b>.minh-viewport</b> is mininum height set to current viewport height.<br />
 				</small>
 			</article>
 
@@ -525,21 +563,59 @@ const Docs = () => (
 					<div className="bg-light w-4">w-4</div>
 					<div className="bg-light w-5">w-5</div>
 					<div className="bg-light w-6">w-6</div>
+
+					<div className={ docsDefaultClass }>w-10</div>
+					<div className={ docsDefaultClass }>w-20</div>
 					<div className={ docsDefaultClass }>w-25</div>
+					<div className={ docsDefaultClass }>w-30</div>
 					<div className={ docsDefaultClass }>w-33</div>
+					<div className={ docsDefaultClass }>w-40</div>
 					<div className={ docsDefaultClass }>w-50</div>
+					<div className={ docsDefaultClass }>w-60</div>
 					<div className={ docsDefaultClass }>w-66</div>
+					<div className={ docsDefaultClass }>w-70</div>
 					<div className={ docsDefaultClass }>w-75</div>
+					<div className={ docsDefaultClass }>w-80</div>
+					<div className={ docsDefaultClass }>w-90</div>
 					<div className={ docsDefaultClass }>w-100</div>
-					<div className={ docsDefaultClass }>minvw-25</div>
-					<div className={ docsDefaultClass }>minvw-33</div>
-					<div className={ docsDefaultClass }>minvw-50</div>
-					<div className={ docsDefaultClass }>minvw-66</div>
-					<div className={ docsDefaultClass }>minvw-75</div>
-					<div className={ docsDefaultClass }>minvw-100</div>
+
+					<div className={ docsDefaultClass }>maxw-10</div>
+					<div className={ docsDefaultClass }>maxw-20</div>
+					<div className={ docsDefaultClass }>maxw-25</div>
+					<div className={ docsDefaultClass }>maxw-30</div>
+					<div className={ docsDefaultClass }>maxw-33</div>
+					<div className={ docsDefaultClass }>maxw-40</div>
+					<div className={ docsDefaultClass }>maxw-50</div>
+					<div className={ docsDefaultClass }>maxw-60</div>
+					<div className={ docsDefaultClass }>maxw-66</div>
+					<div className={ docsDefaultClass }>maxw-70</div>
+					<div className={ docsDefaultClass }>maxw-75</div>
+					<div className={ docsDefaultClass }>maxw-80</div>
+					<div className={ docsDefaultClass }>maxw-90</div>
+					<div className={ docsDefaultClass }>maxw-100</div>
+					<div className={ docsDefaultClass }>maxw-viewport</div>
+
+					<div className={ docsDefaultClass }>minw-10</div>
+					<div className={ docsDefaultClass }>minw-20</div>
+					<div className={ docsDefaultClass }>minw-25</div>
+					<div className={ docsDefaultClass }>minw-30</div>
+					<div className={ docsDefaultClass }>minw-33</div>
+					<div className={ docsDefaultClass }>minw-40</div>
+					<div className={ docsDefaultClass }>minw-50</div>
+					<div className={ docsDefaultClass }>minw-60</div>
+					<div className={ docsDefaultClass }>minw-66</div>
+					<div className={ docsDefaultClass }>minw-70</div>
+					<div className={ docsDefaultClass }>minw-75</div>
+					<div className={ docsDefaultClass }>minw-80</div>
+					<div className={ docsDefaultClass }>minw-90</div>
+					<div className={ docsDefaultClass }>minw-100</div>
+					<div className={ docsDefaultClass }>minw-viewport</div>
 				</div>
 				<small className="block mt-4">
-					<b>.minvw-x</b> is minimum width in viewport width percentage.<br />
+					<b>.minw-x</b> is minimum width as percentage.<br />
+					<b>.maxw-x</b> is maximum width as percentage.<br />
+					<b>.maxw-viewport</b> is maximum width set to current viewport width.<br />
+					<b>.minw-viewport</b> is mininum width set to current viewport width.<br />
 				</small>
 			</article>
 		</Container>
