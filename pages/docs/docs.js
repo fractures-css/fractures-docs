@@ -508,7 +508,8 @@ const Docs = () => (
 					variables --basefont and --baseline. Defaults are 16/1.6.<br />
 					<b>.regular</b> takes a root variable, --regular. Default is 400.<br />
 					<b>.bold</b> takes a root variable, --bold. Default is 700.<br />
-					<b>.ellipsis</b> is non-atomic - makes text-overflow ellipsis possible.
+					<b>.ellipsis</b> is non-atomic - makes text-overflow ellipsis possible.<br />
+					<b>.unselectable</b> makes the element unselectable with user-select: none.
 				</small>
 			</article>
 
