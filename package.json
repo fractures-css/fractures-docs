@@ -7,8 +7,7 @@
 	},
 	"dependencies": {
 		"@zeit/next-css": "^0.2.0",
-		"fractures": "^1.3.0",
-		"fractures-ui": "^0.1.13",
+		"fractures-ui": "^0.2.2",
 		"next": "^6.0.3",
 		"nprogress": "^0.2.0",
 		"react": "^16.4.0",

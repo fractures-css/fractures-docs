@@ -14,10 +14,7 @@ const UiHero = () => (
 			</p>
 			<p>
 				This is really just an experimental implementation; not included in fractures.css.<br />
-				Open an{" "}
-				<a href="https://github.com/fractures/fractures-ui" target="_new">
-					issue
-				</a>, and tell me what you think.
+				Open an <a href="https://github.com/fractures/fractures-ui">issue</a>, and tell me what you think.
 			</p>
 		</header>
 		<div className="pb-4">
@@ -30,32 +27,12 @@ const UiHero = () => (
 					<code>npm i fractures-ui</code>
 				</li>
 				<li>
+					<code>import "fractures/dist/fractures.css"</code>
+				</li>
+				<li>
 					<code>
 						import {`{`} Button {`}`} from "fractures-ui"
 					</code>
-				</li>
-				<li>
-					See code{" "}
-					<a href="https://github.com/fractures/fractures-docs/blob/master/pages/ui.js#L69">examples</a>.
-				</li>
-				<li>
-					Define the following css variables for :root.
-					<pre>
-						<code>--fr-ground: #ffffff;</code>
-						<br />
-						<code>--fr-100: #e8f2fd;</code>
-						<br />
-						<code>--fr-300: #76a7e7;</code>
-						<br />
-						<code>--fr-500: #3482da;</code>
-						<br />
-						<code>--fr-700: #2463a5;</code>
-						<br />
-						<code>--fr-900: #102a45;</code>
-						<br />
-						<code>--fr-focus: rgba(52, 130, 218, 0.4);</code>
-						<br />
-					</pre>
 				</li>
 			</ul>
 		</div>
