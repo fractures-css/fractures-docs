@@ -16,10 +16,6 @@ Router.onRouteChangeError = () => NProgress.done()
 class Layout extends Component {
 	constructor(props) {
 		super(props)
-
-		this.state = {
-			isLoaded: false
-		}
 	}
 
 	// Init GA on mount
@@ -35,7 +31,7 @@ class Layout extends Component {
 	}
 
 	render() {
-		return this.state.isLoaded ? (
+		return (
 			<Fragment>
 				<Head>
 					<title>{this.props.title || meta.title}</title>
@@ -60,7 +56,7 @@ class Layout extends Component {
 				<Nav />
 				<main style={ { marginTop: "4rem" } }>{this.props.children}</main>
 			</Fragment>
-		) : null
+		)
 	}
 }
 
