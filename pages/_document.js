@@ -1,8 +1,7 @@
 import { Fractures } from "fractures-ui"
+import { ServerStyleSheet } from "styled-components"
 import Document, { Head, Main, NextScript } from "next/document"
 import flush from "styled-jsx/server"
-
-import { ServerStyleSheet } from "styled-components"
 
 class MyDocument extends Document {
 	static getInitialProps({ renderPage }) {
