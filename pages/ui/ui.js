@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, Checkbox, Color, Container, Fractures, Radio, Range, Progress, Input } from "fractures-ui"
+import { Button, ButtonGroup, Checkbox, Color, Container, Radio, Range, Progress, Toggle, Input } from "fractures-ui"
 import { Component } from "react"
 import Layout from "../../components/Layout"
 import UiHero from "./components/UiHero"
@@ -120,6 +120,7 @@ class fUI extends Component {
 							/>
 							<Checkbox label="This is disabled, checked" isChecked={ true } isDisabled={ true } />
 							<Checkbox label="This is disabled, unchecked" isChecked={ false } isDisabled={ true } />
+							<Toggle label="This is a toggle" isChecked={ false } isDisabled={ false } />
 						</div>
 					</div>
 					<div className="my-4">
