@@ -5,7 +5,6 @@ import IconBoxes from "./images/IconBoxes"
 import IconIntro from "./images/IconIntro"
 import IconOwn from "./images/IconOwn"
 import IconSticky from "./images/IconSticky"
-import Link from "next/link"
 
 class IndexSkeleton extends Component {
 	constructor(props) {

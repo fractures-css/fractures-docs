@@ -18,7 +18,7 @@ const Docs = () => (
 				<ul className="list-disc ml-4 mt-3">
 					<li>You can overwrite default building blocks by setting --box-(1-6) on :root.</li>
 					<li>Every element is set to border-box.</li>
-					<li>Html y-scroll is always on, so pages won't jump.</li>
+					<li>Html y-scroll is always on, so pages won&apos;t jump.</li>
 				</ul>
 			</header>
 
@@ -44,15 +44,16 @@ const Docs = () => (
 				<h3>Color</h3>
 				<p className="mb-4">
 					Basic monochrome color scheme from CSS defaults.<br />
-					You can overwrite these, but don't.
+					You can overwrite these, but don&apos;t.
 				</p>
-				<div className="grid grid-cols-7 grid-gap-1">
+				<div className="grid grid-cols-8 grid-gap-1">
 					<div className="bg-white p-1">bg-white</div>
 					<div className={ docsDefaultClass }>bg-smoke</div>
 					<div className="bg-light p-1">bg-light</div>
 					<div className="bg-silver p-1">bg-silver</div>
 					<div className="bg-dark p-1">bg-dark</div>
 					<div className="bg-gray p-1">bg-gray</div>
+					<div className="bg-dim p-1">bg-dim</div>
 					<div className="bg-black p-1">bg-black</div>
 					<div className="white p-1">white</div>
 					<div className="smoke p-1">smoke</div>
@@ -60,6 +61,7 @@ const Docs = () => (
 					<div className="silver p-1">silver</div>
 					<div className="dark p-1">dark</div>
 					<div className="gray p-1">gray</div>
+					<div className="dim p-1">dim</div>
 					<div className="black p-1">black</div>
 				</div>
 			</article>
@@ -465,9 +467,21 @@ const Docs = () => (
 					<div className={ docsDefaultClass }>relative</div>
 					<div className={ docsDefaultClass }>sticky</div>
 					<div className={ docsDefaultClass }>bottom-0</div>
+					<div className={ docsDefaultClass }>bottom-1</div>
+					<div className={ docsDefaultClass }>bottom-2</div>
+					<div className={ docsDefaultClass }>bottom-3</div>
 					<div className={ docsDefaultClass }>left-0</div>
+					<div className={ docsDefaultClass }>left-1</div>
+					<div className={ docsDefaultClass }>left-2</div>
+					<div className={ docsDefaultClass }>left-3</div>
 					<div className={ docsDefaultClass }>right-0</div>
+					<div className={ docsDefaultClass }>right-1</div>
+					<div className={ docsDefaultClass }>right-2</div>
+					<div className={ docsDefaultClass }>right-3</div>
 					<div className={ docsDefaultClass }>top-0</div>
+					<div className={ docsDefaultClass }>top-1</div>
+					<div className={ docsDefaultClass }>top-2</div>
+					<div className={ docsDefaultClass }>top-3</div>
 					<div className={ docsDefaultClass }>z-0</div>
 					<div className={ docsDefaultClass }>z-1</div>
 					<div className={ docsDefaultClass }>z-2</div>
@@ -547,7 +561,8 @@ const Docs = () => (
 					<b>.regular</b> takes a root variable, --regular. Default is 400.<br />
 					<b>.bold</b> takes a root variable, --bold. Default is 700.<br />
 					<b>.ellipsis</b> is non-atomic - makes text-overflow ellipsis possible.<br />
-					<b>.unselectable</b> makes the element unselectable with user-select: none.
+					<b>.unselectable</b> makes the element unselectable with user-select: none.<br />
+					<b>.no-events</b> makes the element <em>uneventable</em> with pointer-events: none.
 				</small>
 			</article>
 
@@ -615,7 +630,7 @@ const Docs = () => (
 					<b>.minw-x</b> is minimum width as percentage.<br />
 					<b>.maxw-x</b> is maximum width as percentage.<br />
 					<b>.maxw-viewport</b> is maximum width set to current viewport width.<br />
-					<b>.minw-viewport</b> is mininum width set to current viewport width.<br />
+					<b>.minw-viewport</b> is minimum width set to current viewport width.<br />
 				</small>
 			</article>
 		</Container>

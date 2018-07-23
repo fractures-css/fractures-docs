@@ -1,6 +1,5 @@
-import { Button, Container } from "fractures-ui"
+import { Container } from "fractures-ui"
 import { Fragment } from "react"
-import Link from "next/link"
 import meta from "../../../utils/meta.js"
 
 const IndexStart = () => (
@@ -29,7 +28,7 @@ const IndexStart = () => (
 						</li>
 						<li>
 							Here is an example repo{" "}
-							<a href="https://github.com/fractures/fractures-react">with React</a>.
+							<a href="https://github.com/fractures/fractures-examples">with React</a>.
 						</li>
 					</ul>
 				</li>

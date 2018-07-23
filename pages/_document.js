@@ -1,4 +1,4 @@
-import { Fractures } from "fractures-ui"
+import "fractures/dist/fractures.css"
 import { ServerStyleSheet } from "styled-components"
 import Document, { Head, Main, NextScript } from "next/document"
 import flush from "styled-jsx/server"
@@ -26,7 +26,6 @@ class MyDocument extends Document {
 	render() {
 		return (
 			<html lang="en">
-				<Fractures />
 				<Head>
 					<link rel="stylesheet" href="/_next/static/style.css" />
 					{this.props.styleTags}

@@ -19,7 +19,7 @@ const IndexHero = () => (
 			</p>
 			<div className="flex flex-gap-1">
 				<Button
-					action={ e => {
+					action={ () => {
 						document.getElementById("getting-started").scrollIntoView(true)
 					} }
 					isRounded={ false }
