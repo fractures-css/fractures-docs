@@ -1,4 +1,5 @@
 import "./Layout.css"
+import "fractures/dist/fractures.css"
 import { Component, Fragment } from "react"
 import { initGA, logPageView } from "../../utils/analytics"
 import Head from "next/head"
