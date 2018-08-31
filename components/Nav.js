@@ -16,12 +16,7 @@ class Nav extends Component {
 	}
 
 	render() {
-		const headerLinks = [
-			{ name: "Home", url: "/" },
-			{ name: "Docs", url: "/docs" },
-			{ name: "About", url: "/about" },
-			{ name: "UI", url: "/ui" }
-		]
+		const headerLinks = [{ name: "Home", url: "/" }, { name: "Docs", url: "/docs" }, { name: "About", url: "/about" }]
 
 		const headerRender = headerLinks.map((item, key) => (
 			<li className={ this.state.pathname === item.url ? "active" : "" } key={ key }>

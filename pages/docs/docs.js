@@ -389,9 +389,8 @@ const Docs = () => (
 				<h3>Overflow</h3>
 				<p className="mb-4">Content overflows.</p>
 				<div className="grid grid-cols-5 grid-gap-1">
-					<div className="bg-light p-1 overflow-hidden nowrap">
-						overflow-hidden overflow-hidden...overflow-hidden
-					</div>
+					<div className="bg-light p-1 overflow-visible nowrap">overflow-visible</div>
+					<div className="bg-light p-1 overflow-hidden nowrap">overflow-hidden overflow-hidden...overflow-hidden</div>
 					<div className="bg-light p-1 overflow-scroll nowrap">overflow-scroll ... overflow-scroll</div>
 				</div>
 			</article>
@@ -512,18 +511,16 @@ const Docs = () => (
 					<h5>Sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
 					<h6>Sunt in culpa qui officia deserunt mollit anim id est laborum.</h6>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-						laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-						voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+						enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+						in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+						sunt in culpa qui officia deserunt mollit anim id est laborum.
 					</p>
 					<small>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-						laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-						voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+						enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+						in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+						sunt in culpa qui officia deserunt mollit anim id est laborum.
 					</small>
 				</div>
 				<div className="grid grid-cols-8 grid-gap-1">
@@ -556,8 +553,8 @@ const Docs = () => (
 					<div className={ docsDefaultClass }>break-word</div>
 				</div>
 				<small className="block mt-4">
-					<b>typescale</b> are defined by em units (body, h1, h2, h3, h4, h5, p, h6, small). Body takes root
-					variables --basefont and --baseline. Defaults are 16/1.6.<br />
+					<b>typescale</b> are defined by em units (body, h1, h2, h3, h4, h5, p, h6, small). Body takes root variables --basefont and
+					--baseline. Defaults are 16/1.6.<br />
 					<b>.regular</b> takes a root variable, --regular. Default is 400.<br />
 					<b>.bold</b> takes a root variable, --bold. Default is 700.<br />
 					<b>.ellipsis</b> is non-atomic - makes text-overflow ellipsis possible.<br />
