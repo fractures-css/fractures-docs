@@ -16,11 +16,17 @@ class Nav extends Component {
 	}
 
 	render() {
-		const headerLinks = [{ name: "Home", url: "/" }, { name: "Docs", url: "/docs" }, { name: "About", url: "/about" }]
+
+		// prettier-ignore
+		const headerLinks = [
+			{ name: "Home", url: "/" },
+			{ name: "Docs", url: "/docs" },
+			{ name: "About", url: "/about" }
+		]
 
 		const headerRender = headerLinks.map((item, key) => (
 			<li className={ this.state.pathname === item.url ? "active" : "" } key={ key }>
-				<Link href={ item.url }>
+				<Link href={ item.url } prefetch>
 					<a className="flex flex-gap-1 flex-ycenter relative">
 						<span>{item.name}</span>
 						{item.name === "UI" && <span className="fr-label">WIP</span>}

@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, Checkbox, Color, Container, Radio, Range, Progress, Toggle, Input } from "fractures-ui"
+import { Button, ButtonGroup, Checkbox, Container, Radio, Range, Progress, Toggle, Input } from "fractures-ui"
 import { Component } from "react"
 import Layout from "../components/Layout"
 import UiHero from "./components/UiHero"
