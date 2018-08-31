@@ -1,18 +1,10 @@
 import "./Layout.css"
 import "fractures/dist/fractures.css"
 import { Component, Fragment } from "react"
-import { initGA, logPageView } from "../../utils/analytics"
+import { initGA, logPageView } from "../utils/analytics"
 import Head from "next/head"
-import meta from "../../utils/meta.js"
-import Nav from "../Nav"
-import NProgress from "nprogress"
-import Router from "next/router"
-
-NProgress.configure({ showSpinner: false })
-
-Router.onRouteChangeStart = () => NProgress.start()
-Router.onRouteChangeComplete = () => NProgress.done()
-Router.onRouteChangeError = () => NProgress.done()
+import meta from "../utils/meta.js"
+import Nav from "./Nav"
 
 class Layout extends Component {
 	constructor(props) {
@@ -43,11 +35,7 @@ class Layout extends Component {
 					<meta name="og-type" property="og:type" content="website" />
 					<meta name="og-title" property="og:title" content={ meta.title } />
 					<meta name="og-description" property="og:description" content={ meta.description } />
-					<meta
-						name="og-image"
-						property="og:image"
-						content="https://fractures.space/static/images/share.png"
-					/>
+					<meta name="og-image" property="og:image" content="https://fractures.space/static/images/share.png" />
 					<meta name="og-image-width" property="og:image:width" content="200" />
 					<meta name="og-image-height" property="og:image:height" content="200" />
 					<meta name="google-site-verification" content="zOr1hPUy598X8UrDiYZLK20AkpuhWw0PYKcdOJ-NzPU" />
