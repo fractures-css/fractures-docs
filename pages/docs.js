@@ -1,5 +1,5 @@
 import { Container } from "fractures-ui"
-import Layout from "../../components/Layout"
+import Layout from "../components/Layout"
 import Link from "next/link"
 
 const docsDefaultClass = "bg-smoke p-1"

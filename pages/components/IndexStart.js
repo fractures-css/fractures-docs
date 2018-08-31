@@ -1,6 +1,6 @@
 import { Container } from "fractures-ui"
 import { Fragment } from "react"
-import meta from "../../../utils/meta.js"
+import meta from "../../utils/meta.js"
 
 const IndexStart = () => (
 	<Fragment>
@@ -23,12 +23,9 @@ const IndexStart = () => (
 						<li>
 							Then you can 🦄 <em>import "fractures/dist/fractures.css"</em>
 						</li>
+						<li>For production use, I recommend running the fractures.css file through your build process.</li>
 						<li>
-							For production use, I recommend running the fractures.css file through your build process.
-						</li>
-						<li>
-							Here is an example repo{" "}
-							<a href="https://github.com/fractures/fractures-examples">with React</a>.
+							Here is an example repo <a href="https://github.com/fractures/fractures-examples">with React</a>.
 						</li>
 					</ul>
 				</li>

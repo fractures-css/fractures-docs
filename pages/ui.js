@@ -1,6 +1,6 @@
 import { Button, ButtonGroup, Checkbox, Color, Container, Radio, Range, Progress, Toggle, Input } from "fractures-ui"
 import { Component } from "react"
-import Layout from "../../components/Layout"
+import Layout from "../components/Layout"
 import UiHero from "./components/UiHero"
 
 class fUI extends Component {
@@ -64,18 +64,8 @@ class fUI extends Component {
 							<Button type="secondary" value="Small Rounded" small={ true } isRounded={ true } />
 						</div>
 						<div className="flex flex-gap-1 my-1">
-							<Button
-								type="primary"
-								value="Activate"
-								isLoading={ !this.state.buttonLoading }
-								action={ () => this.mockClick() }
-							/>
-							<Button
-								type="secondary"
-								value="Activate"
-								isLoading={ !this.state.buttonLoading }
-								action={ () => this.mockClick() }
-							/>
+							<Button type="primary" value="Activate" isLoading={ !this.state.buttonLoading } action={ () => this.mockClick() } />
+							<Button type="secondary" value="Activate" isLoading={ !this.state.buttonLoading } action={ () => this.mockClick() } />
 							<Button
 								type="primary"
 								value="Activate"
@@ -113,11 +103,7 @@ class fUI extends Component {
 					<div className="my-4">
 						<h4 className="my-2">Checkbox</h4>
 						<div className="flex flex-gap-1 flex-column my-1">
-							<Checkbox
-								label="Checkbox, hmm"
-								isChecked={ this.state.checkbox }
-								check={ () => this.toggleCheckbox() }
-							/>
+							<Checkbox label="Checkbox, hmm" isChecked={ this.state.checkbox } check={ () => this.toggleCheckbox() } />
 							<Checkbox label="This is disabled, checked" isChecked={ true } isDisabled={ true } />
 							<Checkbox label="This is disabled, unchecked" isChecked={ false } isDisabled={ true } />
 							<Toggle label="This is a toggle" isChecked={ false } isDisabled={ false } />

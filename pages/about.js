@@ -1,14 +1,13 @@
 import { Container } from "fractures-ui"
-import Layout from "../../components/Layout"
+import Layout from "../components/Layout"
 
 const About = () => (
 	<Layout title="about — fractures">
 		<Container className="py-5">
 			<h1 className="mb-2">About</h1>
 			<p className="mb-5">
-				This is a small project, in which I try to simplify my life by abstracting away the complexities UI
-				design has to offer 😨. I use this for quick prototyping; and in some cases, for production 🙈 where I
-				build a design system on top of it.
+				This is a small project, in which I try to simplify my life by abstracting away the complexities UI design has to offer 😨. I use
+				this for quick prototyping; and in some cases, for production 🙈 where I build a design system on top of it.
 				<br />
 				<br />
 				That do sound hacky, so please consider this opinionated.<br />
@@ -39,10 +38,7 @@ const About = () => (
 								prefixed
 							</a>{" "}
 							version handles some, but not everything. This{" "}
-							<a
-								target="_new"
-								href="https://rachelandrew.co.uk/archives/2017/07/04/is-it-really-safe-to-start-using-css-grid-layout/"
-							>
+							<a target="_new" href="https://rachelandrew.co.uk/archives/2017/07/04/is-it-really-safe-to-start-using-css-grid-layout/">
 								article
 							</a>{" "}
 							might help you.
@@ -52,8 +48,8 @@ const About = () => (
 			</div>
 			<h3 className="regular">Inspiration</h3>
 			<p className="my-2">
-				I started this as my own reset.css when having a reset css was cool. It was grown into a common.css,
-				then a tools.css. Now is somewhat atomic.
+				I started this as my own reset.css when having a reset css was cool. It was grown into a common.css, then a tools.css. Now is
+				somewhat atomic.
 			</p>
 			<p className="my-2">I've also learned some tricks from these smart people:</p>
 			<ul className="list-disc mb-5 ml-3">
@@ -66,8 +62,7 @@ const About = () => (
 					<a href="https://gridbyexample.com/">gridbyexample</a>.
 				</li>
 				<li>
-					<a href="https://twitter.com/mrmrs_">@mrmrs_</a> &mdash; with the great{" "}
-					<a href="http://tachyons.io">tachyons</a>.
+					<a href="https://twitter.com/mrmrs_">@mrmrs_</a> &mdash; with the great <a href="http://tachyons.io">tachyons</a>.
 				</li>
 				<li>
 					<a href="https://twitter.com/jxnblk">@jxnblk</a> &mdash; doing God's work with all these{" "}

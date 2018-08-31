@@ -1,6 +1,6 @@
 import { Button, Container } from "fractures-ui"
 import Link from "next/link"
-import meta from "../../../utils/meta.js"
+import meta from "../../utils/meta.js"
 
 const IndexHero = () => (
 	<Container className="flex flex-gap-4 flex-wrap py-6">
@@ -11,8 +11,7 @@ const IndexHero = () => (
 			<h1 title="fractures">fr&middot;ctures</h1>
 			<b className="source-code-pro">Baseline atomic CSS toolkit.</b>
 			<p className="my-3">
-				<b>fractures</b> helps you bootstrap design-systems and prototypes by providing a set of non-blocking,
-				atomic, utility classes.{" "}
+				<b>fractures</b> helps you bootstrap design-systems and prototypes by providing a set of non-blocking, atomic, utility classes.{" "}
 				<Link href="/about">
 					<a>Learn more.</a>
 				</Link>
