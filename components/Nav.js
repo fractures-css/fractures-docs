@@ -1,6 +1,7 @@
 import { Component } from "react"
 import { Container } from "fractures-ui"
 import Link from "next/link"
+import Fractures from "./Fractures"
 
 class Nav extends Component {
 	constructor(props) {
@@ -19,17 +20,16 @@ class Nav extends Component {
 
 		// prettier-ignore
 		const headerLinks = [
-			{ name: "Home", url: "/" },
-			{ name: "Docs", url: "/docs" },
-			{ name: "About", url: "/about" }
+			{ icon: "info", name: "Docs", url: "/docs" },
+			{ icon: "favorite", name: "About", url: "/about" }
 		]
 
 		const headerRender = headerLinks.map((item, key) => (
 			<li className={ this.state.pathname === item.url ? "active" : "" } key={ key }>
 				<Link href={ item.url } prefetch>
-					<a className="flex flex-gap-1 flex-ycenter relative">
+					<a className="flex flex-ycenter flex-gap-1 relative">
+						{item.name === "fr·ctures" && <Fractures />}
 						<span>{item.name}</span>
-						{item.name === "UI" && <span className="fr-label">WIP</span>}
 					</a>
 				</Link>
 			</li>
@@ -37,46 +37,42 @@ class Nav extends Component {
 
 		return (
 			<div className="fr-header fixed z-2 top-0 w-100">
-				<Container>
-					<ul className="flex flex-gap-2">{headerRender}</ul>
+				<Container className="flex flex-between">
+					<ul>
+						<li className={ this.state.pathname === "/" ? "active" : "" }>
+							<Link href={ "/" } prefetch>
+								<a className="flex flex-ycenter flex-gap-1">
+									<Fractures />
+									<span>fr·ctures</span>
+								</a>
+							</Link>
+						</li>
+					</ul>
+					<ol className="flex flex-gap-2">{headerRender}</ol>
 				</Container>
 				<style jsx global>{`
 					.fr-header {
 						height: 4rem;
 
-						background-color: var(--fr-ground);
+						background-color: white;
 						box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
-
-						line-height: 4rem;
 					}
 
 					.fr-header li a {
-						display: block;
-						height: 4rem;
 						padding: 0 0.5rem;
 
 						color: var(--fr-500);
+
+						font-weight: 500;
+						line-height: 4rem;
 					}
 
 					.fr-header li.active {
-						box-shadow: 0 1px 0 0 var(--fr-700);
+						box-shadow: inset 0 -1px 0 0 var(--fr-500);
 					}
 
 					.fr-header li.active a {
 						color: var(--fr-900);
-					}
-
-					.fr-header .fr-label {
-						display: inline-flex;
-						padding: 0 0.25rem;
-
-						background-color: var(--fr-500);
-						border-radius: 0.125rem;
-						color: var(--fr-ground);
-						transform: translateY(-0.125rem);
-
-						font-size: 0.75rem;
-						line-height: 1.5rem;
 					}
 				`}</style>
 			</div>
