@@ -7,15 +7,6 @@
 	--color-red: #db5454;
 	--color-blue: #445695;
 	--color-blue-dark: #3d3f71;
-
-	/* These are for fractures-ui, will be deprecated */
-	--fr-ground: white;
-	--fr-100: var(--color-light);
-	--fr-300: var(--color-gray);
-	--fr-500: var(--color-blue);
-	--fr-700: var(--color-blue-dark);
-	--fr-900: var(--color-dark);
-	--fr-focus: rgba(61, 63, 113, 0.25);
 }
 
 *::selection {

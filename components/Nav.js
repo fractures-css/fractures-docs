@@ -1,7 +1,9 @@
 import { Component } from "react"
+import Button from "./Button"
 import Container from "./Container"
-import Link from "next/link"
 import Fractures from "./Fractures"
+import Link from "next/link"
+import meta from "../utils/meta.js"
 
 class Nav extends Component {
 	constructor(props) {
@@ -38,7 +40,7 @@ class Nav extends Component {
 		return (
 			<div className="fr-header fixed z-2 top-0 w-100">
 				<Container className="flex flex-between">
-					<ul>
+					<ol className="flex flex-gap-1">
 						<li className={ this.state.pathname === "/" ? "active" : "" }>
 							<Link href={ "/" } prefetch>
 								<a className="flex flex-ycenter flex-gap-1">
@@ -47,8 +49,15 @@ class Nav extends Component {
 								</a>
 							</Link>
 						</li>
-					</ul>
-					<ol className="flex flex-gap-2">{headerRender}</ol>
+					</ol>
+					<ol className="flex flex-gap-2">
+						{headerRender}
+						<li className="flex flex-ycenter">
+							<a href="https://github.com/fractures/fractures">
+								<Button count={ meta.stars } label="GitHub" />
+							</a>
+						</li>
+					</ol>
 				</Container>
 				<style jsx global>{`
 					.fr-header {
@@ -61,18 +70,18 @@ class Nav extends Component {
 					.fr-header li a {
 						padding: 0 0.5rem;
 
-						color: var(--fr-500);
+						color: var(--color-blue);
 
 						font-weight: 500;
 						line-height: 4rem;
 					}
 
 					.fr-header li.active {
-						box-shadow: inset 0 -1px 0 0 var(--fr-500);
+						box-shadow: inset 0 -1px 0 0 var(--color-blue);
 					}
 
 					.fr-header li.active a {
-						color: var(--fr-900);
+						color: var(--color-dark);
 					}
 				`}</style>
 			</div>

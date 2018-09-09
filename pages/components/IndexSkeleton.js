@@ -1,10 +1,10 @@
 import { Component, Fragment } from "react"
-import Container from "../../../components/Container"
-import IconBoxes from "./images/IconBoxes"
-import IconIntro from "./images/IconIntro"
-import IconOwn from "./images/IconOwn"
-import IconSticky from "./images/IconSticky"
-import Pre from "../../../components/Pre"
+import Container from "../../components/Container"
+import IconBoxes from "../images/IconBoxes"
+import IconIntro from "../images/IconIntro"
+import IconOwn from "../images/IconOwn"
+import IconSticky from "../images/IconSticky"
+import Pre from "../../components/Pre"
 
 const examples = [
 	[

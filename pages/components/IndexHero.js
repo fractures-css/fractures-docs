@@ -1,6 +1,5 @@
-import { Button } from "fractures-ui"
-import Link from "next/link"
 import Container from "../../components/Container"
+import Link from "next/link"
 import meta from "../../utils/meta.js"
 
 const IndexHero = () => (
@@ -20,22 +19,6 @@ const IndexHero = () => (
 						<a>Learn more.</a>
 					</Link>
 				</p>
-				<div className="flex flex-gap-1">
-					<Button
-						action={ () => {
-							document.getElementById("getting-started").scrollIntoView(true)
-						} }
-						isRounded={ false }
-						type="primary"
-						value="Getting started"
-					/>
-					<Button
-						action={ () => (window.location = "https://github.com/fractures/fractures") }
-						isRounded={ false }
-						type="secondary"
-						value="GitHub"
-					/>
-				</div>
 				<div className="mt-3 source-code-pro">
 					<small>
 						version: {meta.version}
