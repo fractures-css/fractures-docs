@@ -6,17 +6,18 @@ const About = () => (
 		<Container className="py-5">
 			<h1 className="mb-2">About</h1>
 			<p className="py-2">
-				This is a small project, in which I try to simplify my life by abstracting away the complexities UI design has to offer 😨. I use
-				this for quick prototyping; and in some cases, for production where I build a <b>design system</b> on top of it.
+				This is a small project, in which I try to simplify my life by abstracting away the complexities
+				{` `}
+				UI design has to offer 😨. I use fractures for <b>rapid prototyping</b> and building out <b>design systems</b>.
 			</p>
 			<p className="py-2 mb-2">
-				That do sound hacky, so please consider this opinionated.
+				Although it is really just a thin atomic CSS layer, please consider the project opinionated.
 				<br />
 				Have questions? Open an issue on <a href="https://github.com/fractures/fractures/issues">GitHub</a>.
 			</p>
-			<div className="grid grid-cols-2 grid-gap-3 mb-5">
+			<div className="grid grid-cols-1 grid-gap-3 mb-4">
 				<div>
-					<h3>Goals</h3>
+					<h2 className="mb-1">Goals</h2>
 					<ul className="list-disc ml-3">
 						<li>You can design with &mdash; not around it. Leaves UI untouched.</li>
 						<li>Atomic, non blocking.</li>
@@ -26,7 +27,7 @@ const About = () => (
 					</ul>
 				</div>
 				<div>
-					<h3>Problems</h3>
+					<h2 className="mb-1">Problems</h2>
 					<ul className="list-disc ml-3">
 						<li>
 							I don't think percentage based CSS breakpoint are universal enough, so you have to handle
@@ -43,41 +44,39 @@ const About = () => (
 					</ul>
 				</div>
 			</div>
-			<h3>Inspiration</h3>
+			<h4>Inspiration</h4>
 			<p className="my-2">
-				I started this as my own reset.css when having a reset css was cool. It was grown into a common.css, then a tools.css. Now is
-				somewhat atomic.
+				I started this prject as my own reset.css when having a reset css was cool.
+				{` `}
+				It was grown into a common.css, then a tools.css. Now it's somewhat atomic.
 			</p>
 			<p className="my-2">I've also learned some tricks from these smart people:</p>
-			<ul className="list-disc mb-5 ml-3">
+			<ul className="list-disc my-3 ml-3">
 				<li>
-					<a href="https://twitter.com/brad_frost">@brad_frost</a> &mdash; and his classic{" "}
-					<a href="http://atomicdesign.bradfrost.com/">book</a>.
+					<a href="http://atomicdesign.bradfrost.com/">Atomic Design</a> by Brad Frost
 				</li>
 				<li>
-					<a href="https://twitter.com/jongold">@jongold</a> &mdash; An article about the beauties of{" "}
-					<a href="http://www.jon.gold/2015/07/functional-css/">functional css</a>.
+					<a href="http://www.jon.gold/2015/07/functional-css/">Functional Programming, CSS, and your sanity</a> by Jon Gold
 				</li>
 				<li>
-					<a href="https://twitter.com/rachelandrew">@rachelandrew</a> &mdash; grid 101 at{" "}
-					<a href="https://gridbyexample.com/">gridbyexample</a>.
+					<a href="http://danmall.me/articles/cooking-with-design-systems/">Cooking with Design Systems</a> by Dan Mall
 				</li>
 				<li>
-					<a href="https://twitter.com/rauchg">@rauchg</a> &mdash;
-					{` `}
-					<a href="https://rauchg.com/2015/pure-ui">Pure UI</a> is a classic.
+					<a href="https://rauchg.com/2015/pure-ui">Pure UI</a> by Guillermo Rauch
 				</li>
 				<li>
-					<a href="https://twitter.com/mrmrs_">@mrmrs_</a> &mdash; with the great <a href="http://tachyons.io">tachyons</a>.
-				</li>
-				<li>
-					<a href="https://twitter.com/jxnblk">@jxnblk</a> &mdash; doing God's work with all these{" "}
-					<a href="https://github.com/jxnblk?tab=repositories">projects</a>.
+					<a href="https://gridbyexample.com/">Grid by Example</a> by Rachel Andrew
 				</li>
 			</ul>
-			<h3>Me</h3>
 			<p className="my-2">
-				I'm a designer who codes. 🐈 <a href="https://twitter.com/pyx">@pyx</a>
+				The concept of functional CSS is not new.
+				<br />
+				There are quite a few similar projects out there you can choose from:{" "}
+				<a href="https://github.com/topics/functional-css">#functional-css</a>.
+			</p>
+			<h4>Me</h4>
+			<p className="my-2">
+				I'm a designer who <a href="https://pyx.space/about">codes</a>. Tweet me at 🐈 <a href="https://twitter.com/pyx">@pyx</a>
 			</p>
 		</Container>
 	</Layout>
