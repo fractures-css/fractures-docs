@@ -121,13 +121,6 @@ class IndexSkeleton extends Component {
 									content: counter(line);
 									text-align: center;
 								}
-
-								.skeleton-pre span:first-child {
-									/* margin-bottom: 1.5rem; */
-
-									/* background: white; */
-									/* color: var(--fr-300); */
-								}
 							`}</style>
 						</div>
 					</Container>

@@ -1,36 +1,35 @@
 :root {
+	--color-light: #f5f5f8;
+	--color-gray: #e0e0ec;
+	--color-dark: #262633;
 	--color-green: #219f73;
-	--color-high: #e5fedd;
+	--color-mint: #e5fedd;
 	--color-red: #db5454;
+	--color-blue: #445695;
 
-	--fr-ground: #ffffff;
-	--fr-100: #f2f2f7;
-	--fr-300: #e0e0ec;
-	--fr-500: #445695;
+	/* These are for fractures-ui, will be deprecated */
+	--fr-ground: white;
+	--fr-100: var(--color-light);
+	--fr-300: var(--color-gray);
+	--fr-500: var(--color-blue);
 	--fr-700: #3d3f71;
-	--fr-900: #262633;
+	--fr-900: var(--color-dark);
 	--fr-focus: rgba(61, 63, 113, 0.25);
-
-	/* Don't do this. */
-	--gray: var(--fr-300) !important;
-	--lightgray: var(--fr-300) !important;
-	--silver: var(--fr-300) !important;
-	--dimgray: var(--fr-300) !important;
-	--darkgray: var(--fr-300) !important;
-	--whitesmoke: var(--fr-300) !important;
 }
 
 *::selection {
-	background-color: var(--color-high);
+	background-color: var(--color-mint);
 }
 
 html {
-	background-color: var(--fr-100);
+	/* background-color: var(--color-light); */
+	background-color: white;
 }
 
 body {
-	background-color: var(--fr-100);
-	color: var(--fr-700);
+	background-color: var(--color-light);
+	/* background-color: white; */
+	color: var(--color-dark);
 
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
 		"Helvetica Neue", sans-serif;
@@ -75,8 +74,32 @@ h6 {
 	font-weight: 400;
 }
 
-.fr-bg-silver {
-	background-color: var(--fr-100);
+.bg-color-light {
+	background-color: var(--color-light);
+}
+
+.bg-color-gray {
+	background-color: var(--color-gray);
+}
+
+.bg-color-dark {
+	background-color: var(--color-dark);
+}
+
+.bg-color-blue {
+	background-color: var(--color-blue);
+}
+
+.bg-color-green {
+	background-color: var(--color-green);
+}
+
+.bg-color-mint {
+	background-color: var(--color-mint);
+}
+
+.bg-color-red {
+	background-color: var(--color-red);
 }
 
 pre {
@@ -87,7 +110,7 @@ pre {
 
 pre::selection,
 pre *::selection {
-	background-color: var(--fr-100);
+	background-color: var(--color-gray);
 }
 
 pre span em {
@@ -101,7 +124,7 @@ pre span {
 }
 
 pre a {
-	color: var(--fr-900);
+	color: var(--color-dark);
 
 	font-weight: bold;
 }

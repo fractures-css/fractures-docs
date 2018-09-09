@@ -10,10 +10,12 @@ const Docs = () => (
 			<header className="py-5">
 				<h1>Docs</h1>
 				<p>
-					Core concept is ~atomic classes, that makes sense.<br />
+					Core concept is ~atomic classes, that makes sense.
+					<br />
 					<Link href="/about">
 						<a>Learn more</a>
-					</Link>.
+					</Link>
+					.
 				</p>
 				<ul className="list-disc ml-4 mt-3">
 					<li>You can overwrite default building blocks by setting --box-(1-6) on :root.</li>
@@ -43,7 +45,8 @@ const Docs = () => (
 			<article className="py-4">
 				<h3>Color</h3>
 				<p className="mb-4">
-					Basic monochrome color scheme from CSS defaults.<br />
+					Basic monochrome color scheme from CSS defaults.
+					<br />
 					You can overwrite these, but don&apos;t.
 				</p>
 				<div className="grid grid-cols-8 grid-gap-1">
@@ -92,7 +95,8 @@ const Docs = () => (
 				<div className="grid grid-cols-6 grid-gap-1">
 					<div className={ docsDefaultClass }>block</div>
 					<div className={ docsDefaultClass }>
-						clearfix<sup>*</sup>
+						clearfix
+						<sup>*</sup>
 					</div>
 					<div className={ docsDefaultClass }>flex</div>
 					<div className={ docsDefaultClass }>float-left</div>
@@ -104,14 +108,16 @@ const Docs = () => (
 					<div className={ docsDefaultClass }>inline</div>
 					<div className={ docsDefaultClass }>none</div>
 					<div className={ docsDefaultClass }>
-						table<sup>*</sup>
+						table
+						<sup>*</sup>
 					</div>
 					<div className={ docsDefaultClass }>table-cell</div>
 					<div className={ docsDefaultClass }>table-column</div>
 					<div className={ docsDefaultClass }>table-row</div>
 				</div>
 				<small className="block mt-4">
-					<b>.clearfix</b> is an after-before-content hack for clearing floats.<br />
+					<b>.clearfix</b> is an after-before-content hack for clearing floats.
+					<br />
 					<b>.table</b> has an extra attribute, layout: fixed.
 				</small>
 			</article>
@@ -138,13 +144,16 @@ const Docs = () => (
 					<div className={ docsDefaultClass }>flex-gap-5</div>
 					<div className={ docsDefaultClass }>flex-gap-6</div>
 					<div className={ docsDefaultClass }>
-						flex-center<sup>*</sup>
+						flex-center
+						<sup>*</sup>
 					</div>
 					<div className={ docsDefaultClass }>
-						flex-xcenter<sup>*</sup>
+						flex-xcenter
+						<sup>*</sup>
 					</div>
 					<div className={ docsDefaultClass }>
-						flex-ycenter<sup>*</sup>
+						flex-ycenter
+						<sup>*</sup>
 					</div>
 					<div className={ docsDefaultClass }>grow-1</div>
 					<div className={ docsDefaultClass }>grow-2</div>
@@ -158,8 +167,10 @@ const Docs = () => (
 					<div className={ docsDefaultClass }>self-baseline</div>
 				</div>
 				<small className="block mt-4">
-					<b>.flex-(x|y)center</b> does what is say. x-y is axis.<br />
-					<b>.grow-x</b> also resets flex-basis to 0. Should be used on flex children.<br />
+					<b>.flex-(x|y)center</b> does what is say. x-y is axis.
+					<br />
+					<b>.grow-x</b> also resets flex-basis to 0. Should be used on flex children.
+					<br />
 					<b>.self-x</b> is align-self. Should be used on flex children.
 				</small>
 			</article>
@@ -205,7 +216,8 @@ const Docs = () => (
 					<div className={ docsDefaultClass }>grid-rows-8</div>
 				</div>
 				<small className="block mt-4">
-					<b>.grid-(rows|cols)-x</b> are splitted with fr units.<br />
+					<b>.grid-(rows|cols)-x</b> are splitted with fr units.
+					<br />
 					<b>.grid-(rows|cols)-x</b> has a .dense class modifier
 				</small>
 			</article>
@@ -271,10 +283,14 @@ const Docs = () => (
 					<div className={ docsDefaultClass }>minh-viewport</div>
 				</div>
 				<small className="block mt-4">
-					<b>.minh-x</b> is minimum height as percentage.<br />
-					<b>.maxh-x</b> is maximum height as percentage.<br />
-					<b>.maxh-viewport</b> is maximum height set to current viewport height.<br />
-					<b>.minh-viewport</b> is mininum height set to current viewport height.<br />
+					<b>.minh-x</b> is minimum height as percentage.
+					<br />
+					<b>.maxh-x</b> is maximum height as percentage.
+					<br />
+					<b>.maxh-viewport</b> is maximum height set to current viewport height.
+					<br />
+					<b>.minh-viewport</b> is mininum height set to current viewport height.
+					<br />
 				</small>
 			</article>
 
@@ -295,11 +311,13 @@ const Docs = () => (
 					<div className={ docsDefaultClass }>list-upper-latin</div>
 					<div className={ docsDefaultClass }>list-upper-roman</div>
 					<div className={ docsDefaultClass }>
-						list-comma<sup>*</sup>
+						list-comma
+						<sup>*</sup>
 					</div>
 				</div>
 				<small className="block mt-4">
-					<b>.list-comma</b> is turning its content into a comma separated inline list.<br />
+					<b>.list-comma</b> is turning its content into a comma separated inline list.
+					<br />
 				</small>
 			</article>
 
@@ -360,8 +378,10 @@ const Docs = () => (
 					<div className={ docsDefaultClass }>mx-auto</div>
 				</div>
 				<small className="block mt-4">
-					<b>.mx-x</b> is margin on X axis.<br />
-					<b>.my-x</b> is margin on Y axis.<br />
+					<b>.mx-x</b> is margin on X axis.
+					<br />
+					<b>.my-x</b> is margin on Y axis.
+					<br />
 				</small>
 			</article>
 
@@ -451,8 +471,10 @@ const Docs = () => (
 					<div className={ docsDefaultClass }>px-6</div>
 				</div>
 				<small className="block mt-4">
-					<b>.px-x</b> is padding on X axis.<br />
-					<b>.py-x</b> is padding on Y axis.<br />
+					<b>.px-x</b> is padding on X axis.
+					<br />
+					<b>.py-x</b> is padding on Y axis.
+					<br />
 				</small>
 			</article>
 
@@ -493,7 +515,8 @@ const Docs = () => (
 					<div className={ docsDefaultClass }>z-10</div>
 				</div>
 				<small className="block mt-4">
-					<b>.z-x</b> is a z-index scale from 0-100, so it has some extra room.<br />
+					<b>.z-x</b> is a z-index scale from 0-100, so it has some extra room.
+					<br />
 				</small>
 			</article>
 
@@ -501,7 +524,8 @@ const Docs = () => (
 			<article className="py-4">
 				<h3>Typo</h3>
 				<p className="mb-4">
-					Typescale is WIP, and most likely will change.<br />
+					Typescale is WIP, and most likely will change.
+					<br />
 				</p>
 				<div className="grid grid-cols-3 grid-gap-2 mb-3">
 					<h1>Sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
@@ -525,16 +549,19 @@ const Docs = () => (
 				</div>
 				<div className="grid grid-cols-8 grid-gap-1">
 					<div className={ docsDefaultClass }>
-						ellipsis<sup>*</sup>
+						ellipsis
+						<sup>*</sup>
 					</div>
 					<div className={ docsDefaultClass }>italic</div>
 					<div className={ docsDefaultClass }>normal</div>
 					<div className={ docsDefaultClass }>oblique</div>
 					<div className={ docsDefaultClass }>
-						regular<sup>*</sup>
+						regular
+						<sup>*</sup>
 					</div>
 					<div className={ docsDefaultClass }>
-						bold<sup>*</sup>
+						bold
+						<sup>*</sup>
 					</div>
 					<div className={ docsDefaultClass }>center</div>
 					<div className={ docsDefaultClass }>justify</div>
@@ -554,11 +581,16 @@ const Docs = () => (
 				</div>
 				<small className="block mt-4">
 					<b>typescale</b> are defined by em units (body, h1, h2, h3, h4, h5, p, h6, small). Body takes root variables --basefont and
-					--baseline. Defaults are 16/1.6.<br />
-					<b>.regular</b> takes a root variable, --regular. Default is 400.<br />
-					<b>.bold</b> takes a root variable, --bold. Default is 700.<br />
-					<b>.ellipsis</b> is non-atomic - makes text-overflow ellipsis possible.<br />
-					<b>.unselectable</b> makes the element unselectable with user-select: none.<br />
+					--baseline. Defaults are 16/1.6.
+					<br />
+					<b>.regular</b> takes a root variable, --regular. Default is 400.
+					<br />
+					<b>.bold</b> takes a root variable, --bold. Default is 700.
+					<br />
+					<b>.ellipsis</b> is non-atomic - makes text-overflow ellipsis possible.
+					<br />
+					<b>.unselectable</b> makes the element unselectable with user-select: none.
+					<br />
 					<b>.no-events</b> makes the element <em>uneventable</em> with pointer-events: none.
 				</small>
 			</article>
@@ -624,10 +656,14 @@ const Docs = () => (
 					<div className={ docsDefaultClass }>minw-viewport</div>
 				</div>
 				<small className="block mt-4">
-					<b>.minw-x</b> is minimum width as percentage.<br />
-					<b>.maxw-x</b> is maximum width as percentage.<br />
-					<b>.maxw-viewport</b> is maximum width set to current viewport width.<br />
-					<b>.minw-viewport</b> is minimum width set to current viewport width.<br />
+					<b>.minw-x</b> is minimum width as percentage.
+					<br />
+					<b>.maxw-x</b> is maximum width as percentage.
+					<br />
+					<b>.maxw-viewport</b> is maximum width set to current viewport width.
+					<br />
+					<b>.minw-viewport</b> is minimum width set to current viewport width.
+					<br />
 				</small>
 			</article>
 		</Container>

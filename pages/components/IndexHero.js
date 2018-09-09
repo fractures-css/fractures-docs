@@ -45,7 +45,7 @@ const IndexHero = () => (
 			</div>
 			<style jsx global>{`
 				.index-hero {
-					background: linear-gradient(white, var(--fr-100));
+					background: linear-gradient(white, var(--color-light));
 				}
 			`}</style>
 		</Container>

@@ -10,7 +10,8 @@ const About = () => (
 				this for quick prototyping; and in some cases, for production 🙈 where I build a design system on top of it.
 				<br />
 				<br />
-				That do sound hacky, so please consider this opinionated.<br />
+				That do sound hacky, so please consider this opinionated.
+				<br />
 				Have questions? Open an issue on <a href="https://github.com/fractures/fractures/issues">GitHub</a>.
 			</p>
 			<div className="grid grid-cols-2 grid-gap-3 mb-5">
