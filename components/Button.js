@@ -47,6 +47,10 @@ const Button = props => (
 				background-color: var(--color-light);
 			}
 
+			.btn span {
+				display: inline-flex;
+			}
+
 			.btn .btn__count {
 				padding: 0 0.5rem;
 

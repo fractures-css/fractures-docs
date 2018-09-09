@@ -13,8 +13,6 @@ class Layout extends Component {
 
 	// Init GA on mount
 	componentDidMount() {
-		this.setState({ isLoaded: true })
-
 		if(!window.GA_INITIALIZED) {
 			initGA()
 			window.GA_INITIALIZED = true
