@@ -27,15 +27,11 @@ class IndexSkeleton extends Component {
 
 		return (
 			<Fragment>
-				<div className="skeleton__nav">
+				<div className="skeleton__nav ">
 					<Container>
-						<ul className="flex flex-gap-4">
+						<ul className="flex flex-gap-1">
 							{skeletonItems.map((item, key) => (
-								<li
-									key={ key }
-									className={ this.state.example === key && "active" }
-									onClick={ e => this.showExample(e, key) }
-								>
+								<li key={ key } className={ this.state.example === key && "active" } onClick={ e => this.showExample(e, key) }>
 									{item}
 								</li>
 							))}
@@ -49,7 +45,7 @@ class IndexSkeleton extends Component {
 						.skeleton__nav li {
 							position: relative;
 
-							padding: 1rem 0;
+							padding: 0.75rem 1rem;
 
 							cursor: pointer;
 							color: var(--fr-700);
@@ -58,15 +54,15 @@ class IndexSkeleton extends Component {
 						}
 
 						.skeleton__nav .active {
-							box-shadow: 0 1px 0 0 var(--fr-500);
-						}
-
-						.skeleton__nav .active:before {
-							background-color: var(--color-green);
+							/* background-color: var(--fr-300); */
+							/* background: white; */
+							box-shadow: inset 0 0 0 1px var(--fr-300);
+							border-radius: 0.25rem;
+							color: var(--color-red);
 						}
 					`}</style>
 				</div>
-				<div className="py-5 fr-bg-silver">
+				<div className="py-5">
 					<Container>
 						<div className="flex flex-xcenter flex-gap-4 flex-wrap">
 							<div className="skeleton-item mb-4">
@@ -75,12 +71,12 @@ class IndexSkeleton extends Component {
 								{this.state.example === 2 && <IconSticky />}
 								{this.state.example === 3 && <IconOwn />}
 							</div>
-							<div className="grow-1">
+							<pre className="skeleton-pre grow-1">
 								{this.state.example === 0 && exampleIntro}
 								{this.state.example === 1 && exampleBoxes}
 								{this.state.example === 2 && exampleSticky}
 								{this.state.example === 3 && exampleOwn}
-							</div>
+							</pre>
 							<style jsx global>{`
 								.skeleton-item {
 									height: 7.5rem;
@@ -91,8 +87,46 @@ class IndexSkeleton extends Component {
 									height: 7.5rem;
 									width: 7.5rem;
 
-									border-radius: 0.5rem;
-									box-shadow: 0 0.25rem 1.5rem 0 rgba(0, 0, 0, 0.1);
+									border-radius: 0.25rem;
+								}
+
+								.skeleton-pre {
+									min-height: 10.5rem;
+
+									background-color: white;
+									background-size: 1px 1.5rem;
+									background-image: linear-gradient(to bottom, var(--fr-100) 1px, transparent 1px);
+									box-shadow: inset 0 0 0 1px var(--fr-300);
+									border-left: 1.5rem solid var(--fr-300);
+									border-radius: 0.25rem;
+
+									counter-reset: line;
+									line-height: 1.5rem;
+								}
+
+								.skeleton-pre span {
+									position: relative;
+
+									padding-left: 1rem;
+								}
+
+								.skeleton-pre span:before {
+									position: absolute;
+									left: -1.5rem;
+
+									opacity: 0.5;
+									width: 1.5rem;
+
+									counter-increment: line;
+									content: counter(line);
+									text-align: center;
+								}
+
+								.skeleton-pre span:first-child {
+									/* margin-bottom: 1.5rem; */
+
+									/* background: white; */
+									/* color: var(--fr-300); */
 								}
 							`}</style>
 						</div>

@@ -5,7 +5,7 @@
 
 	--fr-ground: #ffffff;
 	--fr-100: #f2f2f7;
-	--fr-300: #bccfe8;
+	--fr-300: #e0e0ec;
 	--fr-500: #445695;
 	--fr-700: #3d3f71;
 	--fr-900: #262633;
@@ -21,11 +21,11 @@ html {
 }
 
 body {
-	background-color: var(--fr-ground);
+	background-color: var(--fr-100);
 	color: var(--fr-700);
 
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-		"Droid Sans", "Helvetica Neue", sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
 }
@@ -96,30 +96,4 @@ pre a {
 	color: var(--fr-900);
 
 	font-weight: bold;
-}
-
-#nprogress {
-	pointer-events: none;
-}
-
-#nprogress .bar {
-	left: 0;
-	position: fixed;
-	top: 0;
-	z-index: 100;
-
-	height: 0.125rem;
-	width: 100%;
-
-	background-color: var(--fr-300);
-}
-
-.nprogress-custom-parent {
-	position: relative;
-
-	overflow: hidden;
-}
-
-.nprogress-custom-parent #nprogress .bar {
-	position: absolute;
 }
