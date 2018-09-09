@@ -1,5 +1,5 @@
 const GitHub = () => (
-	<svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512" height={ 20 } width={ 20 }>
+	<svg xmlns="http://www.w3.org/2000/svg" aria-label="GitHub" role="img" viewBox="0 0 512 512" height={ 24 } width={ 24 }>
 		<rect width="512" height="512" rx="15%" fill="var(--color-blue-dark)" />
 		<path
 			fill="white"

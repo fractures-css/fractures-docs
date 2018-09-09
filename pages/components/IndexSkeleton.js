@@ -11,8 +11,8 @@ const examples = [
 		"Use atomic, self-explanatory classes with ease.",
 		null,
 		`&lt;div class="<em>flex flex-center</em>"&gt;`,
-		`&emsp;&lt;div /&gt;`,
-		`&emsp;&lt;div /&gt;`,
+		`&#9;&lt;div /&gt;`,
+		`&#9;&lt;div /&gt;`,
 		`&lt;/div&gt;`
 	],
 	[
@@ -26,8 +26,8 @@ const examples = [
 		`Eg.: sticky footer with minimum element height`,
 		null,
 		`&lt;div class="<em>flex flex-column minh-viewport</em>"&gt;`,
-		`&emsp;&lt;div class="<em>grow-1</em>" /&gt;`,
-		`&emsp;&lt;footer /"&gt;`,
+		`&#9;&lt;div class="<em>grow-1</em>" /&gt;`,
+		`&#9;&lt;footer /"&gt;`,
 		`&lt;/div&gt;`
 	],
 	[
@@ -35,7 +35,7 @@ const examples = [
 		`Checkout the documentation for a complete overview.`,
 		null,
 		`&lt;div class="your-container <em>grid grid-gap-2</em>"&gt;`,
-		`&emsp;&lt;div class="your-container__el <em>py-3</em>" /&gt;`,
+		`&#9;&lt;div class="your-container__el <em>py-3</em>" /&gt;`,
 		`&lt;/div&gt;`
 	]
 ]

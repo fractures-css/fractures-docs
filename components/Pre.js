@@ -35,6 +35,7 @@ const Pre = props => {
 					font-family: "Source Code Pro", monospace;
 					counter-reset: line;
 					line-height: 1.5rem;
+					tab-size: 4;
 				}
 
 				.fr-pre code {

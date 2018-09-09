@@ -1,28 +1,80 @@
 import Container from "../components/Container"
 import Layout from "../components/Layout"
+import Pre from "../components/Pre"
 import Link from "next/link"
 
 const docsDefaultClass = "bg-color-gray p-1"
+const rootBoxOptions = [
+	`Overwrite the default building blocks by setting --box-(1-6).`,
+	`This will affect every utility where there is a box-scale.`,
+	null,
+	`:root {`,
+	`&#9;<em>--box-1</em>: 8px;`,
+	`&#9;<em>--box-2</em>: 16px;`,
+	`&#9;<em>--box-3</em>: 24px;`,
+	`&#9;<em>--box-4</em>: 32px;`,
+	`&#9;<em>--box-5</em>: 64px;`,
+	`&#9;<em>--box-6</em>: 128px;`,
+	`}`
+]
+
+const rootColorOptions = [
+	`You can overwrite these, but probably shouldn&apos;t.`,
+	null,
+	`<em>--white</em>: white;`,
+	`<em>--whitesmoke</em>: whitesmoke;`,
+	`<em>--lightgray</em>: lightgray;`,
+	`<em>--silver</em>: silver;`,
+	`<em>--darkgray</em>: darkgray;`,
+	`<em>--gray</em>: gray;`,
+	`<em>--dimgray</em>: dimgray;`,
+	`<em>--black</em>: black;`
+]
+
+const typeRootOptions = [
+	`Overwriteable font-weight options on :root.`,
+	`<em>.regular</em> class uses --normal, as it is more descriptive and could conflict with font-style.`,
+	null,
+	`<em>--normal</em>: normal;`,
+	`<em>--bold</em>: bold;`
+]
 
 const Docs = () => (
-	<Layout title="docs — fractures">
+	<Layout title="Documentation — fractures">
 		<Container>
-			<header className="py-5">
+			<header className="pt-5">
 				<h1>Documentation</h1>
-				<p>
-					Core concept is ~atomic classes, that makes sense.
-					<br />
+				<p className="py-1">
+					Core concept is ~atomic classes, that makes sense.{" "}
 					<Link href="/about">
 						<a>Learn more</a>
 					</Link>
 					.
 				</p>
-				<ul className="list-disc ml-4 mt-3">
-					<li>You can overwrite default building blocks by setting --box-(1-6) on :root.</li>
+			</header>
+
+			{/* Customization */}
+			<article className="py-4">
+				<h4>Customization</h4>
+				<p className="my-2">
+					<b>fractures</b> is CSS only, meaning you can customize it by using CSS variables.
+				</p>
+				<Pre lines={ rootBoxOptions } />
+				<small className="block mt-2">
+					Keep in mind that you have to include the unminified <code>fractures.css</code> version in order to have access to{" "}
+					<code>:root</code>.
+				</small>
+				<small className="block">
+					You also have to handle browser prefixes and possible fallbacks.
+					{` `}
+					CSS variables are supported by only 86.73% of current browsers.
+				</small>
+				<h4 className="mt-4">Opinionated reset</h4>
+				<ul className="list-disc ml-4 my-2">
 					<li>Every element is set to border-box.</li>
 					<li>Html y-scroll is always on, so pages won&apos;t jump.</li>
 				</ul>
-			</header>
+			</article>
 
 			{/* Border */}
 			<article className="py-4">
@@ -44,12 +96,8 @@ const Docs = () => (
 			{/* Color */}
 			<article className="py-4">
 				<h3>Colors</h3>
-				<p className="mb-4">
-					Basic monochrome color scheme from CSS defaults.
-					<br />
-					You can overwrite these, but don&apos;t.
-				</p>
-				<div className="grid grid-cols-8 grid-gap-1">
+				<p className="mb-4">Basic monochrome color scheme from CSS defaults.</p>
+				<div className="grid grid-cols-8 grid-gap-1 mb-2">
 					<div className="bg-white black p-1">bg-white</div>
 					<div className="bg-smoke black p-1">bg-smoke</div>
 					<div className="bg-light dim p-1">bg-light</div>
@@ -67,6 +115,7 @@ const Docs = () => (
 					<div className="dim p-1">dim</div>
 					<div className="black p-1">black</div>
 				</div>
+				<Pre lines={ rootColorOptions } />
 			</article>
 
 			{/* Cursor */}
@@ -559,17 +608,14 @@ const Docs = () => (
 					<div className={ docsDefaultClass }>nowrap</div>
 					<div className={ docsDefaultClass }>break-word</div>
 				</div>
-				<small className="block mt-4">
-					<b>.regular</b> takes a root variable, --normal. Default is normal.
-					<br />
-					<b>.bold</b> takes a root variable, --bold. Default is bold.
-					<br />
+				<small className="block mt-4 mb-2">
 					<b>.ellipsis</b> is non-atomic - makes text-overflow ellipsis possible.
 					<br />
 					<b>.unselectable</b> makes the element unselectable with user-select: none.
 					<br />
 					<b>.no-events</b> makes the element <em>uneventable</em> with pointer-events: none.
 				</small>
+				<Pre lines={ typeRootOptions } />
 			</article>
 
 			{/* Width */}
