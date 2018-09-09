@@ -1,5 +1,5 @@
 import { Component } from "react"
-import { Container } from "fractures-ui"
+import Container from "./Container"
 import Link from "next/link"
 import Fractures from "./Fractures"
 
@@ -20,7 +20,7 @@ class Nav extends Component {
 
 		// prettier-ignore
 		const headerLinks = [
-			{ icon: "info", name: "Docs", url: "/docs" },
+			{ icon: "info", name: "Documentation", url: "/docs" },
 			{ icon: "favorite", name: "About", url: "/about" }
 		]
 

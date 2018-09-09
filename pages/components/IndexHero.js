@@ -1,5 +1,6 @@
-import { Button, Container } from "fractures-ui"
+import { Button } from "fractures-ui"
 import Link from "next/link"
+import Container from "../../components/Container"
 import meta from "../../utils/meta.js"
 
 const IndexHero = () => (

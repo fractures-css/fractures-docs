@@ -1,4 +1,4 @@
-import { Container } from "fractures-ui"
+import Container from "../components/Container"
 import Layout from "../components/Layout"
 import Link from "next/link"
 
@@ -8,7 +8,7 @@ const Docs = () => (
 	<Layout title="docs — fractures">
 		<Container>
 			<header className="py-5">
-				<h1>Docs</h1>
+				<h1>Documentation</h1>
 				<p>
 					Core concept is ~atomic classes, that makes sense.
 					<br />

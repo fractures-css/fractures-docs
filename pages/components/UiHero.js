@@ -6,14 +6,17 @@ const UiHero = () => (
 		<header className="pb-4">
 			<h1>UI</h1>
 			<p className="mb-2">
-				Remember when I said framework agnostic?<br />Fractures UI is a small-but-nice, stateless component
-				library for <b>React</b>, built on top of{" "}
+				Remember when I said framework agnostic?
+				<br />
+				Fractures UI is a small-but-nice, stateless component library for <b>React</b>, built on top of{" "}
 				<Link href="/">
 					<a>fractures</a>
-				</Link>.
+				</Link>
+				.
 			</p>
 			<p>
-				This is really just an experimental implementation; not included in fractures.css.<br />
+				This is really just an experimental implementation; not included in fractures.css.
+				<br />
 				Open an <a href="https://github.com/fractures/fractures-ui">issue</a>, and tell me what you think.
 			</p>
 		</header>

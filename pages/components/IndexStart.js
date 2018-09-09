@@ -1,4 +1,4 @@
-import { Container } from "fractures-ui"
+import Container from "../../components/Container"
 import { Fragment } from "react"
 import meta from "../../utils/meta.js"
 

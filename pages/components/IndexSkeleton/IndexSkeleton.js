@@ -1,5 +1,5 @@
 import { Component, Fragment } from "react"
-import { Container } from "fractures-ui"
+import Container from "../../../components/Container"
 import { exampleIntro, exampleBoxes, exampleSticky, exampleOwn } from "./examples"
 import IconBoxes from "./images/IconBoxes"
 import IconIntro from "./images/IconIntro"

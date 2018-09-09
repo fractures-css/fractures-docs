@@ -1,4 +1,4 @@
-import { Container } from "fractures-ui"
+import Container from "../components/Container"
 import Layout from "../components/Layout"
 
 const About = () => (
