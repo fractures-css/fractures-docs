@@ -10,6 +10,14 @@
 	--fr-700: #3d3f71;
 	--fr-900: #262633;
 	--fr-focus: rgba(61, 63, 113, 0.25);
+
+	/* Don't do this. */
+	--gray: var(--fr-300) !important;
+	--lightgray: var(--fr-300) !important;
+	--silver: var(--fr-300) !important;
+	--dimgray: var(--fr-300) !important;
+	--darkgray: var(--fr-300) !important;
+	--whitesmoke: var(--fr-300) !important;
 }
 
 *::selection {
