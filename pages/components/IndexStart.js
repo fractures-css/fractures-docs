@@ -28,7 +28,7 @@ const IndexStart = () => (
 					<b>Use unpkg cdn</b>
 					<ul className="list-disc ml-4">
 						<li>
-							<code suppressContentEditableWarning={ true } contentEditable className="float-left ellipsis">
+							<code suppressContentEditableWarning={ true } contentEditable>
 								&lt;link href="
 								{meta.cdn}" rel="stylesheet" /&gt;
 							</code>

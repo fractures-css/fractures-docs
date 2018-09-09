@@ -72,7 +72,7 @@ class IndexSkeleton extends Component {
 								{this.state.example === 3 && <IconOwn />}
 							</div>
 							<div className="grow-1">
-								<div className="skeleton__nav mb-3">
+								<div className="skeleton__nav unselectable mb-3">
 									<ol className="flex flex-gap-1">
 										{skeletonItems.map((item, key) =>
 
