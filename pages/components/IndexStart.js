@@ -12,7 +12,10 @@ const IndexStart = () => (
 					<b>npm i fractures</b>
 					<ul className="list-disc ml-4">
 						<li>
-							Then you can 🦄 <code contentEditable>import "fractures/dist/fractures.css"</code>
+							Then you can 🦄{" "}
+							<code contentEditable suppressContentEditableWarning={ true }>
+								import "fractures/dist/fractures.css"
+							</code>
 						</li>
 						<li>For production use, I recommend running the fractures.css file through your build process.</li>
 						<li>
@@ -25,7 +28,7 @@ const IndexStart = () => (
 					<b>Use unpkg cdn</b>
 					<ul className="list-disc ml-4">
 						<li>
-							<code contentEditable className="float-left ellipsis">
+							<code suppressContentEditableWarning={ true } contentEditable className="float-left ellipsis">
 								&lt;link href="
 								{meta.cdn}" rel="stylesheet" /&gt;
 							</code>
