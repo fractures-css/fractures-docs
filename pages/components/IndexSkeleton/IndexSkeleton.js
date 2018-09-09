@@ -27,67 +27,77 @@ class IndexSkeleton extends Component {
 
 		return (
 			<Fragment>
-				<div className="skeleton__nav ">
-					<Container>
-						<ul className="flex flex-gap-1">
-							{skeletonItems.map((item, key) => (
-								<li key={ key } className={ this.state.example === key && "active" } onClick={ e => this.showExample(e, key) }>
-									{item}
-								</li>
-							))}
-						</ul>
-					</Container>
-					<style jsx global>{`
-						.skeleton__nav {
-							font-size: 0.875rem;
-						}
-
-						.skeleton__nav li {
-							position: relative;
-
-							padding: 0.75rem 1rem;
-
-							cursor: pointer;
-							color: var(--fr-700);
-
-							font-weight: 500;
-						}
-
-						.skeleton__nav .active {
-							/* background-color: var(--fr-300); */
-							/* background: white; */
-							box-shadow: inset 0 0 0 1px var(--fr-300);
-							border-radius: 0.25rem;
-							color: var(--color-red);
-						}
-					`}</style>
-				</div>
-				<div className="py-5">
+				<div className="my-5">
 					<Container>
 						<div className="flex flex-xcenter flex-gap-4 flex-wrap">
-							<div className="skeleton-item mb-4">
+							<div className="skeleton-item">
 								{this.state.example === 0 && <IconIntro />}
 								{this.state.example === 1 && <IconBoxes />}
 								{this.state.example === 2 && <IconSticky />}
 								{this.state.example === 3 && <IconOwn />}
 							</div>
-							<pre className="skeleton-pre grow-1">
-								{this.state.example === 0 && exampleIntro}
-								{this.state.example === 1 && exampleBoxes}
-								{this.state.example === 2 && exampleSticky}
-								{this.state.example === 3 && exampleOwn}
-							</pre>
+							<div className="grow-1">
+								<div className="skeleton__nav mb-3">
+									<ul className="flex flex-gap-1">
+										{skeletonItems.map((item, key) => (
+											<li key={ key } className={ this.state.example === key && "active" } onClick={ e => this.showExample(e, key) }>
+												{item}
+											</li>
+										))}
+									</ul>
+								</div>
+								<pre className="skeleton-pre grow-1">
+									{this.state.example === 0 && exampleIntro}
+									{this.state.example === 1 && exampleBoxes}
+									{this.state.example === 2 && exampleSticky}
+									{this.state.example === 3 && exampleOwn}
+								</pre>
+							</div>
+
 							<style jsx global>{`
+								@media (max-width: 580px) {
+									.skeleton-item {
+										margin-top: 0 !important;
+										margin-bottom: 4rem !important;
+									}
+								}
+
+								.skeleton__nav {
+									font-size: 0.875rem;
+								}
+
+								.skeleton__nav li {
+									position: relative;
+
+									padding: 0 1rem;
+
+									cursor: pointer;
+									color: var(--color-blue-dark);
+
+									line-height: 3rem;
+									font-weight: 500;
+								}
+
+								.skeleton__nav .active {
+									box-shadow: inset 0 0 0 1px var(--color-gray);
+									border-radius: 0.25rem;
+									color: var(--color-red);
+								}
+
 								.skeleton-item {
 									height: 7.5rem;
+									margin-top: 4.5rem;
 									width: 7.5rem;
 								}
 
 								.skeleton-item svg {
 									height: 7.5rem;
+									opacity: 0;
 									width: 7.5rem;
 
+									animation: fadeInImage 160ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms 1 forwards;
 									border-radius: 0.25rem;
+									transform: scale(0.95) translateY(0.25rem);
 								}
 
 								.skeleton-pre {
@@ -120,6 +130,20 @@ class IndexSkeleton extends Component {
 									counter-increment: line;
 									content: counter(line);
 									text-align: center;
+								}
+
+								@keyframes fadeInImage {
+									from {
+										opacity: 0;
+
+										transform: scale(0.95) translateY(0.25rem);
+									}
+
+									to {
+										opacity: 1;
+
+										transform: scale(1) translateX(0);
+									}
 								}
 							`}</style>
 						</div>
