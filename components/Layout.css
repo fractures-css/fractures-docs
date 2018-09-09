@@ -100,25 +100,3 @@ h6 {
 .bg-color-red {
 	background-color: var(--color-red);
 }
-
-pre {
-	font-size: 0.75rem;
-	font-family: "Source Code Pro", monospace;
-	line-height: 1.5;
-}
-
-pre em {
-	color: var(--color-red);
-
-	font-style: normal;
-}
-
-pre span {
-	display: block;
-}
-
-pre a {
-	color: var(--color-dark);
-
-	font-weight: bold;
-}

@@ -1,10 +1,44 @@
 import { Component, Fragment } from "react"
 import Container from "../../../components/Container"
-import { exampleIntro, exampleBoxes, exampleSticky, exampleOwn } from "./examples"
 import IconBoxes from "./images/IconBoxes"
 import IconIntro from "./images/IconIntro"
 import IconOwn from "./images/IconOwn"
 import IconSticky from "./images/IconSticky"
+import Pre from "../../../components/Pre"
+
+const examples = [
+	[
+		"Use atomic, self-explanatory classes with ease.",
+		null,
+		`&lt;div class="<em>flex flex-center</em>"&gt;`,
+		`&emsp;&lt;div /&gt;`,
+		`&emsp;&lt;div /&gt;`,
+		`&lt;/div&gt;`
+	],
+	[
+		`Have a default size-scale for persevering layouts.`,
+		null,
+		`&lt;header class="<em>fixed w-100 py-2</em>" /&gt;`,
+		`&lt;article class="<em>mx-auto py-4</em>" /&gt;`
+	],
+	[
+		`Achieve more complex layout with just a few classes.`,
+		`Eg.: sticky footer with minimum element height`,
+		null,
+		`&lt;div class="<em>flex flex-column minh-viewport</em>"&gt;`,
+		`&emsp;&lt;div class="<em>grow-1</em>" /&gt;`,
+		`&emsp;&lt;footer /"&gt;`,
+		`&lt;/div&gt;`
+	],
+	[
+		`Mix and match with your own css.`,
+		`Checkout the documentation for a complete overview.`,
+		null,
+		`&lt;div class="your-container <em>grid grid-gap-2</em>"&gt;`,
+		`&emsp;&lt;div class="your-container__el <em>py-3</em>" /&gt;`,
+		`&lt;/div&gt;`
+	]
+]
 
 class IndexSkeleton extends Component {
 	constructor(props) {
@@ -24,12 +58,13 @@ class IndexSkeleton extends Component {
 
 	render() {
 		const skeletonItems = ["Basics", "Sizes", "Complex", "Extend"]
+		const selectedCode = examples[this.state.example]
 
 		return (
 			<Fragment>
 				<div className="my-5">
 					<Container>
-						<div className="flex flex-xcenter flex-gap-4 flex-wrap">
+						<div className="fr-skeleton flex flex-xcenter flex-gap-4">
 							<div className="skeleton-item">
 								{this.state.example === 0 && <IconIntro />}
 								{this.state.example === 1 && <IconBoxes />}
@@ -38,27 +73,30 @@ class IndexSkeleton extends Component {
 							</div>
 							<div className="grow-1">
 								<div className="skeleton__nav mb-3">
-									<ul className="flex flex-gap-1">
-										{skeletonItems.map((item, key) => (
-											<li key={ key } className={ this.state.example === key && "active" } onClick={ e => this.showExample(e, key) }>
+									<ol className="flex flex-gap-1">
+										{skeletonItems.map((item, key) =>
+
+											// prettier-ignore
+											<li
+												key={ key }
+												className={ this.state.example === key && "active" }
+												onClick={ e => this.showExample(e, key) }>
 												{item}
 											</li>
-										))}
-									</ul>
+										)}
+									</ol>
 								</div>
-								<pre className="skeleton-pre grow-1">
-									{this.state.example === 0 && exampleIntro}
-									{this.state.example === 1 && exampleBoxes}
-									{this.state.example === 2 && exampleSticky}
-									{this.state.example === 3 && exampleOwn}
-								</pre>
+								<Pre lines={ selectedCode } />
 							</div>
-
 							<style jsx global>{`
-								@media (max-width: 580px) {
+								@media (max-width: 640px) {
+									.fr-skeleton {
+										flex-direction: column;
+									}
+
 									.skeleton-item {
 										margin-top: 0 !important;
-										margin-bottom: 4rem !important;
+										margin-bottom: 2.5rem !important;
 									}
 								}
 
@@ -98,38 +136,6 @@ class IndexSkeleton extends Component {
 									animation: fadeInImage 160ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms 1 forwards;
 									border-radius: 0.25rem;
 									transform: scale(0.95) translateY(0.25rem);
-								}
-
-								.skeleton-pre {
-									min-height: 10.5rem;
-
-									background-color: white;
-									background-size: 1px 1.5rem;
-									background-image: linear-gradient(to bottom, var(--fr-100) 1px, transparent 1px);
-									box-shadow: inset 0 0 0 1px var(--fr-300);
-									border-left: 1.5rem solid var(--fr-300);
-									border-radius: 0.25rem;
-
-									counter-reset: line;
-									line-height: 1.5rem;
-								}
-
-								.skeleton-pre span {
-									position: relative;
-
-									padding-left: 1rem;
-								}
-
-								.skeleton-pre span:before {
-									position: absolute;
-									left: -1.5rem;
-
-									opacity: 0.5;
-									width: 1.5rem;
-
-									counter-increment: line;
-									content: counter(line);
-									text-align: center;
 								}
 
 								@keyframes fadeInImage {
