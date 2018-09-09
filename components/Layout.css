@@ -18,17 +18,15 @@
 }
 
 *::selection {
-	background-color: var(--color-mint);
+	background-color: var(--color-gray);
 }
 
 html {
-	/* background-color: var(--color-light); */
-	background-color: white;
+	background-color: var(--color-light);
 }
 
 body {
 	background-color: var(--color-light);
-	/* background-color: white; */
 	color: var(--color-dark);
 
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
@@ -108,12 +106,7 @@ pre {
 	line-height: 1.5;
 }
 
-pre::selection,
-pre *::selection {
-	background-color: var(--color-gray);
-}
-
-pre span em {
+pre em {
 	color: var(--color-red);
 
 	font-style: normal;

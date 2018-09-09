@@ -38,7 +38,7 @@ const exampleSticky = (
 		<span>{` `}</span>
 		<span>
 			&lt;div class="
-			<em>flex flex-column minvh-100</em>
+			<em>flex flex-column minh-viewport</em>
 			"&gt;
 		</span>
 		<span>

@@ -2,7 +2,7 @@ import { Container } from "fractures-ui"
 import Layout from "../components/Layout"
 import Link from "next/link"
 
-const docsDefaultClass = "bg-smoke p-1"
+const docsDefaultClass = "bg-color-gray p-1"
 
 const Docs = () => (
 	<Layout title="docs — fractures">
@@ -26,15 +26,15 @@ const Docs = () => (
 
 			{/* Border */}
 			<article className="py-4">
-				<h3>Border</h3>
+				<h3>Border radius</h3>
 				<p className="mb-4">Border radius is important.</p>
 				<div className="flex flex-gap-1">
-					<div className="bg-smoke radius-0 h-6 w-6 flex flex-center">radius-0</div>
-					<div className="bg-light radius-1 h-6 w-6 flex flex-center">radius-1</div>
-					<div className="bg-light radius-2 h-6 w-6 flex flex-center">radius-2</div>
-					<div className="bg-light radius-3 h-6 w-6 flex flex-center">radius-3</div>
-					<div className="bg-black smoke radius-max px-5 nowrap h-6 flex flex-center">radius-max</div>
-					<div className="bg-black smoke radius-100 h-6 w-6 flex flex-center">radius-100</div>
+					<div className="bg-white radius-0 h-6 w-6 flex flex-center">radius-0</div>
+					<div className="bg-color-gray radius-1 h-6 w-6 flex flex-center">radius-1</div>
+					<div className="bg-color-gray radius-2 h-6 w-6 flex flex-center">radius-2</div>
+					<div className="bg-color-gray radius-3 h-6 w-6 flex flex-center">radius-3</div>
+					<div className="bg-color-dark white radius-max px-5 nowrap h-6 flex flex-center">radius-max</div>
+					<div className="bg-color-dark white radius-100 h-6 w-6 flex flex-center">radius-100</div>
 				</div>
 				<small className="block mt-4">
 					<b>.radius-max</b> is rounding border with a large pixel value. Creates tube.
@@ -43,21 +43,21 @@ const Docs = () => (
 
 			{/* Color */}
 			<article className="py-4">
-				<h3>Color</h3>
+				<h3>Colors</h3>
 				<p className="mb-4">
 					Basic monochrome color scheme from CSS defaults.
 					<br />
 					You can overwrite these, but don&apos;t.
 				</p>
 				<div className="grid grid-cols-8 grid-gap-1">
-					<div className="bg-white p-1">bg-white</div>
-					<div className={ docsDefaultClass }>bg-smoke</div>
-					<div className="bg-light p-1">bg-light</div>
-					<div className="bg-silver p-1">bg-silver</div>
-					<div className="bg-dark p-1">bg-dark</div>
-					<div className="bg-gray p-1">bg-gray</div>
-					<div className="bg-dim p-1">bg-dim</div>
-					<div className="bg-black p-1">bg-black</div>
+					<div className="bg-white black p-1">bg-white</div>
+					<div className="bg-smoke black p-1">bg-smoke</div>
+					<div className="bg-light dim p-1">bg-light</div>
+					<div className="bg-silver dim p-1">bg-silver</div>
+					<div className="bg-dark dim p-1">bg-dark</div>
+					<div className="bg-gray white p-1">bg-gray</div>
+					<div className="bg-dim white p-1">bg-dim</div>
+					<div className="bg-black white p-1">bg-black</div>
 					<div className="white p-1">white</div>
 					<div className="smoke p-1">smoke</div>
 					<div className="light p-1">light</div>
@@ -74,17 +74,17 @@ const Docs = () => (
 				<h3>Cursor</h3>
 				<p className="mb-4">Most common cursors.</p>
 				<div className="grid grid-cols-7 grid-gap-1">
-					<div className="p-1 cursor-col-resize">cursor-col-resize</div>
-					<div className="p-1 cursor-grab">cursor-grab</div>
-					<div className="p-1 cursor-grabbing">cursor-grabbing</div>
-					<div className="p-1 cursor-help">cursor-help</div>
-					<div className="p-1 cursor-move">cursor-move</div>
-					<div className="p-1 cursor-pointer">cursor-pointer</div>
-					<div className="p-1 cursor-progress">cursor-progress</div>
-					<div className="p-1 cursor-row-resize">cursor-row-resize</div>
-					<div className="p-1 cursor-text">cursor-text</div>
-					<div className="p-1 cursor-zoom-in">cursor-zoom-in</div>
-					<div className="p-1 cursor-zoom-out">cursor-zoom-out</div>
+					<div className={ `${ docsDefaultClass } cursor-col-resize` }>cursor-col-resize</div>
+					<div className={ `${ docsDefaultClass } cursor-grab` }>cursor-grab</div>
+					<div className={ `${ docsDefaultClass } cursor-grabbing` }>cursor-grabbing</div>
+					<div className={ `${ docsDefaultClass } cursor-help` }>cursor-help</div>
+					<div className={ `${ docsDefaultClass } cursor-move` }>cursor-move</div>
+					<div className={ `${ docsDefaultClass } cursor-pointer` }>cursor-pointer</div>
+					<div className={ `${ docsDefaultClass } cursor-progress` }>cursor-progress</div>
+					<div className={ `${ docsDefaultClass } cursor-row-resize` }>cursor-row-resize</div>
+					<div className={ `${ docsDefaultClass } cursor-text` }>cursor-text</div>
+					<div className={ `${ docsDefaultClass } cursor-zoom-in` }>cursor-zoom-in</div>
+					<div className={ `${ docsDefaultClass } cursor-zoom-out` }>cursor-zoom-out</div>
 				</div>
 			</article>
 
@@ -227,13 +227,13 @@ const Docs = () => (
 				<h3>Height</h3>
 				<p className="mb-4">Common height options.</p>
 				<div className="grid grid-cols-7 grid-gap-1">
-					<div className="bg-light h-0">h-0</div>
-					<div className="bg-light h-1">h-1</div>
-					<div className="bg-light h-2">h-2</div>
-					<div className="bg-light h-3">h-3</div>
-					<div className="bg-light h-4">h-4</div>
-					<div className="bg-light h-5">h-5</div>
-					<div className="bg-light h-6">h-6</div>
+					<div className={ `${ docsDefaultClass } h-0` }>h-0</div>
+					<div className={ `${ docsDefaultClass } h-1` }>h-1</div>
+					<div className={ `${ docsDefaultClass } h-2` }>h-2</div>
+					<div className={ `${ docsDefaultClass } h-3` }>h-3</div>
+					<div className={ `${ docsDefaultClass } h-4` }>h-4</div>
+					<div className={ `${ docsDefaultClass } h-5` }>h-5</div>
+					<div className={ `${ docsDefaultClass } h-6` }>h-6</div>
 
 					<div className={ docsDefaultClass }>h-10</div>
 					<div className={ docsDefaultClass }>h-20</div>
@@ -326,13 +326,13 @@ const Docs = () => (
 				<h3>Margin</h3>
 				<p className="mb-4">Margins based on overwriteable box sizes.</p>
 				<div className="grid grid-cols-7 grid-gap-1">
-					<div className="bg-light m-0">m-0</div>
-					<div className="bg-light m-1">m-1</div>
-					<div className="bg-light m-2">m-2</div>
-					<div className="bg-light m-3">m-3</div>
-					<div className="bg-light m-4">m-4</div>
-					<div className="bg-light m-5">m-5</div>
-					<div className="bg-light m-6">m-6</div>
+					<div className={ `${ docsDefaultClass } m-0` }>m-0</div>
+					<div className={ `${ docsDefaultClass } m-1` }>m-1</div>
+					<div className={ `${ docsDefaultClass } m-2` }>m-2</div>
+					<div className={ `${ docsDefaultClass } m-3` }>m-3</div>
+					<div className={ `${ docsDefaultClass } m-4` }>m-4</div>
+					<div className={ `${ docsDefaultClass } m-5` }>m-5</div>
+					<div className={ `${ docsDefaultClass } m-6` }>m-6</div>
 					<div className={ docsDefaultClass }>mb-0</div>
 					<div className={ docsDefaultClass }>mb-1</div>
 					<div className={ docsDefaultClass }>mb-2</div>
@@ -390,17 +390,17 @@ const Docs = () => (
 				<h3>Opacity</h3>
 				<p className="mb-4">Opacity by decimal steps.</p>
 				<div className="grid grid-cols-5 grid-gap-1">
-					<div className="bg-gray p-1 opacity-100">opacity-100</div>
-					<div className="bg-gray p-1 opacity-90">opacity-90</div>
-					<div className="bg-gray p-1 opacity-80">opacity-80</div>
-					<div className="bg-gray p-1 opacity-70">opacity-70</div>
-					<div className="bg-gray p-1 opacity-60">opacity-60</div>
-					<div className="bg-gray p-1 opacity-50">opacity-50</div>
-					<div className="bg-gray p-1 opacity-40">opacity-40</div>
-					<div className="bg-gray p-1 opacity-30">opacity-30</div>
-					<div className="bg-gray p-1 opacity-20">opacity-20</div>
-					<div className="bg-gray p-1 opacity-10">opacity-10</div>
-					<div className="bg-gray p-1 opacity-0">opacity-0</div>
+					<div className={ `${ docsDefaultClass } opacity-100` }>opacity-100</div>
+					<div className={ `${ docsDefaultClass } opacity-90` }>opacity-90</div>
+					<div className={ `${ docsDefaultClass } opacity-80` }>opacity-80</div>
+					<div className={ `${ docsDefaultClass } opacity-70` }>opacity-70</div>
+					<div className={ `${ docsDefaultClass } opacity-60` }>opacity-60</div>
+					<div className={ `${ docsDefaultClass } opacity-50` }>opacity-50</div>
+					<div className={ `${ docsDefaultClass } opacity-40` }>opacity-40</div>
+					<div className={ `${ docsDefaultClass } opacity-30` }>opacity-30</div>
+					<div className={ `${ docsDefaultClass } opacity-20` }>opacity-20</div>
+					<div className={ `${ docsDefaultClass } opacity-10` }>opacity-10</div>
+					<div className={ `${ docsDefaultClass } opacity-0` }>opacity-0</div>
 				</div>
 			</article>
 
@@ -409,9 +409,9 @@ const Docs = () => (
 				<h3>Overflow</h3>
 				<p className="mb-4">Content overflows.</p>
 				<div className="grid grid-cols-5 grid-gap-1">
-					<div className="bg-light p-1 overflow-visible nowrap">overflow-visible</div>
-					<div className="bg-light p-1 overflow-hidden nowrap">overflow-hidden overflow-hidden...overflow-hidden</div>
-					<div className="bg-light p-1 overflow-scroll nowrap">overflow-scroll ... overflow-scroll</div>
+					<div className={ `${ docsDefaultClass } overflow-visible nowrap` }>overflow-visible</div>
+					<div className={ `${ docsDefaultClass } overflow-hidden nowrap` }>overflow-hidden overflow-hidden...overflow-hidden</div>
+					<div className={ `${ docsDefaultClass } overflow-scroll nowrap` }>overflow-scroll ... overflow-scroll</div>
 				</div>
 			</article>
 
@@ -420,13 +420,13 @@ const Docs = () => (
 				<h3>Padding</h3>
 				<p className="mb-4">Paddings based on overwriteable box sizes.</p>
 				<div className="grid grid-cols-7 grid-gap-1">
-					<div className="bg-light p-0">p-0</div>
-					<div className="bg-light p-1">p-1</div>
-					<div className="bg-light p-2">p-2</div>
-					<div className="bg-light p-3">p-3</div>
-					<div className="bg-light p-4">p-4</div>
-					<div className="bg-light p-5">p-5</div>
-					<div className="bg-light p-6">p-6</div>
+					<div className={ `bg-color-gray p-0` }>p-0</div>
+					<div className={ `${ docsDefaultClass } p-1` }>p-1</div>
+					<div className={ `${ docsDefaultClass } p-2` }>p-2</div>
+					<div className={ `${ docsDefaultClass } p-3` }>p-3</div>
+					<div className={ `${ docsDefaultClass } p-4` }>p-4</div>
+					<div className={ `${ docsDefaultClass } p-5` }>p-5</div>
+					<div className={ `${ docsDefaultClass } p-6` }>p-6</div>
 					<div className={ docsDefaultClass }>pb-0</div>
 					<div className={ docsDefaultClass }>pb-1</div>
 					<div className={ docsDefaultClass }>pb-2</div>
@@ -600,13 +600,13 @@ const Docs = () => (
 				<h3>Width</h3>
 				<p className="mb-4">Common width options.</p>
 				<div className="grid grid-cols-7 grid-gap-1">
-					<div className="bg-light w-0">W-0</div>
-					<div className="bg-light w-1">w-1</div>
-					<div className="bg-light w-2">w-2</div>
-					<div className="bg-light w-3">w-3</div>
-					<div className="bg-light w-4">w-4</div>
-					<div className="bg-light w-5">w-5</div>
-					<div className="bg-light w-6">w-6</div>
+					<div className={ `bg-color-gray w-0` }>W-0</div>
+					<div className={ `bg-color-gray w-1` }>w-1</div>
+					<div className={ `bg-color-gray w-2` }>w-2</div>
+					<div className={ `bg-color-gray w-3` }>w-3</div>
+					<div className={ `bg-color-gray w-4` }>w-4</div>
+					<div className={ `bg-color-gray w-5` }>w-5</div>
+					<div className={ `bg-color-gray w-6` }>w-6</div>
 
 					<div className={ docsDefaultClass }>w-10</div>
 					<div className={ docsDefaultClass }>w-20</div>
