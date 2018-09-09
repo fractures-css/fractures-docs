@@ -1,6 +1,7 @@
 :root {
 	--color-light: #f5f5f8;
 	--color-gray: #e0e0ec;
+	--color-dim: #a2a2ac;
 	--color-dark: #262633;
 	--color-green: #219f73;
 	--color-mint: #e5fedd;
@@ -90,4 +91,12 @@ h6 {
 
 .bg-color-red {
 	background-color: var(--color-red);
+}
+
+.color-gray {
+	color: var(--color-gray);
+}
+
+.color-blue {
+	color: var(--color-blue);
 }

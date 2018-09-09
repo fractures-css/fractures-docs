@@ -86,7 +86,7 @@ class IndexSkeleton extends Component {
 										)}
 									</ol>
 								</div>
-								<Pre lines={ selectedCode } />
+								<Pre lines={ selectedCode } lineCount={ 7 } />
 							</div>
 							<style jsx global>{`
 								@media (max-width: 640px) {

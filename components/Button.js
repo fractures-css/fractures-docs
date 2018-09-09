@@ -1,4 +1,5 @@
 import PropTypes from "prop-types"
+import GitHub from "./GitHub"
 
 const defaultProps = {
 	label: "",
@@ -11,8 +12,9 @@ const propTypes = {
 }
 
 const Button = props => (
-	<span className="btn-container unselectable relative inline-block">
-		<span className="btn flex flex-gap-1">
+	<span className="btn-container flex flex-ycenter unselectable relative inline-block">
+		<span className="btn flex flex-ycenter flex-gap-1">
+			<GitHub />
 			<span>{props.label}</span>
 			<span className="btn__count">{props.count}</span>
 		</span>
@@ -54,9 +56,12 @@ const Button = props => (
 			.btn .btn__count {
 				padding: 0 0.5rem;
 
-				background: var(--color-light);
 				border-radius: 0.25rem;
 				box-shadow: inset 0 0 0 1px var(--color-gray);
+				color: var(--color-dim);
+
+				font-size: 0.75rem;
+				font-weight: 500;
 			}
 		`}</style>
 	</span>

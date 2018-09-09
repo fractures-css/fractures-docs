@@ -53,7 +53,7 @@ class Nav extends Component {
 					<ol className="flex flex-gap-2">
 						{headerRender}
 						<li className="flex flex-ycenter">
-							<a href="https://github.com/fractures/fractures">
+							<a href="https://github.com/fractures/fractures" className="flex flex-ycenter">
 								<Button count={ meta.stars } label="GitHub" />
 							</a>
 						</li>

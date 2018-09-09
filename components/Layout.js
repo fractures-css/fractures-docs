@@ -41,7 +41,9 @@ class Layout extends Component {
 					<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" />
 				</Head>
 				<Nav />
-				<main style={ { marginTop: "4rem" } }>{this.props.children}</main>
+				<main className="pb-5" style={ { marginTop: "4rem" } }>
+					{this.props.children}
+				</main>
 			</Fragment>
 		)
 	}
