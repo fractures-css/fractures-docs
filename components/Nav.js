@@ -30,7 +30,6 @@ class Nav extends Component {
 			<li className={ this.state.pathname === item.url ? "active" : "" } key={ key }>
 				<Link href={ item.url } prefetch>
 					<a className="flex flex-ycenter flex-gap-1 relative">
-						{item.name === "fr·ctures" && <Fractures />}
 						<span>{item.name}</span>
 					</a>
 				</Link>
@@ -44,7 +43,9 @@ class Nav extends Component {
 						<li className={ this.state.pathname === "/" ? "active" : "" }>
 							<Link href={ "/" } prefetch>
 								<a className="flex flex-ycenter flex-gap-1">
-									<Fractures />
+									<span className="flex flex-ycenter fr-hide-on-small">
+										<Fractures />
+									</span>
 									<span>fr·ctures</span>
 								</a>
 							</Link>
@@ -52,7 +53,7 @@ class Nav extends Component {
 					</ol>
 					<ol className="flex flex-gap-2">
 						{headerRender}
-						<li className="flex flex-ycenter">
+						<li className="fr-hide-on-medium flex flex-ycenter">
 							<a href="https://github.com/fractures/fractures" className="flex flex-ycenter">
 								<Button count={ meta.stars } label="GitHub" />
 							</a>

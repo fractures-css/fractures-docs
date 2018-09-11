@@ -110,3 +110,15 @@ small {
 .color-blue {
 	color: var(--color-blue);
 }
+
+@media (max-width: 1020px) {
+	.fr-hide-on-medium {
+		display: none !important;
+	}
+}
+
+@media (max-width: 640px) {
+	.fr-hide-on-small {
+		display: none !important;
+	}
+}
