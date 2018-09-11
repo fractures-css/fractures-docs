@@ -8,6 +8,8 @@
 	--color-red: #db5454;
 	--color-blue: #445695;
 	--color-blue-dark: #3d3f71;
+
+	--font-monospace: "Source Code Pro", monospace;
 }
 
 *::selection {
@@ -71,7 +73,7 @@ small {
 }
 
 .source-code-pro {
-	font-family: "Source Code Pro", monospace;
+	font-family: var(--font-monospace);
 	font-weight: 400;
 }
 
