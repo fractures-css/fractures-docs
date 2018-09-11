@@ -1,3 +1,19 @@
+import PropTypes from "prop-types"
+import DocsNotes from "./DocsNotes"
+import Pre from "../../components/Pre"
+
+const defaultProps = {
+	grid: 6
+}
+
+const propTypes = {
+	children: PropTypes.node,
+	description: PropTypes.string,
+	grid: PropTypes.number,
+	pre: PropTypes.array,
+	title: PropTypes.string.isRequired
+}
+
 const DocsSection = props => {
 	const haveNotes = props.notes && props.notes.length
 
@@ -7,56 +23,27 @@ const DocsSection = props => {
 				<h4>{props.title}</h4>
 				{props.description && <p className="mt-2">{props.description}</p>}
 			</header>
-			{props.children}
-			{haveNotes && (
-				<footer>
-					<ol className="docs-section-notes">
-						{props.notes.map((note, key) => (
-							<li key={ key }>
-								<small className="block">
-									{note.name && (
-										<span>
-											<b>{note.name}</b>:{` `}
-										</span>
-									)}
-									{note.note}
-								</small>
-							</li>
-						))}
-					</ol>
-					<style jsx global>{`
-						.docs-section-notes {
-							counter-reset: item;
-						}
+			{props.children && <div className={ `docs-section__grid grid grid-cols-${ props.grid } grid-gap-1` }>{props.children}</div>}
+			{props.pre && <Pre lines={ props.pre } />}
+			{haveNotes && <DocsNotes { ...props } />}
+			<style jsx>{`
+				@media (max-width: 1020px) {
+					.docs-section__grid {
+						grid-template-columns: repeat(${ props.grid / 2 }, 1fr);
+					}
+				}
 
-						.docs-section-notes li {
-							position: relative;
-
-							padding-left: 1.5rem;
-
-							counter-increment: item;
-						}
-
-						.docs-section-notes li:before {
-							position: absolute;
-
-							display: block;
-							height: 1.25rem;
-							margin-left: -1.5rem;
-							width: 1.25rem;
-
-							color: var(--color-dim);
-
-							content: counter(item);
-							font-size: 0.75rem;
-							line-height: 1.25rem;
-							text-align: center;
-						}
-					`}</style>
-				</footer>
-			)}
+				@media (max-width: 640px) {
+					.docs-section__grid {
+						grid-template-columns: repeat(2, 1fr);
+					}
+				}
+			`}</style>
 		</article>
 	)
 }
+
+DocsSection.defaultProps = defaultProps
+DocsSection.propTypes = propTypes
 
 export default DocsSection
