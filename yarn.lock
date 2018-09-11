@@ -662,9 +662,9 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@let-codes/eslint-config@^0.1.6":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@let-codes/eslint-config/-/eslint-config-0.1.6.tgz#84538c5faa08c7c64a04a8512780bcc764e694bc"
+"@let-codes/eslint-config@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@let-codes/eslint-config/-/eslint-config-0.1.7.tgz#4b27c6297e8dc21e298ba27c09ec09ffd46caf7a"
 
 "@zeit/next-css@^0.2.0":
   version "0.2.0"

@@ -65,6 +65,11 @@ h6 {
 	font-weight: normal;
 }
 
+small {
+	font-size: 0.75rem;
+	line-height: 1.25rem;
+}
+
 .source-code-pro {
 	font-family: "Source Code Pro", monospace;
 	font-weight: 400;

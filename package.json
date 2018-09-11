@@ -16,7 +16,7 @@
 		"styled-jsx": "^3.0.2"
 	},
 	"devDependencies": {
-		"@let-codes/eslint-config": "^0.1.6",
+		"@let-codes/eslint-config": "^0.1.7",
 		"babel-eslint": "^9.0.0",
 		"babel-runtime": "^6.26.0",
 		"eslint": "^5.5.0",
