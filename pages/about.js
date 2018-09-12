@@ -30,7 +30,7 @@ const About = () => (
 					<h2 className="mb-1">Problems</h2>
 					<ul className="list-disc ml-3">
 						<li>
-							I don't think percentage based CSS breakpoint are universal enough, so you have to handle
+							I don't think percentage based CSS breakpoints are universal enough, so you have to handle
 							{` `}
 							<b>responsive</b> states yourself.
 						</li>
