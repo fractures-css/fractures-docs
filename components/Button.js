@@ -19,7 +19,7 @@ const Button = props => (
 		<style jsx global>{`
 			.btn {
 				position: relative;
-				display: inline-block;
+				display: inline-flex;
 				padding: 0 0.5rem 0 0.5rem;
 
 				border: 0;
