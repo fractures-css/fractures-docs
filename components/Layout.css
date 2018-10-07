@@ -21,7 +21,7 @@ html {
 }
 
 body {
-	background-color: var(--color-light);
+	background-color: white;
 	color: var(--color-blue-dark);
 
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",

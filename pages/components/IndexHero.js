@@ -4,7 +4,7 @@ import meta from "../../utils/meta.js"
 
 const IndexHero = () => (
 	<section className="index-hero">
-		<Container className="index-hero__container flex flex-gap-4 flex-wrap pt-6 pb-5">
+		<Container className="index-hero__container flex flex-gap-4 flex-wrap py-6">
 			<div className="h-6 w-6">
 				<img src="/static/images/fractures.svg" alt="fractures" className="h-6 w-6" />
 			</div>
@@ -37,10 +37,6 @@ const IndexHero = () => (
 						margin-right: 0 !important;
 						margin-bottom: 2rem !important;
 					}
-				}
-
-				.index-hero {
-					background: linear-gradient(white, var(--color-light));
 				}
 			`}</style>
 		</Container>

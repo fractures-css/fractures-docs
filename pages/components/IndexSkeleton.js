@@ -62,7 +62,7 @@ class IndexSkeleton extends Component {
 
 		return (
 			<Fragment>
-				<div className="my-5">
+				<div className="index-skeleton py-5">
 					<Container>
 						<div className="fr-skeleton flex flex-xcenter flex-gap-4">
 							<div className="skeleton-item">
@@ -98,6 +98,10 @@ class IndexSkeleton extends Component {
 										margin-top: 0 !important;
 										margin-bottom: 2.5rem !important;
 									}
+								}
+
+								.index-skeleton {
+									background-color: var(--color-light);
 								}
 
 								.skeleton__nav {
