@@ -242,9 +242,9 @@ const Docs = () => (
 				<Repeater component={ DocsElement } label="opacity-$" scale={ decimalScale } showClass />
 			</DocsSection>
 			<DocsSection title="Overflow" description="Content overflows.">
-				<DocsElement label="opacity-visible" showClass />
-				<DocsElement label="opacity-hidden" showClass />
-				<DocsElement label="opacity-scroll" showClass />
+				<DocsElement label="overflow-visible" showClass />
+				<DocsElement label="overflow-hidden" showClass />
+				<DocsElement label="overflow-scroll" showClass />
 			</DocsSection>
 			<DocsSection
 				title="Padding"
