@@ -1,6 +1,6 @@
-import PropTypes from "prop-types"
-import DocsNotes from "./DocsNotes"
-import Pre from "../../components/Pre"
+import PropTypes from 'prop-types'
+import DocsNotes from './DocsNotes'
+import Pre from '../../components/Pre'
 
 const defaultProps = {
 	grid: 6

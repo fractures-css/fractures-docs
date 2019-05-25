@@ -1,5 +1,5 @@
-import Container from "../components/Container"
-import Layout from "../components/Layout"
+import Container from '../components/Container'
+import Layout from '../components/Layout'
 
 const About = () => (
 	<Layout title="About — fractures">
@@ -35,10 +35,10 @@ const About = () => (
 							<b>responsive</b> states yourself.
 						</li>
 						<li>
-							You can use it in production, but you have to create your own <b>fallbacks</b>. The{" "}
+							You can use it in production, but you have to create your own <b>fallbacks</b>. The{' '}
 							<a target="_new" href="https://unpkg.com/fractures/dist/fractures.prefixed.min.css">
 								prefixed
-							</a>{" "}
+							</a>{' '}
 							version handles some, but not everything.
 						</li>
 					</ul>
@@ -71,7 +71,7 @@ const About = () => (
 			<p className="my-2">
 				The concept of functional CSS is not new.
 				<br />
-				There are quite a few similar projects out there you can choose from:{" "}
+				There are quite a few similar projects out there you can choose from:{' '}
 				<a href="https://github.com/topics/functional-css">#functional-css</a>.
 			</p>
 			<h4>Me</h4>

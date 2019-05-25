@@ -1,6 +1,6 @@
-import Pre from "../../components/Pre"
-import Container from "../../components/Container"
-import meta from "../../utils/meta.js"
+import Pre from '../../components/Pre'
+import Container from '../../components/Container'
+import meta from '../../utils/meta.js'
 
 const IndexStart = () => (
 	<Container className="py-4">
@@ -10,7 +10,7 @@ const IndexStart = () => (
 				<h4>Module</h4>
 				<Pre lines={ [`npm i fractures`, null, `import "fractures/dist/fractures.css"`] } />
 				<p>
-					Install with npm or yarn, then import it once, globally. You can find usage examples under{" "}
+					Install with npm or yarn, then import it once, globally. You can find usage examples under{' '}
 					<a href="https://github.com/fractures/fractures-examples">fractures-examples</a> for <b>React</b> and <b>Next.js</b>.
 				</p>
 				<small>

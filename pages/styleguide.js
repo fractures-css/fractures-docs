@@ -1,14 +1,14 @@
-import Container from "../components/Container"
-import Layout from "../components/Layout"
+import Container from '../components/Container'
+import Layout from '../components/Layout'
 
 const colors = [
-	{ name: "light", hex: "light" },
-	{ name: "gray", hex: "gray" },
-	{ name: "dark", hex: "dark" },
-	{ name: "blue", hex: "blue" },
-	{ name: "green", hex: "green" },
-	{ name: "mint", hex: "mint" },
-	{ name: "red", hex: "red" }
+	{ name: 'light', hex: 'light' },
+	{ name: 'gray', hex: 'gray' },
+	{ name: 'dark', hex: 'dark' },
+	{ name: 'blue', hex: 'blue' },
+	{ name: 'green', hex: 'green' },
+	{ name: 'mint', hex: 'mint' },
+	{ name: 'red', hex: 'red' }
 ]
 
 const Color = props => (

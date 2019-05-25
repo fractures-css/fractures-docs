@@ -1,7 +1,7 @@
-import ReactGA from "react-ga"
+import ReactGA from 'react-ga'
 
 const initGA = () => {
-	ReactGA.initialize("UA-17037942-5")
+	ReactGA.initialize('UA-17037942-5')
 }
 
 const logPageView = () => {
@@ -9,13 +9,13 @@ const logPageView = () => {
 	ReactGA.pageview(window.location.pathname)
 }
 
-const logEvent = (category = "", action = "") => {
+const logEvent = (category = '', action = '') => {
 	if(category && action) {
 		ReactGA.event({ category, action })
 	}
 }
 
-const logException = (description = "", fatal = false) => {
+const logException = (description = '', fatal = false) => {
 	if(description) {
 		ReactGA.exception({ description, fatal })
 	}

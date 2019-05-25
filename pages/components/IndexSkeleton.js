@@ -1,14 +1,14 @@
-import { Component, Fragment } from "react"
-import Container from "../../components/Container"
-import IconBoxes from "../images/IconBoxes"
-import IconIntro from "../images/IconIntro"
-import IconOwn from "../images/IconOwn"
-import IconSticky from "../images/IconSticky"
-import Pre from "../../components/Pre"
+import { Component, Fragment } from 'react'
+import Container from '../../components/Container'
+import IconBoxes from '../images/IconBoxes'
+import IconIntro from '../images/IconIntro'
+import IconOwn from '../images/IconOwn'
+import IconSticky from '../images/IconSticky'
+import Pre from '../../components/Pre'
 
 const examples = [
 	[
-		"Use atomic, self-explanatory classes with ease.",
+		'Use atomic, self-explanatory classes with ease.',
 		null,
 		`&lt;div class="<em>flex flex-center</em>"&gt;`,
 		`&#9;&lt;div /&gt;`,
@@ -57,7 +57,7 @@ class IndexSkeleton extends Component {
 	}
 
 	render() {
-		const skeletonItems = ["Basics", "Sizes", "Complex", "Extend"]
+		const skeletonItems = ['Basics', 'Sizes', 'Complex', 'Extend']
 		const selectedCode = examples[this.state.example]
 
 		return (
@@ -79,7 +79,7 @@ class IndexSkeleton extends Component {
 											// prettier-ignore
 											<li
 												key={ key }
-												className={ this.state.example === key && "active" }
+												className={ this.state.example === key && 'active' }
 												onClick={ e => this.showExample(e, key) }>
 												{item}
 											</li>

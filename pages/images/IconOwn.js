@@ -6,26 +6,8 @@ const IconOwn = () => (
 					<g id="content" transform="translate(0.000000, 30.000000)">
 						<rect id="Rectangle-27" fill="#FFFFFF" x="0" y="0" width="200" height="170" />
 						<rect id="Rectangle-26" fill="#FF5656" x="20" y="0" width="160" height="170" />
-						<rect
-							id="Rectangle-16"
-							fill="#50E1A0"
-							style={ { mixBlendMode: "lighten" } }
-							x="170"
-							y="75"
-							width="20"
-							height="20"
-							rx="10"
-						/>
-						<rect
-							id="Rectangle-16"
-							fill="#50E1A0"
-							style={ { mixBlendMode: "lighten" } }
-							x="10"
-							y="75"
-							width="20"
-							height="20"
-							rx="10"
-						/>
+						<rect id="Rectangle-16" fill="#50E1A0" style={ { mixBlendMode: 'lighten' } } x="170" y="75" width="20" height="20" rx="10" />
+						<rect id="Rectangle-16" fill="#50E1A0" style={ { mixBlendMode: 'lighten' } } x="10" y="75" width="20" height="20" rx="10" />
 					</g>
 					<g id="chrome">
 						<rect id="Rectangle-19" fill="#3F3D75" x="0" y="0" width="200" height="30" />

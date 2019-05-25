@@ -1,6 +1,6 @@
-import Container from "../../components/Container"
-import Link from "next/link"
-import meta from "../../utils/meta.js"
+import Container from '../../components/Container'
+import Link from 'next/link'
+import meta from '../../utils/meta.js'
 
 const IndexHero = () => (
 	<section className="index-hero">
@@ -14,7 +14,7 @@ const IndexHero = () => (
 				<p className="my-3">
 					<b>fractures</b>
 					{` `}
-					helps you bootstrap design-systems and prototypes by providing a set of non-blocking, atomic, utility classes.{" "}
+					helps you bootstrap design-systems and prototypes by providing a set of non-blocking, atomic, utility classes.{' '}
 					<Link href="/about">
 						<a>Learn more.</a>
 					</Link>
