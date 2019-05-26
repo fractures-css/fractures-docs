@@ -59,6 +59,13 @@ const Index = () => (
 				.index-hero {
 					background-color: var(--color-light);
 				}
+
+				.index-hero__container {
+					background-image: url('/static/images/hero.svg');
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: left center;
+				}
 			`}</style>
 		</section>
 		<IndexStart />
