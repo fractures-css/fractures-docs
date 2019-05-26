@@ -24,12 +24,12 @@ const Pre = props => {
 				.fr-pre {
 					min-height: ${ maxHeight }rem;
 
-					background-color: white;
+					background-color: var(--color-dark);
 					background-size: 1px 1.5rem;
-					background-image: linear-gradient(to bottom, var(--color-light) 1px, transparent 1px);
-					box-shadow: inset 0 0 0 1px var(--color-gray);
-					border-left: 1.5rem solid var(--color-light);
+					box-shadow: inset 0 0 0 1px var(--color-gray-900);
+					border-left: 1.5rem solid var(--color-gray-700);
 					border-radius: 0.25rem;
+					color: var(--color-gray-300);
 
 					font-size: 0.75rem;
 					font-family: var(--font-monospace);
@@ -49,19 +49,13 @@ const Pre = props => {
 					position: absolute;
 					left: -1.5rem;
 
-					opacity: 0.5;
 					width: 1.5rem;
+
+					color: var(--color-gray-300);
 
 					counter-increment: line;
 					content: counter(line);
 					text-align: center;
-				}
-			`}</style>
-			<style jsx global>{`
-				pre code em {
-					color: var(--color-red);
-
-					font-style: normal;
 				}
 			`}</style>
 		</pre>

@@ -8,6 +8,12 @@
 	--color-red: #db5454;
 	--color-blue: #445695;
 
+	--color-gray-100: #d2d2df;
+	--color-gray-300: #bdbdcb;
+	--color-gray-500: #73737d;
+	--color-gray-700: #2e2e33;
+	--color-gray-900: #1b1b1d;
+
 	--font-default: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
 		'Droid Sans', 'Helvetica Neue', sans-serif;
 	--font-monospace: 'Roboto Mono', monospace;
@@ -70,6 +76,16 @@ h6 {
 small {
 	font-size: 0.75rem;
 	line-height: 1.25rem;
+}
+
+pre * {
+	font-family: var(--font-monospace);
+}
+
+pre code em {
+	color: var(--color-green);
+
+	font-style: normal;
 }
 
 .font-monospace {
