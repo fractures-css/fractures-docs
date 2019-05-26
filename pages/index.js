@@ -11,7 +11,7 @@ const Index = () => (
 	<Layout title="fractures">
 		<section className="index-hero py-6">
 			<Container className="index-hero__container flex flex-gap-4">
-				<div className="flex flex-gap-4 grow-1">
+				<div className="fr-index grow-1 flex flex-gap-4">
 					<div className="grow-1">
 						<h1 title="fractures" className="flex flex-ycenter flex-gap-2">
 							<Fractures size={ 48 } />
@@ -49,6 +49,10 @@ const Index = () => (
 					.index-hero__container > div:first-child {
 						margin-right: 0;
 						margin-bottom: 32px;
+					}
+
+					.fr-index {
+						flex-basis: auto;
 					}
 				}
 

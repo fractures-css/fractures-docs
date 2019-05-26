@@ -56,7 +56,7 @@ class IndexSkeleton extends Component {
 		const selectedCode = examples[this.state.example]
 
 		return (
-			<div className="grow-1 flex flex-column flex-xcenter">
+			<div className="fr-example grow-1 flex flex-column flex-xcenter">
 				<Pre lines={ selectedCode } lineCount={ 7 } />
 				<ol className="skeleton__nav flex flex-gap-1">
 					{skeletonItems.map((item, key) => (
@@ -88,7 +88,17 @@ class IndexSkeleton extends Component {
 						color: var(--color-red);
 					}
 
+					@media (max-width: 1020px) {
+						.fr-example {
+							flex-grow: auto;
+						}
+					}
+
 					@media (max-width: 640px) {
+						.fr-example {
+							flex-grow: auto;
+						}
+
 						.skeleton__nav {
 							flex-direction: column;
 							margin-left: 0;
