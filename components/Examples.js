@@ -74,7 +74,7 @@ class IndexSkeleton extends Component {
 					}
 
 					.skeleton__nav li {
-						position: relative;
+						/* position: relative; */
 
 						padding: 0 1rem;
 
@@ -95,13 +95,13 @@ class IndexSkeleton extends Component {
 					}
 
 					@media (max-width: 640px) {
-						.fr-example {
-							flex-grow: auto;
+						.skeleton__nav {
+							/* flex-direction: column; */
+							margin-left: 0;
 						}
 
-						.skeleton__nav {
-							flex-direction: column;
-							margin-left: 0;
+						.skeleton__nav li {
+							padding: 0 0.5rem;
 						}
 					}
 				`}</style>

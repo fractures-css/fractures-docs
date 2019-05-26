@@ -2,6 +2,7 @@ const Fractures = ({ color, size }) => (
 	<svg
 		width={ size || 24 }
 		height={ size || 24 }
+		style={ { minWidth: (size || 24) + 'px' } }
 		viewBox="0 0 24 24"
 		fill="none"
 		role="image"
