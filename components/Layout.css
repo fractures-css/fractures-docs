@@ -8,7 +8,7 @@
 	--color-red: #db5454;
 	--color-blue: #445695;
 
-	--font-monospace: 'Source Code Pro', monospace;
+	--font-monospace: 'Roboto Mono', monospace;
 }
 
 *::selection {
@@ -71,7 +71,7 @@ small {
 	line-height: 1.25rem;
 }
 
-.source-code-pro {
+.font-monospace {
 	font-family: var(--font-monospace);
 	font-weight: 400;
 }

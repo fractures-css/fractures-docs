@@ -32,7 +32,7 @@ const Pre = props => {
 					border-radius: 0.25rem;
 
 					font-size: 0.75rem;
-					font-family: 'Source Code Pro', monospace;
+					font-family: var(--font-monospace);
 					counter-reset: line;
 					line-height: 1.5rem;
 					tab-size: 4;

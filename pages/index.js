@@ -11,31 +11,31 @@ const Index = () => (
 	<Layout title="fractures">
 		<section className="index-hero py-6">
 			<Container className="index-hero__container flex flex-gap-4">
-				<div className="fr-index grow-1 flex flex-gap-4">
-					<div className="grow-1">
+				<div className="fr-index flex-column grow-1 flex flex-gap-3">
+					<header>
 						<h1 title="fractures" className="flex flex-ycenter flex-gap-2">
 							<Fractures size={ 48 } />
 							<span>fr&middot;ctures</span>
 						</h1>
-						<b className="source-code-pro">Baseline atomic CSS toolkit.</b>
-						<p className="my-3">
-							<b>fractures</b>
-							{` `}
-							helps you bootstrap design-systems and prototypes by providing a set of non-blocking, atomic, utility classes.{' '}
-							<Link href="/about">
-								<a>Learn more.</a>
-							</Link>
-						</p>
-						<a href="https://github.com/fractures/fractures">
-							<Button label="GitHub" />
-						</a>
-						<div className="mt-3 source-code-pro">
-							<small>
-								version: {meta.version}
-								<br />
-								size: {meta.size}b gzipped
-							</small>
-						</div>
+						<b className="font-monospace">Baseline atomic CSS toolkit.</b>
+					</header>
+					<p>
+						<b>fractures</b>
+						{` `}
+						helps you bootstrap design-systems and prototypes by providing a set of non-blocking, atomic, utility classes.{' '}
+						<Link href="/about">
+							<a>Learn more.</a>
+						</Link>
+					</p>
+					<a href="https://github.com/fractures/fractures">
+						<Button label="GitHub" />
+					</a>
+					<div className="font-monospace">
+						<small>
+							version: {meta.version}
+							<br />
+							size: {meta.size}b gzipped
+						</small>
 					</div>
 				</div>
 				<Examples />
