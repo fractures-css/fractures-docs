@@ -1,10 +1,10 @@
-import "./Layout.css"
-import "fractures/dist/fractures.css"
-import { Component, Fragment } from "react"
-import { initGA, logPageView } from "../utils/analytics"
-import Head from "next/head"
-import meta from "../utils/meta.js"
-import Nav from "./Nav"
+import './Layout.css'
+import 'fractures/dist/fractures.css'
+import { Component, Fragment } from 'react'
+import { initGA, logPageView } from '../utils/analytics'
+import Head from 'next/head'
+import meta from '../utils/meta.js'
+import Nav from './Nav'
 
 class Layout extends Component {
 	constructor(props) {
@@ -41,7 +41,7 @@ class Layout extends Component {
 					<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" />
 				</Head>
 				<Nav />
-				<main className="pb-5" style={ { marginTop: "4rem" } }>
+				<main className="pb-5" style={ { marginTop: '4rem' } }>
 					{this.props.children}
 				</main>
 			</Fragment>

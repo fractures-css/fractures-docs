@@ -28,11 +28,11 @@ const Pre = props => {
 					background-size: 1px 1.5rem;
 					background-image: linear-gradient(to bottom, var(--color-light) 1px, transparent 1px);
 					box-shadow: inset 0 0 0 1px var(--color-gray);
-					border-left: 1.5rem solid var(--color-gray);
+					border-left: 1.5rem solid var(--color-light);
 					border-radius: 0.25rem;
 
 					font-size: 0.75rem;
-					font-family: "Source Code Pro", monospace;
+					font-family: 'Source Code Pro', monospace;
 					counter-reset: line;
 					line-height: 1.5rem;
 					tab-size: 4;

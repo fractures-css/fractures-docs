@@ -1,8 +1,8 @@
 const Container = props => (
-	<div className={ `container mx-auto ${ props.className ? `${ props.className }` : `` }` }>
+	<div className={ `container mx-auto ${ props.className ? props.className : `` }` }>
 		{props.children}
 		<style jsx>{`
-			@media (max-width: ${ props.width ? props.width + 60 : 1020 }px) {
+			@media (max-width: 1020px) {
 				.container {
 					margin-left: 1.5rem !important;
 					margin-right: 1.5rem !important;
@@ -13,7 +13,7 @@ const Container = props => (
 
 			.container {
 				max-width: 100%;
-				width: ${ props.width ? props.width : 960 }px;
+				width: 960px;
 			}
 		`}</style>
 	</div>

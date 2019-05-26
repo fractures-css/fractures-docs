@@ -1,5 +1,4 @@
 import { Component, Fragment } from 'react'
-import Container from '../../components/Container'
 import IconBoxes from '../images/IconBoxes'
 import IconIntro from '../images/IconIntro'
 import IconOwn from '../images/IconOwn'
@@ -61,105 +60,99 @@ class IndexSkeleton extends Component {
 		const selectedCode = examples[this.state.example]
 
 		return (
-			<Fragment>
-				<div className="index-skeleton py-5">
-					<Container>
-						<div className="fr-skeleton flex flex-xcenter flex-gap-4">
-							<div className="skeleton-item">
-								{this.state.example === 0 && <IconIntro />}
-								{this.state.example === 1 && <IconBoxes />}
-								{this.state.example === 2 && <IconSticky />}
-								{this.state.example === 3 && <IconOwn />}
-							</div>
-							<div className="grow-1">
-								<div className="skeleton__nav unselectable mb-3">
-									<ol className="flex flex-gap-1">
-										{skeletonItems.map((item, key) =>
-
-											// prettier-ignore
-											<li
-												key={ key }
-												className={ this.state.example === key && 'active' }
-												onClick={ e => this.showExample(e, key) }>
-												{item}
-											</li>
-										)}
-									</ol>
-								</div>
-								<Pre lines={ selectedCode } lineCount={ 7 } />
-							</div>
-							<style jsx global>{`
-								@media (max-width: 640px) {
-									.fr-skeleton {
-										flex-direction: column;
-									}
-
-									.skeleton-item {
-										margin-top: 0 !important;
-										margin-bottom: 2.5rem !important;
-									}
-								}
-
-								.index-skeleton {
-									background-color: var(--color-light);
-								}
-
-								.skeleton__nav {
-									font-size: 0.875rem;
-								}
-
-								.skeleton__nav li {
-									position: relative;
-
-									padding: 0 1rem;
-
-									cursor: pointer;
-									color: var(--color-blue-dark);
-
-									line-height: 3rem;
-									font-weight: 500;
-								}
-
-								.skeleton__nav .active {
-									box-shadow: inset 0 0 0 1px var(--color-gray);
-									border-radius: 0.25rem;
-									color: var(--color-red);
-								}
-
-								.skeleton-item {
-									height: 7.5rem;
-									margin-top: 4.5rem;
-									width: 7.5rem;
-								}
-
-								.skeleton-item svg {
-									height: 7.5rem;
-									opacity: 0;
-									width: 7.5rem;
-
-									animation: fadeInImage 160ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms 1 forwards;
-									border-radius: 0.25rem;
-									transform: scale(0.95) translateY(0.25rem);
-								}
-
-								@keyframes fadeInImage {
-									from {
-										opacity: 0;
-
-										transform: scale(0.95) translateY(0.25rem);
-									}
-
-									to {
-										opacity: 1;
-
-										transform: scale(1) translateX(0);
-									}
-								}
-							`}</style>
+			<div className="index-skeleton">
+				<div className="fr-skeleton flex flex-column flex-xcenter flex-gap-4">
+					{/* <div className="skeleton-item">
+						{this.state.example === 0 && <IconIntro />}
+						{this.state.example === 1 && <IconBoxes />}
+						{this.state.example === 2 && <IconSticky />}
+						{this.state.example === 3 && <IconOwn />}
+					</div> */}
+					<div className="grow-1">
+						<Pre lines={ selectedCode } />
+						<div className="skeleton__nav unselectable mb-3">
+							<ol className="flex flex-gap-1">
+								{skeletonItems.map((item, key) => (
+									<li key={ key } className={ this.state.example === key && 'active' } onClick={ e => this.showExample(e, key) }>
+										{item}
+									</li>
+								))}
+							</ol>
 						</div>
-					</Container>
+					</div>
+					<style jsx global>{`
+						@media (max-width: 640px) {
+							.fr-skeleton {
+								flex-direction: column;
+							}
+
+							.skeleton-item {
+								margin-top: 0 !important;
+								margin-bottom: 2.5rem !important;
+							}
+						}
+
+						.index-skeleton {
+							max-width: 100%;
+							width: 640px;
+
+							background-color: var(--color-gray);
+						}
+
+						.skeleton__nav {
+							font-size: 0.875rem;
+						}
+
+						.skeleton__nav li {
+							position: relative;
+
+							padding: 0 1rem;
+
+							cursor: pointer;
+							color: var(--color-blue-dark);
+
+							line-height: 3rem;
+							font-weight: 500;
+						}
+
+						.skeleton__nav .active {
+							box-shadow: inset 0 0 0 1px var(--color-gray);
+							border-radius: 0.25rem;
+							color: var(--color-red);
+						}
+
+						.skeleton-item {
+							height: 7.5rem;
+							margin-top: 4.5rem;
+							width: 7.5rem;
+						}
+
+						.skeleton-item svg {
+							height: 7.5rem;
+							opacity: 0;
+							width: 7.5rem;
+
+							animation: fadeInImage 160ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms 1 forwards;
+							border-radius: 0.25rem;
+							transform: scale(0.95) translateY(0.25rem);
+						}
+
+						@keyframes fadeInImage {
+							from {
+								opacity: 0;
+
+								transform: scale(0.95) translateY(0.25rem);
+							}
+
+							to {
+								opacity: 1;
+
+								transform: scale(1) translateX(0);
+							}
+						}
+					`}</style>
 				</div>
-			</Fragment>
+			</div>
 		)
 	}
 }

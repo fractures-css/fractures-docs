@@ -1,4 +1,4 @@
-import { Fragment } from "react"
+import { Fragment } from 'react'
 
 const Repeater = props => {
 	const Component = props.component
@@ -6,7 +6,7 @@ const Repeater = props => {
 	return (
 		<Fragment>
 			{props.scale.map((item, key) => (
-				<Component key={ key } { ...props } label={ props.label.replace("$", item) } />
+				<Component key={ key } { ...props } label={ props.label.replace('$', item) } />
 			))}
 		</Fragment>
 	)

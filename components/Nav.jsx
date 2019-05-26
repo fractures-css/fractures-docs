@@ -1,9 +1,9 @@
-import { Component } from "react"
-import Button from "./Button"
-import Container from "./Container"
-import Fractures from "./Fractures"
-import Link from "next/link"
-import meta from "../utils/meta.js"
+import { Component } from 'react'
+import GitHub from './images/GitHub'
+import Container from './Container'
+import Fractures from './images/Fractures'
+import Link from 'next/link'
+import meta from '../utils/meta.js'
 
 class Nav extends Component {
 	constructor(props) {
@@ -19,15 +19,10 @@ class Nav extends Component {
 	}
 
 	render() {
-
-		// prettier-ignore
-		const headerLinks = [
-			{ icon: "info", name: "Documentation", url: "/docs" },
-			{ icon: "favorite", name: "About", url: "/about" }
-		]
+		const headerLinks = [{ icon: 'info', name: 'Documentation', url: '/docs' }, { icon: 'favorite', name: 'About', url: '/about' }]
 
 		const headerRender = headerLinks.map((item, key) => (
-			<li className={ this.state.pathname === item.url ? "active" : "" } key={ key }>
+			<li className={ this.state.pathname === item.url ? 'active' : '' } key={ key }>
 				<Link href={ item.url } prefetch>
 					<a className="flex flex-ycenter flex-gap-1 relative">
 						<span>{item.name}</span>
@@ -40,8 +35,8 @@ class Nav extends Component {
 			<div className="fr-header fixed z-2 top-0 w-100">
 				<Container className="flex flex-between">
 					<ol className="flex flex-gap-1">
-						<li className={ this.state.pathname === "/" ? "active" : "" }>
-							<Link href={ "/" } prefetch>
+						<li className={ this.state.pathname === '/' ? 'active' : '' }>
+							<Link href={ '/' } prefetch>
 								<a className="flex flex-ycenter flex-gap-1">
 									<span className="flex flex-ycenter fr-hide-on-small">
 										<Fractures />
@@ -54,8 +49,8 @@ class Nav extends Component {
 					<ol className="flex flex-gap-2">
 						{headerRender}
 						<li className="fr-hide-on-medium flex flex-ycenter">
-							<a href="https://github.com/fractures/fractures" className="flex flex-ycenter">
-								<Button count={ meta.stars } label="GitHub" />
+							<a href="https://github.com/fractures/fractures" className="flex flex-center">
+								<GitHub />
 							</a>
 						</li>
 					</ol>
