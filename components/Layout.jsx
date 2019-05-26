@@ -38,7 +38,10 @@ class Layout extends Component {
 					<meta name="og-image-height" property="og:image:height" content="200" />
 					<meta name="google-site-verification" content="zOr1hPUy598X8UrDiYZLK20AkpuhWw0PYKcdOJ-NzPU" />
 					<link rel="icon" href="/static/favicon.ico" />
-					<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet" />
+					<link
+						href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700,700i|Roboto+Mono:400,700&display=swap"
+						rel="stylesheet"
+					/>
 				</Head>
 				<Nav />
 				<main className="pb-5" style={ { marginTop: '4rem' } }>
