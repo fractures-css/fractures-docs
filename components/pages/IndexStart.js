@@ -1,6 +1,6 @@
-import Pre from '../../components/Pre'
-import Container from '../../components/Container'
+import Container from '../Container'
 import meta from '../../utils/meta.js'
+import Pre from '../Pre'
 
 const IndexStart = () => (
 	<Container className="py-4">

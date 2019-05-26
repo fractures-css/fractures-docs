@@ -3,7 +3,6 @@ import GitHub from './images/GitHub'
 import Container from './Container'
 import Fractures from './images/Fractures'
 import Link from 'next/link'
-import meta from '../utils/meta.js'
 
 class Nav extends Component {
 	constructor(props) {
@@ -59,25 +58,29 @@ class Nav extends Component {
 					.fr-header {
 						height: 4rem;
 
-						background-color: white;
-						box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+						background-color: var(--color-dark);
+						/* background-color: white; */
+						/* box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15); */
 					}
 
 					.fr-header li a {
 						padding: 0 0.5rem;
 
-						color: var(--color-blue);
+						/* color: var(--color-blue); */
+						color: var(--color-dim);
 
 						font-weight: 500;
 						line-height: 4rem;
 					}
 
 					.fr-header li.active {
-						box-shadow: inset 0 -1px 0 0 var(--color-blue);
+						/* background-color: var(--color-light); */
+						/* box-shadow: inset 0 1px 0 0 var(--color-blue); */
 					}
 
 					.fr-header li.active a {
-						color: var(--color-dark);
+						color: white;
+						/* color: var(--color-blue); */
 					}
 				`}</style>
 			</div>
