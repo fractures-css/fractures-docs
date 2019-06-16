@@ -4,8 +4,8 @@ import Layout from '../components/Layout'
 const About = () => (
 	<Layout title="About — fractures">
 		<Container className="py-5">
-			<h1 className="regular">
-				<mark>Functional CSS, but only the good parts.</mark>
+			<h1>
+				<mark>Functional CSS</mark>, but only the good parts.
 			</h1>
 			<h2>fr&middot;ctures tries to abstract away the complexities UI design has to offer.{` `}</h2>
 			<p className="py-2">
