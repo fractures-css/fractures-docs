@@ -4,30 +4,32 @@ import Layout from '../components/Layout'
 const About = () => (
 	<Layout title="About — fractures">
 		<Container className="py-5">
-			<h1 className="mb-2">About</h1>
+			<h1 className="regular">
+				<mark>Functional CSS, but only the good parts.</mark>
+			</h1>
+			<h2>fr&middot;ctures tries to abstract away the complexities UI design has to offer.{` `}</h2>
 			<p className="py-2">
-				This is a small project, in which I try to simplify my life by abstracting away the complexities
-				{` `}
-				UI design has to offer 😨. I use fractures for <b>rapid prototyping</b> and building out <b>design systems</b>.
+				It is really just a thin <a href="https://pyx.space/post/atomic-css-with-fractures/">atomic CSS</a> layer with a small opinionated{' '}
+				<a href="https://github.com/fractures/fractures/blob/master/src/reset.css">reset</a>
+				.<br />
+				Use fractures for <b>rapid prototyping</b> and building out <b>design systems</b>.
 			</p>
-			<p className="py-2 mb-2">
-				Although it is really just a thin atomic CSS layer, please consider the project opinionated.
-				<br />
+			<p className="mb-2">
 				Have questions? Open an issue on <a href="https://github.com/fractures/fractures/issues">GitHub</a>.
 			</p>
 			<div className="grid grid-cols-1 grid-gap-3 mb-4">
 				<div>
-					<h2 className="mb-1">Goals</h2>
+					<h3 className="mb-1">Goals</h3>
 					<ul className="list-disc ml-3">
 						<li>You can design with &mdash; not around it. Leaves UI untouched.</li>
 						<li>Atomic, non blocking.</li>
-						<li>Manageable cognitive load, with a small footprint.</li>
+						<li>Manageable cognitive load with a small footprint.</li>
 						<li>Fast in every way.</li>
 						<li>Framework agnostic.</li>
 					</ul>
 				</div>
 				<div>
-					<h2 className="mb-1">Problems</h2>
+					<h3 className="mb-1">Problems</h3>
 					<ul className="list-disc ml-3">
 						<li>
 							I don't think percentage based CSS breakpoints are universal enough, so you have to handle
@@ -44,9 +46,9 @@ const About = () => (
 					</ul>
 				</div>
 			</div>
-			<h4>Inspiration</h4>
+			<h3>Inspiration</h3>
 			<p className="my-2">
-				I started this prject as my own reset.css when having a reset css was cool.
+				I started this project as my own reset.css when having a reset css was cool.
 				{` `}
 				It was grown into a common.css, then a tools.css. Now it's somewhat atomic.
 			</p>
@@ -69,14 +71,8 @@ const About = () => (
 				</li>
 			</ul>
 			<p className="my-2">
-				The concept of functional CSS is not new.
-				<br />
-				There are quite a few similar projects out there you can choose from:{' '}
-				<a href="https://github.com/topics/functional-css">#functional-css</a>.
-			</p>
-			<h4>Me</h4>
-			<p className="my-2">
-				I'm a designer who <a href="https://pyx.space/about">codes</a>. Tweet me at 🐈 <a href="https://twitter.com/pyx">@pyx</a>
+				The concept of functional CSS is not new. There are quite a few similar projects out there you can choose from if you looking for
+				something different: <a href="https://github.com/topics/functional-css">#functional-css</a>.
 			</p>
 		</Container>
 	</Layout>

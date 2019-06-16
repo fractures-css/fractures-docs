@@ -107,6 +107,10 @@ input[type='text']:focus {
 	border-color: var(--color-gray-500);
 }
 
+mark {
+	background-color: var(--color-mint);
+}
+
 .font-monospace {
 	font-family: var(--font-monospace);
 	font-weight: 400;
