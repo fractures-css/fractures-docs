@@ -1,4 +1,5 @@
 import Button from '../components/Button'
+import SecondaryButton from '../components/SecondaryButton'
 import Container from '../components/Container'
 import Examples from '../components/Examples'
 import Fractures from '../components/images/Fractures'
@@ -27,9 +28,16 @@ const Index = () => (
 							<a>Learn more.</a>
 						</Link>
 					</p>
-					<a href="https://github.com/fractures/fractures">
-						<Button label="GitHub" />
-					</a>
+					<div className="flex flex-ycenter flex-gap-1">
+						<a href="https://github.com/fractures/fractures">
+							<Button label="GitHub" />
+						</a>
+						<Link href="/docs">
+							<a>
+								<SecondaryButton label="Documentation" />
+							</a>
+						</Link>
+					</div>
 					<div className="font-monospace">
 						<small>
 							version: {meta.version}

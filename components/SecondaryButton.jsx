@@ -1,8 +1,5 @@
-import GitHub from './images/GitHub'
-
-const Button = props => (
+const SecondaryButton = props => (
 	<span className="btn flex flex-ycenter unselectable relative flex-gap-1">
-		<GitHub />
 		<span>{props.label}</span>
 		<style jsx>{`
 			.btn {
@@ -22,15 +19,15 @@ const Button = props => (
 			}
 
 			.btn {
-				background-color: var(--color-dark);
-				color: var(--color-light);
+				background-color: var(--color-gray-100);
+				color: var(--color-gray-700);
 			}
 
 			.btn:hover {
-				background-color: var(--color-green);
+				background-color: var(--color-gray-300);
 			}
 		`}</style>
 	</span>
 )
 
-export default Button
+export default SecondaryButton

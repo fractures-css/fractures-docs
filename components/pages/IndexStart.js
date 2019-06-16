@@ -1,39 +1,54 @@
 import Container from '../Container'
 import meta from '../../utils/meta.js'
-import Pre from '../Pre'
+import ModuleImage from './images/ModuleImage'
+import ModuleCDN from './images/ModuleCDN'
+import ModuleFile from './images/ModuleFile'
 
 const IndexStart = () => (
 	<Container className="py-4">
 		<h2 className="mb-3">Getting started</h2>
-		<ol className="flex flex-column flex-gap-4">
-			<li className="flex flex-column flex-gap-2">
-				<h4>Module</h4>
-				<Pre lines={ [`npm i fractures`, null, `import "fractures/dist/fractures.css"`] } />
-				<p>
-					Install with npm or yarn, then import it once, globally. You can find usage examples under{' '}
-					<a href="https://github.com/fractures/fractures-examples">fractures-examples</a> for <b>React</b> and <b>Next.js</b>.
-				</p>
-				<small>
-					Although you can import <code>fractures.prefixed.min.css</code>
-					{` `}
-					just as easily&mdash;for production use, I recommend running the fractures.css file through your build process.
-				</small>
+		<ol className="fr-getting-started__list flex flex-gap-4">
+			<li className="flex flex-column flex-gap-1">
+				<ModuleImage />
+				<h5>Module</h5>
+				<code>import 'fractures'</code>
+				<p>Install with npm or yarn, then import it once, globally.</p>
 			</li>
-			<li className="flex flex-column flex-gap-2">
-				<h4>CDN</h4>
-				<Pre lines={ [`&lt;link href="${ meta.cdn }" rel="stylesheet" /&gt;`] } />
+			<li className="flex flex-column flex-gap-1">
+				<ModuleCDN />
+				<h5>CDN</h5>
+				<input type="text" value={ `<link href="${ meta.cdn }" rel="stylesheet" />` } />
 				<p>This is not great for production, but great for prototypes or lazy people.</p>
 			</li>
-			<li className="flex flex-column flex-gap-2 ">
-				<h4>Download</h4>
-				<Pre
-					lines={ [
-						`Save with your hands, and serve as you wish. 🐹`,
-						`See releases on <a href="https://github.com/fractures/fractures/releases">GitHub</a>`
-					] }
-				/>
+			<li className="flex flex-column flex-gap-1">
+				<ModuleFile />
+				<h5>Download</h5>
+				<p>Save with your hands, and serve as you wish. 🐹</p>
+				<p>
+					See releases on <a href="https://github.com/fractures/fractures/releases">GitHub</a>.
+				</p>
 			</li>
 		</ol>
+		<style jsx>{`
+			@media (max-width: 1020px) {
+				.fr-getting-started__list {
+					flex-direction: column;
+				}
+
+				.fr-getting-started__list li {
+					margin-right: 0 !important;
+					width: 100% !important;
+				}
+
+				.fr-getting-started__list li + li {
+					margin-top: 2rem;
+				}
+			}
+
+			.fr-getting-started__list li {
+				width: calc(100% / 3);
+			}
+		`}</style>
 	</Container>
 )
 
