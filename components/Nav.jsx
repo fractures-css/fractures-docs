@@ -21,7 +21,7 @@ class Nav extends Component {
 		const headerLinks = [{ icon: 'info', name: 'Documentation', url: '/docs' }, { icon: 'favorite', name: 'About', url: '/about' }]
 
 		const headerRender = headerLinks.map((item, key) => (
-			<li className={ this.state.pathname === item.url ? 'active' : '' } key={ key }>
+			<li className={ this.state.pathname && this.state.pathname.includes(item.url) ? 'active' : '' } key={ key }>
 				<Link href={ item.url } prefetch>
 					<a className="flex flex-ycenter flex-gap-1 relative">
 						<span>{item.name}</span>
