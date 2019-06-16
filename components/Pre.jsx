@@ -23,13 +23,15 @@ const Pre = props => {
 
 				.fr-pre {
 					min-height: ${ maxHeight }rem;
+					padding-left: 1.5rem;
 
-					background-color: var(--color-dark);
+					background-color: white;
 					background-size: 1px 1.5rem;
-					box-shadow: inset 0 0 0 1px var(--color-gray-900);
-					border-left: 1.5rem solid var(--color-gray-700);
+					background-image: linear-gradient(to bottom, var(--color-light) 1px, transparent 1px);
 					border-radius: 0.25rem;
-					color: var(--color-gray-300);
+					box-shadow: inset 0 0 0 1px var(--color-gray-100);
+					/* box-shadow: inset 0 0 0 1px var(--color-gray-100), inset 1.5rem 0 0 0 var(--color-light), inset 25px 0 0 0 var(--color-gray-100); */
+					color: var(--color-gray-500);
 
 					font-size: 0.75rem;
 					font-family: var(--font-monospace);
@@ -55,6 +57,7 @@ const Pre = props => {
 
 					counter-increment: line;
 					content: counter(line);
+					font-size: 0.625rem;
 					text-align: center;
 				}
 			`}</style>
