@@ -1,7 +1,6 @@
 import './Layout.css'
 import 'fractures/dist/fractures.css'
 import { Component, Fragment } from 'react'
-import { initGA, logPageView } from '../utils/analytics'
 import Head from 'next/head'
 import meta from '../utils/meta.js'
 import Nav from './Nav'
@@ -9,16 +8,6 @@ import Nav from './Nav'
 class Layout extends Component {
 	constructor(props) {
 		super(props)
-	}
-
-	// Init GA on mount
-	componentDidMount() {
-		if(!window.GA_INITIALIZED) {
-			initGA()
-			window.GA_INITIALIZED = true
-		}
-
-		logPageView()
 	}
 
 	render() {
@@ -36,11 +25,27 @@ class Layout extends Component {
 					<meta name="og-image" property="og:image" content="https://fractures.space/static/images/share.png" />
 					<meta name="og-image-width" property="og:image:width" content="200" />
 					<meta name="og-image-height" property="og:image:height" content="200" />
-					<meta name="google-site-verification" content="zOr1hPUy598X8UrDiYZLK20AkpuhWw0PYKcdOJ-NzPU" />
 					<link rel="icon" href="/static/favicon.ico" />
 					<link
 						href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,600,600i|Roboto+Mono:400,700&display=swap"
 						rel="stylesheet"
+					/>
+					<script
+						dangerouslySetInnerHTML={{
+							__html: `
+								(function(f, a, t, h, o, m){
+								a[h]=a[h]||function(){
+								(a[h].q=a[h].q||[]).push(arguments)
+								};
+								o=f.createElement('script'),
+								m=f.getElementsByTagName('script')[0];
+								o.async=1; o.src=t; o.id='fathom-script';
+								m.parentNode.insertBefore(o,m)
+								})(document, window, 'https://cdn.usefathom.com/tracker.js', 'fathom');
+								fathom('set', 'siteId', '${process.env.FATHOM_FRACTURES_SPACE}');
+								fathom('trackPageview');
+							`
+						}}
 					/>
 				</Head>
 				<Nav />

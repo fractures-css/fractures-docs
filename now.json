@@ -1,5 +1,10 @@
 {
 	"alias": ["fractures.space"],
 	"builds": [{ "src": "package.json", "use": "@now/static-build" }],
-	"version": 2
+	"version": 2,
+	"build": {
+		"env": {
+      "FATHOM_FRACTURES_SPACE": "@fathom_fractures_space"
+    }
+ 	}
 }
