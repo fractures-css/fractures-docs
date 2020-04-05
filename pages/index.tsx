@@ -6,7 +6,7 @@ import Fractures from '../components/images/Fractures'
 import IndexStart from '../components/pages/IndexStart'
 import Layout from '../components/Layout'
 import Link from 'next/link'
-import meta from '../utils/meta.js'
+import meta from '../utils/meta'
 
 const Index = () => (
 	<Layout title="fractures">

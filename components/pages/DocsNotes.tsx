@@ -1,4 +1,4 @@
-const DocsNotes = props => (
+const DocsNotes: React.FC<any> = (props) => (
 	<footer>
 		<ol className="docs-section-notes">
 			{props.notes.map((note, key) => (

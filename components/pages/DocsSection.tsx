@@ -14,7 +14,7 @@ const propTypes = {
 	title: PropTypes.string.isRequired
 }
 
-const DocsSection = props => {
+const DocsSection: React.FC<any> = (props) => {
 	const haveNotes = props.notes && props.notes.length
 
 	return (

@@ -1,5 +1,5 @@
 import Container from '../Container'
-import meta from '../../utils/meta.js'
+import meta from '../../utils/meta'
 import ModuleImage from './images/ModuleImage'
 import ModuleCDN from './images/ModuleCDN'
 import ModuleFile from './images/ModuleFile'

@@ -1,4 +1,4 @@
-const DocsElement = props => {
+const DocsElement: React.FC<any> = (props) => {
 	const label = props.showClass ? props.label : ``
 	const cls = props.className ? props.className : ``
 	const background = props.disableBackground ? `` : `docs-element--background`

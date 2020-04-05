@@ -228,7 +228,10 @@ const Docs = () => (
 			<DocsSection
 				title="Margin"
 				description="Common margin options."
-				notes={ [{ name: '.mx-x', note: 'is margin on X axis.' }, { name: '.mx-y', note: 'is margin on Y axis.' }] }
+				notes={ [
+					{ name: '.mx-x', note: 'is margin on X axis.' },
+					{ name: '.mx-y', note: 'is margin on Y axis.' }
+				] }
 			>
 				<Repeater component={ DocsElement } label="m-$" scale={ baseScaleZero } />
 				<Repeater component={ DocsElement } label="mb-$" scale={ baseScaleZero } />
@@ -249,7 +252,10 @@ const Docs = () => (
 			<DocsSection
 				title="Padding"
 				description="Paddings based on overwriteable box sizes."
-				notes={ [{ name: '.py-x', note: 'is padding on X axis.' }, { name: '.py-y', note: 'is padding on Y axis.' }] }
+				notes={ [
+					{ name: '.py-x', note: 'is padding on X axis.' },
+					{ name: '.py-y', note: 'is padding on Y axis.' }
+				] }
 			>
 				<Repeater component={ DocsElement } label="p-$" scale={ baseScaleZero } />
 				<Repeater component={ DocsElement } label="pb-$" scale={ baseScaleZero } />

@@ -4,7 +4,7 @@ import Container from './Container'
 import Fractures from './images/Fractures'
 import Link from 'next/link'
 
-class Nav extends Component {
+class Nav extends Component<any, any> {
 	constructor(props) {
 		super(props)
 
@@ -18,7 +18,10 @@ class Nav extends Component {
 	}
 
 	render() {
-		const headerLinks = [{ icon: 'info', name: 'Documentation', url: '/docs' }, { icon: 'favorite', name: 'About', url: '/about' }]
+		const headerLinks = [
+			{ icon: 'info', name: 'Documentation', url: '/docs' },
+			{ icon: 'favorite', name: 'About', url: '/about' }
+		]
 
 		const headerRender = headerLinks.map((item, key) => (
 			<li className={ this.state.pathname && this.state.pathname.includes(item.url) ? 'active' : '' } key={ key }>

@@ -1,4 +1,4 @@
-const Fractures = ({ color, size }) => (
+const Fractures: React.FC<any> = ({ color, size }) => (
 	<svg
 		width={ size || 24 }
 		height={ size || 24 }

@@ -2,10 +2,10 @@ import './Layout.css'
 import 'fractures/dist/fractures.css'
 import { Component, Fragment } from 'react'
 import Head from 'next/head'
-import meta from '../utils/meta.js'
+import meta from '../utils/meta'
 import Nav from './Nav'
 
-class Layout extends Component {
+class Layout extends Component<any, any> {
 	constructor(props) {
 		super(props)
 	}
@@ -31,7 +31,7 @@ class Layout extends Component {
 						rel="stylesheet"
 					/>
 					<script
-						dangerouslySetInnerHTML={{
+						dangerouslySetInnerHTML={ {
 							__html: `
 								(function(f, a, t, h, o, m){
 								a[h]=a[h]||function(){
@@ -42,10 +42,10 @@ class Layout extends Component {
 								o.async=1; o.src=t; o.id='fathom-script';
 								m.parentNode.insertBefore(o,m)
 								})(document, window, 'https://cdn.usefathom.com/tracker.js', 'fathom');
-								fathom('set', 'siteId', '${process.env.FATHOM_FRACTURES_SPACE}');
+								fathom('set', 'siteId', '${ process.env.FATHOM_FRACTURES_SPACE }');
 								fathom('trackPageview');
 							`
-						}}
+						} }
 					/>
 				</Head>
 				<Nav />

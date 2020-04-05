@@ -35,7 +35,7 @@ const examples = [
 	]
 ]
 
-class IndexSkeleton extends Component {
+class IndexSkeleton extends Component<any, any> {
 	constructor(props) {
 		super(props)
 
@@ -60,7 +60,7 @@ class IndexSkeleton extends Component {
 				<Pre lines={ selectedCode } lineCount={ 7 } />
 				<ol className="skeleton__nav flex flex-gap-1">
 					{skeletonItems.map((item, key) => (
-						<li key={ key } className={ this.state.example === key && 'active' } onClick={ e => this.showExample(e, key) }>
+						<li key={ key } className={ this.state.example === key && 'active' } onClick={ (e) => this.showExample(e, key) }>
 							{item}
 						</li>
 					))}

@@ -1,4 +1,4 @@
-const GitHub = ({ size }) => (
+const GitHub: React.FC<any> = ({ size }) => (
 	<svg
 		height={ size || 24 }
 		width={ size || 24 }
