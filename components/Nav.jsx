@@ -22,7 +22,7 @@ class Nav extends Component {
 
 		const headerRender = headerLinks.map((item, key) => (
 			<li className={ this.state.pathname && this.state.pathname.includes(item.url) ? 'active' : '' } key={ key }>
-				<Link href={ item.url } prefetch>
+				<Link href={ item.url }>
 					<a className="flex flex-ycenter flex-gap-1 relative">
 						<span>{item.name}</span>
 					</a>
@@ -35,7 +35,7 @@ class Nav extends Component {
 				<Container className="flex flex-between">
 					<ol className="flex flex-gap-1">
 						<li className={ this.state.pathname === '/' ? 'active' : '' }>
-							<Link href={ '/' } prefetch>
+							<Link href={ '/' }>
 								<a className="flex flex-ycenter flex-gap-1">
 									<span className="flex flex-ycenter fr-hide-on-small">
 										<Fractures />
